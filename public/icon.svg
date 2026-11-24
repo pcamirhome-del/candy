@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E1065" />
+      <stop offset="55%" stop-color="#1A0B3B" />
+      <stop offset="100%" stop-color="#0F0722" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#FF4D8D" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FF4D8D" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="candyBody" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#FF6B9D" />
+      <stop offset="45%" stop-color="#FF2E54" />
+      <stop offset="100%" stop-color="#9E0028" />
+    </linearGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE875" />
+      <stop offset="50%" stop-color="#FFB800" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <circle cx="256" cy="240" r="210" fill="url(#glow)" />
+  <!-- Candy wrapper wings -->
+  <path d="M124 218 L72 166 C62 195 62 232 72 260 L124 238 Z" fill="url(#goldRim)" />
+  <path d="M388 218 L440 166 C450 195 450 232 440 260 L388 238 Z" fill="url(#goldRim)" />
+  <path d="M126 250 L74 282 C68 308 74 334 88 352 L144 294 Z" fill="#F59E0B" opacity="0.85" />
+  <path d="M386 250 L438 282 C444 308 438 334 424 352 L368 294 Z" fill="#F59E0B" opacity="0.85" />
+  <!-- Central Gem Candy -->
+  <circle cx="256" cy="256" r="136" fill="url(#goldRim)" />
+  <circle cx="256" cy="256" r="122" fill="url(#candyBody)" />
+  <!-- Glossy stripes -->
+  <path d="M170 195 Q256 152 342 195" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.35" />
+  <path d="M162 256 Q256 215 350 256" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.22" />
+  <ellipse cx="212" cy="194" rx="44" ry="22" transform="rotate(-24 212 194)" fill="#FFFFFF" opacity="0.65" />
+  <circle cx="176" cy="232" r="10" fill="#FFFFFF" opacity="0.55" />
+  <!-- Crown Star -->
+  <path d="M256 202 L271 236 L308 240 L280 265 L288 302 L256 283 L224 302 L232 265 L204 240 L241 236 Z" fill="#FFFBEB" opacity="0.95" />
+</svg>

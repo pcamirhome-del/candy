@@ -1,0 +1,6 @@
+{
+  "name": "Sugar Rush Kingdom",
+  "description": "An offline-first Match-3 candy puzzle adventure with special candy combos, 16 handcrafted levels, keys, boosters, and real-time lives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
