@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  ArrowLeft,
   Banknote,
   Gem,
   Gift,
   Hammer,
   Heart,
+  Home,
   KeyRound,
+  Pause,
   Play,
   Settings,
   Shuffle,
@@ -23,6 +24,7 @@ import {
   LevelStartModal,
   OutOfLivesModal,
   OutOfMovesModal,
+  PauseMenuModal,
   SettingsShopModal,
   VictoryModal,
 } from './components/Modals';
@@ -61,9 +63,11 @@ export default function App() {
 
   // Navigation & Modal states
   const [screen, setScreen] = useState<'splash' | 'map' | 'game'>('splash');
+  const [hasEnteredKingdom, setHasEnteredKingdom] = useState(false);
   const [selectedLevel, setSelectedLevel] = useState<LevelConfig | null>(null);
   const [selectedGate, setSelectedGate] = useState<GateRequirement | null>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const [showPauseMenu, setShowPauseMenu] = useState(false);
   const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [showGiftPack, setShowGiftPack] = useState(false);
   const [showOutOfLives, setShowOutOfLives] = useState(false);
@@ -210,6 +214,7 @@ export default function App() {
     setIngredientsCollected(0);
     setGameInstanceKey((k) => k + 1);
     setSelectedLevel(null);
+    setShowPauseMenu(false);
     setScreen('game');
   };
 
@@ -286,14 +291,15 @@ export default function App() {
     setScreen('map');
   };
 
-  const handleBackToMapFromGame = () => {
+  const handleExitLevelTo = (target: 'map' | 'splash') => {
     sound.playButton();
     if (!victoryInfo && movesLeft < activeLevel.moves) {
       deductOneLife();
     }
+    setShowPauseMenu(false);
     setFailureReason(null);
     setVictoryInfo(null);
-    setScreen('map');
+    setScreen(target);
   };
 
   const handleConsumeBooster = useCallback((type: BoosterType) => {
@@ -399,7 +405,11 @@ export default function App() {
         {screen === 'splash' && (
           <SplashScreen
             unlockedLevel={progress.unlockedLevel}
-            onPlay={() => setScreen('map')}
+            skipLoading={hasEnteredKingdom}
+            onPlay={() => {
+              setHasEnteredKingdom(true);
+              setScreen('map');
+            }}
             onOpenSettings={() => setShowSettings(true)}
           />
         )}
@@ -407,18 +417,33 @@ export default function App() {
         {/* MAP VIEW */}
         {screen === 'map' && (
           <>
-            <header className="shrink-0 z-20 px-2.5 pt-2.5 pb-2 bg-[#160A2E]/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between gap-1.5">
-              <div className="flex items-center gap-1 min-w-0 overflow-hidden">
+            <header className="shrink-0 z-20 px-2 pt-2.5 pb-2 bg-[#160A2E]/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between gap-1.5">
+              {/* Top-Left Glossy Back-to-Home Button */}
+              <button
+                type="button"
+                onClick={() => {
+                  sound.playButton();
+                  setScreen('splash');
+                }}
+                className="min-h-[40px] min-w-[40px] rounded-xl bg-gradient-to-b from-pink-500 via-rose-500 to-rose-700 border border-amber-200/75 shadow-[0_4px_12px_rgba(244,63,94,0.38)] flex items-center justify-center text-white active:scale-95 shrink-0"
+                aria-label="Back to Main Home Screen"
+                title="Main Home Screen"
+              >
+                <Home className="w-4 h-4 drop-shadow" />
+              </button>
+
+              {/* HUD Resource Counters (wrapped safely on tiny screens) */}
+              <div className="flex-1 flex items-center gap-1 flex-wrap min-w-0">
                 <button
                   type="button"
                   onClick={() => {
                     sound.playButton();
                     if (progress.lives < MAX_LIVES) setShowOutOfLives(true);
                   }}
-                  className="min-h-[38px] rounded-xl bg-white/8 border border-white/10 px-2 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
+                  className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
                 >
                   <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 shrink-0" />
-                  <span className="font-display text-xs font-extrabold tabular-nums">
+                  <span className="font-display text-[11px] font-extrabold tabular-nums">
                     {progress.lives}
                   </span>
                   {progress.lives < MAX_LIVES && (
@@ -428,9 +453,9 @@ export default function App() {
                   )}
                 </button>
 
-                <div className="min-h-[38px] rounded-xl bg-white/8 border border-white/10 px-2 py-1 flex items-center gap-1 text-emerald-300 shrink-0">
+                <div className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-emerald-300 shrink-0">
                   <Banknote className="w-3.5 h-3.5 shrink-0" />
-                  <span className="font-display text-xs font-extrabold tabular-nums">
+                  <span className="font-display text-[11px] font-extrabold tabular-nums">
                     {progress.cash.toLocaleString()}
                   </span>
                 </div>
@@ -441,17 +466,17 @@ export default function App() {
                     sound.playButton();
                     setShowSettings(true);
                   }}
-                  className="min-h-[38px] rounded-xl bg-white/8 border border-white/10 px-2 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
+                  className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
                 >
                   <Gem className="w-3.5 h-3.5 text-cyan-300 shrink-0" />
-                  <span className="font-display text-xs font-extrabold tabular-nums">
+                  <span className="font-display text-[11px] font-extrabold tabular-nums">
                     {progress.gems}
                   </span>
                 </button>
 
-                <div className="min-h-[38px] rounded-xl bg-white/8 border border-white/10 px-2 py-1 flex items-center gap-1 text-amber-300 shrink-0">
+                <div className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-amber-300 shrink-0">
                   <KeyRound className="w-3.5 h-3.5 shrink-0" />
-                  <span className="font-display text-xs font-extrabold tabular-nums">
+                  <span className="font-display text-[11px] font-extrabold tabular-nums">
                     {progress.keys}
                   </span>
                 </div>
@@ -466,7 +491,7 @@ export default function App() {
                     if (!nextMuted) sound.playButton();
                     setProgress((p) => ({ ...p, soundMuted: nextMuted }));
                   }}
-                  className="min-h-[42px] min-w-[42px] rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white active:scale-95"
+                  className="min-h-[40px] min-w-[40px] rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white active:scale-95"
                   aria-label={progress.soundMuted ? 'Unmute audio' : 'Mute audio'}
                 >
                   {progress.soundMuted ? (
@@ -481,7 +506,7 @@ export default function App() {
                     sound.playButton();
                     setShowSettings(true);
                   }}
-                  className="min-h-[42px] min-w-[42px] rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white active:scale-95"
+                  className="min-h-[40px] min-w-[40px] rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white active:scale-95"
                   aria-label="Settings and shop"
                 >
                   <Settings className="w-4 h-4" />
@@ -535,11 +560,14 @@ export default function App() {
               <div className="flex items-center justify-between gap-2">
                 <button
                   type="button"
-                  onClick={handleBackToMapFromGame}
-                  className="min-h-[44px] min-w-[44px] rounded-xl bg-white/8 border border-white/12 flex items-center justify-center text-white active:scale-95"
-                  aria-label="Back to level map"
+                  onClick={() => {
+                    sound.playButton();
+                    setShowPauseMenu(true);
+                  }}
+                  className="min-h-[44px] min-w-[44px] rounded-xl bg-gradient-to-b from-pink-500/80 to-rose-600/90 border border-amber-200/60 shadow-md flex items-center justify-center text-white active:scale-95"
+                  aria-label="Pause and exit menu"
                 >
-                  <ArrowLeft className="w-5 h-5" />
+                  <Pause className="w-5 h-5" />
                 </button>
 
                 <div className="flex-1 min-w-0 text-center">
@@ -590,7 +618,9 @@ export default function App() {
                 activeBooster={activeBooster}
                 movesLeft={movesLeft}
                 score={score}
-                isModalOpen={Boolean(victoryInfo) || Boolean(failureReason) || showSettings}
+                isModalOpen={
+                  Boolean(victoryInfo) || Boolean(failureReason) || showSettings || showPauseMenu
+                }
                 onConsumeMove={() => setMovesLeft((m) => Math.max(0, m - 1))}
                 onAddScore={(pts) => setScore((s) => s + pts)}
                 onConsumeBooster={handleConsumeBooster}
@@ -802,6 +832,26 @@ export default function App() {
               });
             }}
             onClose={() => setShowGiftPack(false)}
+          />
+        )}
+        {showPauseMenu && (
+          <PauseMenuModal
+            level={activeLevel}
+            movesLeft={movesLeft}
+            soundMuted={progress.soundMuted}
+            isLevelInProgress={!victoryInfo && movesLeft < activeLevel.moves}
+            onResume={() => {
+              sound.playButton();
+              setShowPauseMenu(false);
+            }}
+            onToggleSound={() => {
+              const nextMuted = !progress.soundMuted;
+              sound.setMuted(nextMuted);
+              if (!nextMuted) sound.playButton();
+              setProgress((p) => ({ ...p, soundMuted: nextMuted }));
+            }}
+            onExitToMap={() => handleExitLevelTo('map')}
+            onExitToHome={() => handleExitLevelTo('splash')}
           />
         )}
       </div>

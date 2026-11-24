@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  AlertTriangle,
   Check,
   ClipboardCheck,
   Copy,
@@ -7,7 +8,11 @@ import {
   Gem,
   Hammer,
   Heart,
+  Home,
   KeyRound,
+  Map,
+  Pause,
+  Play,
   RotateCcw,
   ShieldCheck,
   Shuffle,
@@ -702,6 +707,167 @@ export const SettingsShopModal: React.FC<SettingsShopModalProps> = ({
             Developed by Amir Lamay • Made In Egypt
           </p>
         </div>
+      </div>
+    </div>
+  );
+};
+
+interface PauseMenuModalProps {
+  level: LevelConfig;
+  movesLeft: number;
+  soundMuted: boolean;
+  isLevelInProgress: boolean;
+  onResume: () => void;
+  onToggleSound: () => void;
+  onExitToMap: () => void;
+  onExitToHome: () => void;
+}
+
+export const PauseMenuModal: React.FC<PauseMenuModalProps> = ({
+  level,
+  movesLeft,
+  soundMuted,
+  isLevelInProgress,
+  onResume,
+  onToggleSound,
+  onExitToMap,
+  onExitToHome,
+}) => {
+  const [confirmTarget, setConfirmTarget] = useState<'map' | 'home' | null>(null);
+
+  const handleRequestExit = (target: 'map' | 'home') => {
+    if (isLevelInProgress) {
+      setConfirmTarget(target);
+      return;
+    }
+    if (target === 'map') {
+      onExitToMap();
+    } else {
+      onExitToHome();
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+      <div className="w-full max-w-[380px] rounded-3xl bg-[#1C1036]/95 border border-white/20 p-5 shadow-2xl text-white">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-2.5">
+            <div className="w-10 h-10 rounded-xl bg-pink-500/25 border border-pink-400/40 text-pink-300 flex items-center justify-center">
+              <Pause className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="font-display text-xl font-extrabold leading-tight">Game Paused</h2>
+              <p className="text-xs text-purple-200/80">
+                Level {level.id} · {level.title}
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onResume}
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-white/10 active:scale-95"
+            aria-label="Resume game"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {confirmTarget ? (
+          <div className="mt-4 rounded-2xl bg-rose-500/15 border border-rose-400/45 p-4 text-center">
+            <div className="mx-auto w-11 h-11 rounded-2xl bg-rose-500/25 text-rose-300 flex items-center justify-center mb-2">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <h3 className="font-display text-lg font-extrabold text-white">
+              Leave Level in Progress?
+            </h3>
+            <p className="mt-1 text-xs text-purple-100/85 leading-relaxed">
+              Returning to the{' '}
+              <span className="font-bold text-amber-300">
+                {confirmTarget === 'map' ? 'Level Map' : 'Main Home Screen'}
+              </span>{' '}
+              now will cost <span className="font-bold text-rose-300">1 Life</span>.
+            </p>
+
+            <div className="mt-4 flex flex-col gap-2.5">
+              <button
+                type="button"
+                onClick={() => setConfirmTarget(null)}
+                className="w-full min-h-[48px] rounded-2xl bg-gradient-to-b from-emerald-400 to-emerald-600 py-2.5 font-display text-base font-extrabold text-slate-950 shadow-lg active:scale-[0.98]"
+              >
+                Keep Playing
+              </button>
+              <button
+                type="button"
+                onClick={confirmTarget === 'map' ? onExitToMap : onExitToHome}
+                className="w-full min-h-[46px] rounded-2xl bg-rose-600/90 border border-rose-300/40 py-2.5 font-display text-sm font-extrabold text-white active:scale-[0.98]"
+              >
+                Exit & Lose 1 Life
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div className="mt-4 rounded-2xl bg-white/8 border border-white/10 px-3.5 py-2.5 flex items-center justify-between text-xs">
+              <span className="text-purple-200/80 font-semibold tabular-nums">
+                Moves Remaining: <strong className="text-white">{movesLeft}</strong>
+              </span>
+              <span
+                className={`font-bold ${
+                  isLevelInProgress ? 'text-amber-300' : 'text-emerald-300'
+                }`}
+              >
+                {isLevelInProgress ? 'In Progress (-1 Life on exit)' : 'Safe to Exit'}
+              </span>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-2.5">
+              <button
+                type="button"
+                onClick={onResume}
+                className="w-full min-h-[50px] rounded-2xl bg-gradient-to-b from-emerald-400 to-emerald-600 py-3 flex items-center justify-center gap-2 font-display text-lg font-extrabold text-slate-950 shadow-lg active:scale-[0.98]"
+              >
+                <Play className="w-5 h-5 fill-slate-950" />
+                <span>Resume Level</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={onToggleSound}
+                className="w-full min-h-[46px] rounded-2xl bg-white/8 border border-white/15 px-4 py-2.5 flex items-center justify-between text-sm font-bold active:scale-[0.98]"
+              >
+                <span className="flex items-center gap-2">
+                  {soundMuted ? (
+                    <VolumeX className="w-4 h-4 text-rose-300" />
+                  ) : (
+                    <Volume2 className="w-4 h-4 text-emerald-300" />
+                  )}
+                  Sound Effects
+                </span>
+                <span className="text-xs text-purple-200">
+                  {soundMuted ? 'Muted' : 'On'}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleRequestExit('map')}
+                className="w-full min-h-[46px] rounded-2xl bg-white/10 border border-white/15 px-4 py-2.5 flex items-center justify-center gap-2 text-sm font-bold text-white active:scale-[0.98]"
+              >
+                <Map className="w-4 h-4 text-pink-300" />
+                <span>Back to Level Map</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleRequestExit('home')}
+                className="w-full min-h-[46px] rounded-2xl bg-gradient-to-r from-pink-500/20 to-amber-500/20 border border-amber-300/35 px-4 py-2.5 flex items-center justify-center gap-2 text-sm font-bold text-amber-200 active:scale-[0.98]"
+              >
+                <Home className="w-4 h-4 text-amber-300" />
+                <span>Main Home Screen</span>
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

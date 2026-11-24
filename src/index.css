@@ -158,3 +158,102 @@
   animation: confettiFall var(--dur, 2.2s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+@keyframes cloudDrift {
+  0% { transform: translate3d(-18px, 0, 0); }
+  50% { transform: translate3d(22px, -3px, 0); }
+  100% { transform: translate3d(-18px, 0, 0); }
+}
+
+.animate-cloud-drift {
+  animation: cloudDrift 16s ease-in-out infinite;
+}
+
+.animate-cloud-drift-slow {
+  animation: cloudDrift 22s ease-in-out infinite reverse;
+}
+
+@keyframes twinkleStar {
+  0%, 100% { opacity: 0.35; transform: scale(0.75) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+}
+
+.animate-twinkle-star {
+  animation: twinkleStar var(--twinkle-dur, 2.6s) ease-in-out infinite;
+}
+
+@keyframes sugarRise {
+  0% { opacity: 0; transform: translate3d(0, 14px, 0) scale(0.6); }
+  20% { opacity: 0.85; }
+  80% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate3d(var(--sx, 10px), -95px, 0) scale(1.1); }
+}
+
+.animate-sugar-rise {
+  animation: sugarRise var(--sugar-dur, 5.5s) linear infinite;
+}
+
+@keyframes lollipopSway {
+  0%, 100% { transform: rotate(-3.2deg); }
+  50% { transform: rotate(3.4deg); }
+}
+
+.animate-lollipop-sway {
+  animation: lollipopSway 4.8s ease-in-out infinite;
+}
+
+@keyframes lollipopSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-lollipop-spin-slow {
+  animation: lollipopSpin 12s linear infinite;
+}
+
+.animate-lollipop-spin-fast {
+  animation: lollipopSpin 0.85s linear infinite;
+}
+
+@keyframes lollipopBounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.2, 0.86); }
+  60% { transform: scale(0.92, 1.12); }
+  82% { transform: scale(1.06, 0.96); }
+  100% { transform: scale(1); }
+}
+
+.animate-lollipop-bounce {
+  animation: lollipopBounce 580ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes kissHeartFloat {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.35) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+    transform: translate3d(-24px, -16px, 0) scale(1.05) rotate(-10deg);
+  }
+  65% {
+    opacity: 0.95;
+    transform: translate3d(var(--hx, -135px), var(--hy, -85px), 0) scale(1.18) rotate(12deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--hx2, -210px), var(--hy2, -135px), 0) scale(0.7) rotate(-8deg);
+  }
+}
+
+.animate-kiss-heart {
+  animation: kissHeartFloat 2.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes princessBlink {
+  0%, 46%, 50%, 94%, 100% { transform: scaleY(1); }
+  48%, 96% { transform: scaleY(0.08); }
+}
+
+.animate-princess-blink {
+  animation: princessBlink 4.2s ease-in-out infinite;
+}
