@@ -1,12 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  Banknote,
-  Gem,
   Gift,
   Hammer,
   Heart,
   Home,
-  KeyRound,
   Pause,
   Play,
   Settings,
@@ -16,6 +13,11 @@ import {
   VolumeX,
 } from 'lucide-react';
 import { AdminGiftModal } from './components/AdminGiftModal';
+import {
+  GoldenDollarCoinIcon,
+  GoldenKeyIcon,
+  PinkGemIcon,
+} from './components/CandyCurrencyHUD';
 import { GameBoard } from './components/GameBoard';
 import { GiftPackModal } from './components/GiftPackModal';
 import { LevelMap } from './components/LevelMap';
@@ -26,6 +28,7 @@ import {
   OutOfMovesModal,
   PauseMenuModal,
   SettingsShopModal,
+  UnlockLevelModal,
   VictoryModal,
 } from './components/Modals';
 import { OfflineIndicator } from './components/OfflineIndicator';
@@ -65,6 +68,7 @@ export default function App() {
   const [screen, setScreen] = useState<'splash' | 'map' | 'game'>('splash');
   const [hasEnteredKingdom, setHasEnteredKingdom] = useState(false);
   const [selectedLevel, setSelectedLevel] = useState<LevelConfig | null>(null);
+  const [unlockLevelTarget, setUnlockLevelTarget] = useState<LevelConfig | null>(null);
   const [selectedGate, setSelectedGate] = useState<GateRequirement | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [showPauseMenu, setShowPauseMenu] = useState(false);
@@ -156,6 +160,13 @@ export default function App() {
     sound.unlock();
     sound.playButton();
 
+    const isPurchased = progress.purchasedLevels.includes(level.id);
+    if (isPurchased) {
+      setUseColorBombStart(false);
+      setSelectedLevel(level);
+      return;
+    }
+
     const blockingGate = KEY_GATES.find(
       (g) => level.id > g.afterLevel && !progress.unlockedGates.includes(g.afterLevel)
     );
@@ -165,11 +176,7 @@ export default function App() {
     }
 
     if (level.id > progress.unlockedLevel) {
-      if (blockingGate) {
-        setSelectedGate(blockingGate);
-      } else {
-        showToast(`Complete Level ${progress.unlockedLevel} first!`);
-      }
+      setUnlockLevelTarget(level);
       return;
     }
 
@@ -247,7 +254,10 @@ export default function App() {
       ...prev,
       gems: prev.gems + gemsEarned,
       keys: prev.keys + keyEarned,
-      unlockedLevel: Math.min(LEVELS.length, Math.max(prev.unlockedLevel, activeLevel.id + 1)),
+      unlockedLevel:
+        activeLevel.id <= prev.unlockedLevel
+          ? Math.min(LEVELS.length, Math.max(prev.unlockedLevel, activeLevel.id + 1))
+          : prev.unlockedLevel,
       levelStars: {
         ...prev.levelStars,
         [activeLevel.id]: Math.max(prev.levelStars[activeLevel.id] ?? 0, stars),
@@ -369,6 +379,17 @@ export default function App() {
       setScreen('map');
       return;
     }
+    const isPurchased = progress.purchasedLevels.includes(nextLvl.id);
+    if (isPurchased) {
+      startLevelPlay(nextLvl, false);
+      return;
+    }
+    if (nextLvl.id > progress.unlockedLevel) {
+      setVictoryInfo(null);
+      setScreen('map');
+      setUnlockLevelTarget(nextLvl);
+      return;
+    }
     const blockingGate = KEY_GATES.find(
       (g) => nextLvl.id > g.afterLevel && !progress.unlockedGates.includes(g.afterLevel)
     );
@@ -379,6 +400,21 @@ export default function App() {
       return;
     }
     startLevelPlay(nextLvl, false);
+  };
+
+  const handleUnlockLevelWithGems = (level: LevelConfig, cost: number) => {
+    if (progress.gems < cost) return;
+    sound.playSpecialCreate();
+    setProgress((prev) => ({
+      ...prev,
+      gems: prev.gems - cost,
+      purchasedLevels: prev.purchasedLevels.includes(level.id)
+        ? prev.purchasedLevels
+        : [...prev.purchasedLevels, level.id].sort((a, b) => a - b),
+    }));
+    setUnlockLevelTarget(null);
+    showToast(`Level ${level.id} Unlocked!`);
+    startLevelPlay(level, false);
   };
 
   const scorePct = Math.min(100, Math.round((score / activeLevel.targetScore) * 100));
@@ -404,13 +440,16 @@ export default function App() {
         {/* SPLASH SCREEN */}
         {screen === 'splash' && (
           <SplashScreen
-            unlockedLevel={progress.unlockedLevel}
+            progress={progress}
+            msUntilNextLife={msUntilNextLife}
             skipLoading={hasEnteredKingdom}
             onPlay={() => {
               setHasEnteredKingdom(true);
               setScreen('map');
             }}
             onOpenSettings={() => setShowSettings(true)}
+            onOpenGiftPack={() => setShowGiftPack(true)}
+            onOpenLives={() => setShowOutOfLives(true)}
           />
         )}
 
@@ -432,7 +471,7 @@ export default function App() {
                 <Home className="w-4 h-4 drop-shadow" />
               </button>
 
-              {/* HUD Resource Counters (wrapped safely on tiny screens) */}
+              {/* HUD Resource Counters with Candy Currency Style */}
               <div className="flex-1 flex items-center gap-1 flex-wrap min-w-0">
                 <button
                   type="button"
@@ -440,7 +479,7 @@ export default function App() {
                     sound.playButton();
                     if (progress.lives < MAX_LIVES) setShowOutOfLives(true);
                   }}
-                  className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
+                  className="min-h-[34px] rounded-full bg-gradient-to-b from-[#6B21A8]/90 to-[#4C1D95]/90 border border-pink-200/50 px-2 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
                 >
                   <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 shrink-0" />
                   <span className="font-display text-[11px] font-extrabold tabular-nums">
@@ -453,12 +492,19 @@ export default function App() {
                   )}
                 </button>
 
-                <div className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-emerald-300 shrink-0">
-                  <Banknote className="w-3.5 h-3.5 shrink-0" />
-                  <span className="font-display text-[11px] font-extrabold tabular-nums">
+                <button
+                  type="button"
+                  onClick={() => {
+                    sound.playButton();
+                    setShowGiftPack(true);
+                  }}
+                  className="min-h-[34px] rounded-full bg-gradient-to-b from-[#6B21A8]/90 to-[#4C1D95]/90 border border-pink-200/50 px-2 py-1 flex items-center gap-1 text-amber-200 active:scale-95 shrink-0"
+                >
+                  <GoldenDollarCoinIcon className="w-4 h-4 shrink-0" />
+                  <span className="font-display text-[11px] font-extrabold text-white tabular-nums">
                     {progress.cash.toLocaleString()}
                   </span>
-                </div>
+                </button>
 
                 <button
                   type="button"
@@ -466,17 +512,17 @@ export default function App() {
                     sound.playButton();
                     setShowSettings(true);
                   }}
-                  className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
+                  className="min-h-[34px] rounded-full bg-gradient-to-b from-[#6B21A8]/90 to-[#4C1D95]/90 border border-pink-200/50 px-2 py-1 flex items-center gap-1 text-white active:scale-95 shrink-0"
                 >
-                  <Gem className="w-3.5 h-3.5 text-cyan-300 shrink-0" />
+                  <PinkGemIcon className="w-4 h-4 shrink-0" />
                   <span className="font-display text-[11px] font-extrabold tabular-nums">
                     {progress.gems}
                   </span>
                 </button>
 
-                <div className="min-h-[36px] rounded-xl bg-white/8 border border-white/10 px-1.5 py-1 flex items-center gap-1 text-amber-300 shrink-0">
-                  <KeyRound className="w-3.5 h-3.5 shrink-0" />
-                  <span className="font-display text-[11px] font-extrabold tabular-nums">
+                <div className="min-h-[34px] rounded-full bg-gradient-to-b from-[#6B21A8]/90 to-[#4C1D95]/90 border border-pink-200/50 px-2 py-1 flex items-center gap-1 text-amber-300 shrink-0">
+                  <GoldenKeyIcon className="w-4 h-4 shrink-0" />
+                  <span className="font-display text-[11px] font-extrabold text-white tabular-nums">
                     {progress.keys}
                   </span>
                 </div>
@@ -727,6 +773,25 @@ export default function App() {
             }}
             onStart={() => startLevelPlay(selectedLevel, useColorBombStart)}
             onClose={() => setSelectedLevel(null)}
+          />
+        )}
+
+        {unlockLevelTarget && (
+          <UnlockLevelModal
+            level={unlockLevelTarget}
+            gems={progress.gems}
+            onUnlockAndPlay={handleUnlockLevelWithGems}
+            onOpenGiftPack={() => {
+              sound.playButton();
+              setUnlockLevelTarget(null);
+              setShowGiftPack(true);
+            }}
+            onOpenGemStore={() => {
+              sound.playButton();
+              setUnlockLevelTarget(null);
+              setShowSettings(true);
+            }}
+            onClose={() => setUnlockLevelTarget(null)}
           />
         )}
 

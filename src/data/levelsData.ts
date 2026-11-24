@@ -1,4 +1,4 @@
-import { GateRequirement, LevelConfig } from "../game/types";
+import { GateRequirement, LevelConfig, WorldChapter } from "../game/types";
 
 export const KEY_GATES_250: GateRequirement[] = [
   {
@@ -6700,6 +6700,1655 @@ export const LEVELS_250: LevelConfig[] = [
   }
 ];
 
+
+export const WORLD_CHAPTERS: WorldChapter[] = [
+  {
+    "id": 1,
+    "name": "Sugar Meadow",
+    "subtitle": "Sweet Beginnings",
+    "startLevel": 1,
+    "endLevel": 25,
+    "accent": "from-pink-500 to-rose-600"
+  },
+  {
+    "id": 2,
+    "name": "Lemonade Lagoon",
+    "subtitle": "Citrus Breezes",
+    "startLevel": 26,
+    "endLevel": 50,
+    "accent": "from-amber-400 to-orange-500"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate Mountains",
+    "subtitle": "Fudge Peaks",
+    "startLevel": 51,
+    "endLevel": 75,
+    "accent": "from-amber-700 to-rose-800"
+  },
+  {
+    "id": 4,
+    "name": "Peppermint Palace",
+    "subtitle": "Minty Frost",
+    "startLevel": 76,
+    "endLevel": 100,
+    "accent": "from-emerald-400 to-teal-600"
+  },
+  {
+    "id": 5,
+    "name": "Caramel Canyon",
+    "subtitle": "Golden Swirls",
+    "startLevel": 101,
+    "endLevel": 125,
+    "accent": "from-orange-500 to-amber-700"
+  },
+  {
+    "id": 6,
+    "name": "Berry Blossom Bay",
+    "subtitle": "Juicy Tides",
+    "startLevel": 126,
+    "endLevel": 150,
+    "accent": "from-fuchsia-500 to-purple-700"
+  },
+  {
+    "id": 7,
+    "name": "Bubblegum Bridge",
+    "subtitle": "Pastel Skies",
+    "startLevel": 151,
+    "endLevel": 175,
+    "accent": "from-pink-400 to-fuchsia-600"
+  },
+  {
+    "id": 8,
+    "name": "Honeycomb Hollow",
+    "subtitle": "Nectar Vaults",
+    "startLevel": 176,
+    "endLevel": 200,
+    "accent": "from-yellow-400 to-amber-600"
+  },
+  {
+    "id": 9,
+    "name": "Cotton Candy Clouds",
+    "subtitle": "Skyborne Sweets",
+    "startLevel": 201,
+    "endLevel": 225,
+    "accent": "from-sky-400 to-pink-500"
+  },
+  {
+    "id": 10,
+    "name": "Royal Crown Keep",
+    "subtitle": "Grand Finale Kingdom",
+    "startLevel": 226,
+    "endLevel": 250,
+    "accent": "from-violet-500 to-indigo-700"
+  },
+  {
+    "id": 11,
+    "name": "Prism Portal Valley",
+    "subtitle": "Twin Candy Realms",
+    "startLevel": 251,
+    "endLevel": 275,
+    "accent": "from-cyan-400 to-blue-600"
+  },
+  {
+    "id": 12,
+    "name": "Ribbon Belt Factory",
+    "subtitle": "Spinning Sugar Tracks",
+    "startLevel": 276,
+    "endLevel": 300,
+    "accent": "from-rose-500 to-amber-500"
+  },
+  {
+    "id": 13,
+    "name": "Sapphire Ice Citadel",
+    "subtitle": "Frozen Crystal Jelly",
+    "startLevel": 301,
+    "endLevel": 325,
+    "accent": "from-sky-500 to-indigo-700"
+  },
+  {
+    "id": 14,
+    "name": "Pistachio Pagoda",
+    "subtitle": "Emerald Gardens",
+    "startLevel": 326,
+    "endLevel": 350,
+    "accent": "from-emerald-500 to-lime-600"
+  },
+  {
+    "id": 15,
+    "name": "Truffle Mirage Dunes",
+    "subtitle": "Cocoa Sands",
+    "startLevel": 351,
+    "endLevel": 375,
+    "accent": "from-amber-600 to-stone-800"
+  },
+  {
+    "id": 16,
+    "name": "Starlight Soda Falls",
+    "subtitle": "Fizzy Cascades",
+    "startLevel": 376,
+    "endLevel": 400,
+    "accent": "from-indigo-500 to-cyan-500"
+  },
+  {
+    "id": 17,
+    "name": "Marshmallow Observatory",
+    "subtitle": "Floating Islands",
+    "startLevel": 401,
+    "endLevel": 425,
+    "accent": "from-purple-400 to-pink-600"
+  },
+  {
+    "id": 18,
+    "name": "Butterscotch Harbor",
+    "subtitle": "Toffee Docks",
+    "startLevel": 426,
+    "endLevel": 450,
+    "accent": "from-yellow-500 to-orange-600"
+  },
+  {
+    "id": 19,
+    "name": "Licorice Labyrinth",
+    "subtitle": "Dark Swirl Mazes",
+    "startLevel": 451,
+    "endLevel": 475,
+    "accent": "from-slate-600 to-purple-900"
+  },
+  {
+    "id": 20,
+    "name": "Strawberry Spire",
+    "subtitle": "Ruby Towers",
+    "startLevel": 476,
+    "endLevel": 500,
+    "accent": "from-rose-500 to-red-700"
+  },
+  {
+    "id": 21,
+    "name": "Warp Gate Archipelago",
+    "subtitle": "Portal Crossings",
+    "startLevel": 501,
+    "endLevel": 525,
+    "accent": "from-teal-400 to-blue-700"
+  },
+  {
+    "id": 22,
+    "name": "Velvet Macaron Plaza",
+    "subtitle": "Conveyor Courts",
+    "startLevel": 526,
+    "endLevel": 550,
+    "accent": "from-pink-500 to-violet-700"
+  },
+  {
+    "id": 23,
+    "name": "Cinnamon Volcano",
+    "subtitle": "Spiced Candy Bombs",
+    "startLevel": 551,
+    "endLevel": 575,
+    "accent": "from-red-500 to-amber-600"
+  },
+  {
+    "id": 24,
+    "name": "Glacier Mint Rift",
+    "subtitle": "Split Frost Caverns",
+    "startLevel": 576,
+    "endLevel": 600,
+    "accent": "from-cyan-300 to-teal-700"
+  },
+  {
+    "id": 25,
+    "name": "Golden Nougat Bastion",
+    "subtitle": "Vaulted Citadels",
+    "startLevel": 601,
+    "endLevel": 625,
+    "accent": "from-amber-400 to-yellow-700"
+  },
+  {
+    "id": 26,
+    "name": "Nebula Pop Galaxy",
+    "subtitle": "Cosmic Swirls",
+    "startLevel": 626,
+    "endLevel": 650,
+    "accent": "from-fuchsia-600 to-indigo-900"
+  },
+  {
+    "id": 27,
+    "name": "Aurora Jelly Temple",
+    "subtitle": "Glowing Shrines",
+    "startLevel": 651,
+    "endLevel": 675,
+    "accent": "from-emerald-400 to-cyan-700"
+  },
+  {
+    "id": 28,
+    "name": "Diamond Taffy Summit",
+    "subtitle": "Highland Bridges",
+    "startLevel": 676,
+    "endLevel": 700,
+    "accent": "from-sky-400 to-purple-700"
+  },
+  {
+    "id": 29,
+    "name": "Imperial Sundae Throne",
+    "subtitle": "Royal Gauntlet",
+    "startLevel": 701,
+    "endLevel": 725,
+    "accent": "from-rose-600 to-purple-900"
+  },
+  {
+    "id": 30,
+    "name": "Celestial Candy Crown",
+    "subtitle": "Eternal Kingdom Peak",
+    "startLevel": 726,
+    "endLevel": 750,
+    "accent": "from-amber-400 via-pink-500 to-purple-700"
+  }
+];
+
+export const KEY_GATES_750: GateRequirement[] = [
+  {
+    "afterLevel": 5,
+    "keysRequired": 1,
+    "gemSkipCost": 20,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 10,
+    "keysRequired": 2,
+    "gemSkipCost": 20,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 15,
+    "keysRequired": 3,
+    "gemSkipCost": 25,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 20,
+    "keysRequired": 4,
+    "gemSkipCost": 25,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 25,
+    "keysRequired": 5,
+    "gemSkipCost": 25,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 30,
+    "keysRequired": 6,
+    "gemSkipCost": 30,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 35,
+    "keysRequired": 7,
+    "gemSkipCost": 30,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 40,
+    "keysRequired": 8,
+    "gemSkipCost": 30,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 45,
+    "keysRequired": 9,
+    "gemSkipCost": 35,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 50,
+    "keysRequired": 10,
+    "gemSkipCost": 35,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 55,
+    "keysRequired": 11,
+    "gemSkipCost": 35,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 60,
+    "keysRequired": 12,
+    "gemSkipCost": 40,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 65,
+    "keysRequired": 13,
+    "gemSkipCost": 40,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 70,
+    "keysRequired": 14,
+    "gemSkipCost": 40,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 75,
+    "keysRequired": 15,
+    "gemSkipCost": 45,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 80,
+    "keysRequired": 16,
+    "gemSkipCost": 45,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 85,
+    "keysRequired": 17,
+    "gemSkipCost": 45,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 90,
+    "keysRequired": 18,
+    "gemSkipCost": 50,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 95,
+    "keysRequired": 19,
+    "gemSkipCost": 50,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 100,
+    "keysRequired": 20,
+    "gemSkipCost": 50,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 105,
+    "keysRequired": 21,
+    "gemSkipCost": 55,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 110,
+    "keysRequired": 22,
+    "gemSkipCost": 55,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 115,
+    "keysRequired": 23,
+    "gemSkipCost": 55,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 120,
+    "keysRequired": 24,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 125,
+    "keysRequired": 25,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 130,
+    "keysRequired": 26,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 135,
+    "keysRequired": 27,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 140,
+    "keysRequired": 28,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 145,
+    "keysRequired": 29,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 150,
+    "keysRequired": 30,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 155,
+    "keysRequired": 31,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 160,
+    "keysRequired": 32,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 165,
+    "keysRequired": 33,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 170,
+    "keysRequired": 34,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 175,
+    "keysRequired": 35,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 180,
+    "keysRequired": 36,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 185,
+    "keysRequired": 37,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 190,
+    "keysRequired": 38,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 195,
+    "keysRequired": 39,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 200,
+    "keysRequired": 40,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 205,
+    "keysRequired": 41,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 210,
+    "keysRequired": 42,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 215,
+    "keysRequired": 43,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 220,
+    "keysRequired": 44,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 225,
+    "keysRequired": 45,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 230,
+    "keysRequired": 46,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 235,
+    "keysRequired": 47,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 240,
+    "keysRequired": 48,
+    "gemSkipCost": 60,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 245,
+    "keysRequired": 49,
+    "gemSkipCost": 60,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 250,
+    "keysRequired": 50,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 255,
+    "keysRequired": 51,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 260,
+    "keysRequired": 52,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 265,
+    "keysRequired": 53,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 270,
+    "keysRequired": 54,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 275,
+    "keysRequired": 55,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 280,
+    "keysRequired": 56,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 285,
+    "keysRequired": 57,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 290,
+    "keysRequired": 58,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 295,
+    "keysRequired": 59,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 300,
+    "keysRequired": 60,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 305,
+    "keysRequired": 61,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 310,
+    "keysRequired": 62,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 315,
+    "keysRequired": 63,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 320,
+    "keysRequired": 64,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 325,
+    "keysRequired": 65,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 330,
+    "keysRequired": 66,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 335,
+    "keysRequired": 67,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 340,
+    "keysRequired": 68,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 345,
+    "keysRequired": 69,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 350,
+    "keysRequired": 70,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 355,
+    "keysRequired": 71,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 360,
+    "keysRequired": 72,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 365,
+    "keysRequired": 73,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 370,
+    "keysRequired": 74,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 375,
+    "keysRequired": 75,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 380,
+    "keysRequired": 76,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 385,
+    "keysRequired": 77,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 390,
+    "keysRequired": 78,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 395,
+    "keysRequired": 79,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 400,
+    "keysRequired": 80,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 405,
+    "keysRequired": 81,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 410,
+    "keysRequired": 82,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 415,
+    "keysRequired": 83,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 420,
+    "keysRequired": 84,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 425,
+    "keysRequired": 85,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 430,
+    "keysRequired": 86,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 435,
+    "keysRequired": 87,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 440,
+    "keysRequired": 88,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 445,
+    "keysRequired": 89,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 450,
+    "keysRequired": 90,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 455,
+    "keysRequired": 91,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 460,
+    "keysRequired": 92,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 465,
+    "keysRequired": 93,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 470,
+    "keysRequired": 94,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 475,
+    "keysRequired": 95,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 480,
+    "keysRequired": 96,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 485,
+    "keysRequired": 97,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 490,
+    "keysRequired": 98,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 495,
+    "keysRequired": 99,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 500,
+    "keysRequired": 100,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 505,
+    "keysRequired": 101,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 510,
+    "keysRequired": 102,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 515,
+    "keysRequired": 103,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 520,
+    "keysRequired": 104,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 525,
+    "keysRequired": 105,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 530,
+    "keysRequired": 106,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 535,
+    "keysRequired": 107,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 540,
+    "keysRequired": 108,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 545,
+    "keysRequired": 109,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 550,
+    "keysRequired": 110,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 555,
+    "keysRequired": 111,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 560,
+    "keysRequired": 112,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 565,
+    "keysRequired": 113,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 570,
+    "keysRequired": 114,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 575,
+    "keysRequired": 115,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 580,
+    "keysRequired": 116,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 585,
+    "keysRequired": 117,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 590,
+    "keysRequired": 118,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 595,
+    "keysRequired": 119,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 600,
+    "keysRequired": 120,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 605,
+    "keysRequired": 121,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 610,
+    "keysRequired": 122,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 615,
+    "keysRequired": 123,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 620,
+    "keysRequired": 124,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 625,
+    "keysRequired": 125,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 630,
+    "keysRequired": 126,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 635,
+    "keysRequired": 127,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 640,
+    "keysRequired": 128,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 645,
+    "keysRequired": 129,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 650,
+    "keysRequired": 130,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 655,
+    "keysRequired": 131,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 660,
+    "keysRequired": 132,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 665,
+    "keysRequired": 133,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 670,
+    "keysRequired": 134,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 675,
+    "keysRequired": 135,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 680,
+    "keysRequired": 136,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 685,
+    "keysRequired": 137,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 690,
+    "keysRequired": 138,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 695,
+    "keysRequired": 139,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 700,
+    "keysRequired": 140,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 705,
+    "keysRequired": 141,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 710,
+    "keysRequired": 142,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 715,
+    "keysRequired": 143,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 720,
+    "keysRequired": 144,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 725,
+    "keysRequired": 145,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 730,
+    "keysRequired": 146,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 735,
+    "keysRequired": 147,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  },
+  {
+    "afterLevel": 740,
+    "keysRequired": 148,
+    "gemSkipCost": 85,
+    "title": "Sugar Gate"
+  },
+  {
+    "afterLevel": 745,
+    "keysRequired": 149,
+    "gemSkipCost": 85,
+    "title": "Toffee Gate"
+  }
+];
+
+export const LEVELS_251_TO_750: LevelConfig[] = [
+  {"id":251,"title":"Aurora Cascade","objectiveType":"ingredients","moves":30,"targetScore":62395,"starThresholds":[62395,90473,121670],"ingredientCount":5,"blueprint":["###.....","##......","#L....L.","LH....HL","F......F",".F....F#","......##",".....###"],"signature":"###...../##....../#L....L./LH....HL/F......F/.F....F#/......##/.....###|ingredients|5|30|62395|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":252,"title":"Diamond Gallery","objectiveType":"score","moves":31,"targetScore":62540,"starThresholds":[62540,90683,121953],"blueprint":["....####",".S......","........","...##SBL","B..##...","........",".S......","####...."],"signature":"....####/.S....../......../...##SBL/B..##.../......../.S....../####....|score|0|31|62540|tp1|cv0","gemReward":35,"numColors":5,"worldId":11,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":253,"title":"Starlight Arch","objectiveType":"jelly","moves":24,"targetScore":62685,"starThresholds":[62685,90893,122236],"blueprint":["222##222","S.2##2.S","22....22",".L####L.","2.####.2","F.2..2.F","121##121","2.2##2.2"],"signature":"222##222/S.2##2.S/22....22/.L####L./2.####.2/F.2..2.F/121##121/2.2##2.2|jelly|0|24|62685|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":254,"title":"Bubblegum Crossing","objectiveType":"blockers","moves":25,"targetScore":62830,"starThresholds":[62830,91104,122519],"blueprint":["#......#","..S.F...",".......S","S....G.H","F.......",".......F",".....F..","#......#"],"signature":"#......#/..S.F.../.......S/S....G.H/F......./.......F/.....F../#......#|blockers|0|25|62830|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":255,"title":"Sugar Boss 255","objectiveType":"jelly","moves":30,"targetScore":66475,"starThresholds":[66475,96389,129626],"blueprint":["2.1111.2",".1.SS.1.",".2.22.2.","2######2","H######H","1F....F1","S.1..1.S","22....22"],"signature":"2.1111.2/.1.SS.1./.2.22.2./2######2/H######H/1F....F1/S.1..1.S/22....22|jelly|0|30|66475|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":80,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":256,"title":"Caramel Grotto","objectiveType":"score","moves":27,"targetScore":63120,"starThresholds":[63120,91524,123084],"blueprint":["##....##","##B.S.##",".S......","........","........","L.....SS","##....##","##....##"],"signature":"##....##/##B.S.##/.S....../......../......../L.....SS/##....##/##....##|score|0|27|63120|tp0|cv1","gemReward":35,"numColors":6,"worldId":11,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":257,"title":"Honey Terrace","objectiveType":"jelly","moves":28,"targetScore":63265,"starThresholds":[63265,91734,123367],"blueprint":["11.##.11","2F.22.F2",".GH22HG.","#H2222H#","#.1221.#","HL1..1LH","2......2","22.##.22"],"signature":"11.##.11/2F.22.F2/.GH22HG./#H2222H#/#.1221.#/HL1..1LH/2......2/22.##.22|jelly|0|28|63265|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":258,"title":"Glacier Harbor","objectiveType":"blockers","moves":29,"targetScore":63410,"starThresholds":[63410,91945,123650],"blueprint":["........","......S.","C.....S.","########","FC..S...",".G...S..","........","........"],"signature":"......../......S./C.....S./########/FC..S.../.G...S../......../........|blockers|0|29|63410|tp2|cv0","gemReward":35,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":259,"title":"Prism Citadel","objectiveType":"ingredients","moves":30,"targetScore":63555,"starThresholds":[63555,92155,123932],"ingredientCount":5,"blueprint":["........","........","F......F","........","L......L","LH....HL","........","........"],"signature":"......../......../F......F/......../L......L/LH....HL/......../........|ingredients|5|30|63555|tp0|cv1","gemReward":35,"numColors":5,"worldId":11,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":260,"title":"Frost Boss 260","objectiveType":"blockers","moves":30,"targetScore":67200,"starThresholds":[67200,97440,131040],"blueprint":["...##...","..C##...","...##...","..S##...","C..##F..",".GH##...","...##...","...##..."],"signature":"...##.../..C##.../...##.../..S##.../C..##F../.GH##.../...##.../...##...|blockers|0|30|67200|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":80,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":261,"title":"Golden Portal","objectiveType":"jelly","moves":24,"targetScore":63845,"starThresholds":[63845,92575,124498],"blueprint":[".2......","1......1","#.GGGG.#","##....##","##.11.##","#......#","1.1..1.1","...11..."],"signature":".2....../1......1/#.GGGG.#/##....##/##.11.##/#......#/1.1..1.1/...11...|jelly|0|24|63845|tp1|cv0","gemReward":35,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":262,"title":"Neon Plaza","objectiveType":"blockers","moves":25,"targetScore":63990,"starThresholds":[63990,92786,124781],"blueprint":["........","..#..#C.","..#SC#..","H.....G.","........","G.#..#..","G.#..#..","........"],"signature":"......../..#..#C./..#SC#../H.....G./......../G.#..#../G.#..#../........|blockers|0|25|63990|tp0|cv1","gemReward":35,"numColors":6,"worldId":11,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":263,"title":"Rainbow Courtyard","objectiveType":"ingredients","moves":26,"targetScore":64135,"starThresholds":[64135,92996,125063],"ingredientCount":5,"blueprint":["#..##..#","........","LF....FL",".L#..#L.","FG....GF","........","#......#","##....##"],"signature":"#..##..#/......../LF....FL/.L#..#L./FG....GF/......../#......#/##....##|ingredients|5|26|64135|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":264,"title":"Ruby Spire","objectiveType":"score","moves":27,"targetScore":64280,"starThresholds":[64280,93206,125346],"blueprint":["##....##","#.B....#",".S......","..BB..S.","......B.",".....L..","#.B....#","##....##"],"signature":"##....##/#.B....#/.S....../..BB..S./......B./.....L../#.B....#/##....##|score|0|27|64280|tp1|cv0","gemReward":35,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":265,"title":"Truffle Boss 265","objectiveType":"jelly","moves":30,"targetScore":67925,"starThresholds":[67925,98491,132454],"blueprint":["21222212","1.H..H.1",".122221.","12C##C21","GF1##1FG","1H.22.H1","..2222..","2..11..2"],"signature":"21222212/1.H..H.1/.122221./12C##C21/GF1##1FG/1H.22.H1/..2222../2..11..2|jelly|0|30|67925|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":80,"numColors":6,"worldId":11,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":266,"title":"Velvet Vault","objectiveType":"blockers","moves":29,"targetScore":64570,"starThresholds":[64570,93627,125912],"blueprint":["##....##","#.....C#","....C...","F..##..G","...##..S",".FF....H","#...S..#","##....##"],"signature":"##....##/#.....C#/....C.../F..##..G/...##..S/.FF....H/#...S..#/##....##|blockers|0|29|64570|tp0|cv0","gemReward":35,"numColors":5,"worldId":11},
+  {"id":267,"title":"Glazed Summit","objectiveType":"ingredients","moves":30,"targetScore":64715,"starThresholds":[64715,93837,126194],"ingredientCount":5,"blueprint":["###.....","##......","#H....H.",".F....F.","H......H",".......#","......##",".....###"],"signature":"###...../##....../#H....H./.F....F./H......H/.......#/......##/.....###|ingredients|5|30|64715|tp1|cv0","gemReward":35,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":268,"title":"Cosmic Lagoon","objectiveType":"score","moves":31,"targetScore":64860,"starThresholds":[64860,94047,126477],"blueprint":["....####","......S.","........","...##...","...##...","........","....S...","####...."],"signature":"....####/......S./......../...##.../...##.../......../....S.../####....|score|0|31|64860|tp0|cv1","gemReward":35,"numColors":6,"worldId":11,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":269,"title":"Royal Garden","objectiveType":"jelly","moves":24,"targetScore":65005,"starThresholds":[65005,94257,126760],"blueprint":["2..##..2",".HH##HH.","..2112..","2.####.2","2.####.2","22....22",".LG##GL.","222##222"],"signature":"2..##..2/.HH##HH./..2112../2.####.2/2.####.2/22....22/.LG##GL./222##222|jelly|0|24|65005|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":270,"title":"Crystal Boss 270","objectiveType":"blockers","moves":30,"targetScore":68650,"starThresholds":[68650,99543,133868],"blueprint":["#......#","....S...",".....G.C","...G.CC.","........","....G...",".C....F.","#......#"],"signature":"#......#/....S.../.....G.C/...G.CC./......../....G.../.C....F./#......#|blockers|0|30|68650|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":80,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":271,"title":"Mint Oasis","objectiveType":"ingredients","moves":26,"targetScore":65295,"starThresholds":[65295,94678,127325],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#H....H#","........","........"],"signature":"......../......../#......#/##....##/##....##/#H....H#/......../........|ingredients|5|26|65295|tp0|cv1","gemReward":35,"numColors":6,"worldId":11,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":272,"title":"Swirl Conveyor","objectiveType":"score","moves":27,"targetScore":65440,"starThresholds":[65440,94888,127608],"blueprint":["##....##","##....##","...S....",".....B.B",".......S","S.......","##S...##","##....##"],"signature":"##....##/##....##/...S..../.....B.B/.......S/S......./##S...##/##....##|score|0|27|65440|tp0|cv0","gemReward":35,"numColors":6,"worldId":11},
+  {"id":273,"title":"Sapphire Pagoda","objectiveType":"jelly","moves":28,"targetScore":65585,"starThresholds":[65585,95098,127891],"blueprint":["..1##1..","222..222",".1L11L1.","#2H..H2#","#H1221H#",".12CC21.","L..SS..L","2.2##2.2"],"signature":"..1##1../222..222/.1L11L1./#2H..H2#/#H1221H#/.12CC21./L..SS..L/2.2##2.2|jelly|0|28|65585|tp1|cv0","gemReward":35,"numColors":5,"worldId":11,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":274,"title":"Toffee Crown","objectiveType":"blockers","moves":29,"targetScore":65730,"starThresholds":[65730,95309,128174],"blueprint":["........","......F.","....F.CS","########","...C....","........",".H......","........"],"signature":"......../......F./....F.CS/########/...C..../......../.H....../........|blockers|0|29|65730|tp2|cv1","gemReward":35,"numColors":6,"worldId":11,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":275,"title":"Aurora Boss 275","objectiveType":"jelly","moves":30,"targetScore":69375,"starThresholds":[69375,100594,135281],"blueprint":[".1....1.","G2G..G2G","22222222","2......2","1......1","G.G22G.G","1......1","1......1"],"signature":".1....1./G2G..G2G/22222222/2......2/1......1/G.G22G.G/1......1/1......1|jelly|0|30|69375|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":83,"numColors":6,"worldId":11},
+  {"id":276,"title":"Prism Portal","objectiveType":"jelly","moves":24,"targetScore":66020,"starThresholds":[66020,95729,128739],"blueprint":["###...21","##......","#....1..","...F2.11","....21.2","....S.C#","2..1H1##","....1###"],"signature":"###...21/##....../#....1../...F2.11/....21.2/....S.C#/2..1H1##/....1###|jelly|0|24|66020|tp1|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":277,"title":"Frost Plaza","objectiveType":"blockers","moves":25,"targetScore":66165,"starThresholds":[66165,95939,129022],"blueprint":["....####",".CS..SC.",".CH..HC.",".H.##.H.","..C##C..","........","........","####...."],"signature":"....####/.CS..SC./.CH..HC./.H.##.H./..C##C../......../......../####....|blockers|0|25|66165|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":278,"title":"Golden Courtyard","objectiveType":"ingredients","moves":26,"targetScore":66310,"starThresholds":[66310,96150,129305],"ingredientCount":5,"blueprint":["...##...","...##...",".G.....L","L.####..","..####..","HL......","...##...","...##..."],"signature":"...##.../...##.../.G.....L/L.####../..####../HL....../...##.../...##...|ingredients|5|26|66310|tp0|cv0","gemReward":35,"numColors":6,"worldId":12},
+  {"id":279,"title":"Neon Spire","objectiveType":"score","moves":27,"targetScore":66455,"starThresholds":[66455,96360,129587],"blueprint":["#......#",".B.LL.B.","........","LB.....L","........","L......L","...LL...","#......#"],"signature":"#......#/.B.LL.B./......../LB.....L/......../L......L/...LL.../#......#|score|0|27|66455|tp1|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":280,"title":"Rainbow Boss 280","objectiveType":"blockers","moves":30,"targetScore":70100,"starThresholds":[70100,101645,136695],"blueprint":["........",".....C..","G.......",".######G",".######S","S...C...","H.......","........"],"signature":"......../.....C../G......./.######G/.######S/S...C.../H......./........|blockers|0|30|70100|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":83,"numColors":5,"worldId":12,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":281,"title":"Ruby Vault","objectiveType":"blockers","moves":29,"targetScore":66745,"starThresholds":[66745,96780,130153],"blueprint":["##....##","##....##","FS....SF",".G....G.","........","........","##.FF.##","##....##"],"signature":"##....##/##....##/FS....SF/.G....G./......../......../##.FF.##/##....##|blockers|0|29|66745|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":282,"title":"Truffle Summit","objectiveType":"ingredients","moves":30,"targetScore":66890,"starThresholds":[66890,96991,130436],"ingredientCount":5,"blueprint":["...##...","........","L.......","#.....L#","#......#","........","........","...##..."],"signature":"...##.../......../L......./#.....L#/#......#/......../......../...##...|ingredients|5|30|66890|tp1|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":283,"title":"Velvet Lagoon","objectiveType":"score","moves":31,"targetScore":67035,"starThresholds":[67035,97201,130718],"blueprint":["........",".L....L.",".S....S.","########","........","........",".L....L.","........"],"signature":"......../.L....L./.S....S./########/......../......../.L....L./........|score|0|31|67035|tp2|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":284,"title":"Glazed Garden","objectiveType":"jelly","moves":24,"targetScore":67180,"starThresholds":[67180,97411,131001],"blueprint":["...1.21.","2.1..L..","...2.2.2",".....12.","......1.","H22..F..","...S.12.","......2."],"signature":"...1.21./2.1..L../...2.2.2/.....12./......1./H22..F../...S.12./......2.|jelly|0|24|67180|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":285,"title":"Cosmic Boss 285","objectiveType":"jelly","moves":30,"targetScore":70825,"starThresholds":[70825,102696,138109],"blueprint":["2..##..2","..1##1..","2.1##1.2",".1.##.1.",".CC##...","22.##.22","S1H##H1S","1..##..1"],"signature":"2..##..2/..1##1../2.1##1.2/.1.##.1./.CC##.../22.##.22/S1H##H1S/1..##..1|jelly|0|30|70825|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":83,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":286,"title":"Royal Oasis","objectiveType":"ingredients","moves":26,"targetScore":67470,"starThresholds":[67470,97832,131567],"ingredientCount":5,"blueprint":["........","........","#L....L#","##....##","##....##","#......#","........","........"],"signature":"......../......../#L....L#/##....##/##....##/#......#/......../........|ingredients|5|26|67470|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":287,"title":"Crystal Conveyor","objectiveType":"score","moves":27,"targetScore":67615,"starThresholds":[67615,98042,131849],"blueprint":["........",".B#..#B.","..#..#..",".L....L.","........","..#..#..","B.#..#.B","........"],"signature":"......../.B#..#B./..#..#../.L....L./......../..#..#../B.#..#.B/........|score|0|27|67615|tp0|cv1","gemReward":35,"numColors":5,"worldId":12,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":288,"title":"Mint Pagoda","objectiveType":"jelly","moves":28,"targetScore":67760,"starThresholds":[67760,98252,132132],"blueprint":["#2.##..#",".2.1..2.","1.....22","H.#1.#2.","......H.","2.G..2..","#1.2...#","##....##"],"signature":"#2.##..#/.2.1..2./1.....22/H.#1.#2./......H./2.G..2../#1.2...#/##....##|jelly|0|28|67760|tp1|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":289,"title":"Swirl Crown","objectiveType":"blockers","moves":29,"targetScore":67905,"starThresholds":[67905,98462,132415],"blueprint":["##....##","#F....F#","SS....SS","G......G",".G....G.",".S....S.","#......#","##....##"],"signature":"##....##/#F....F#/SS....SS/G......G/.G....G./.S....S./#......#/##....##|blockers|0|29|67905|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":290,"title":"Sapphire Boss 290","objectiveType":"blockers","moves":30,"targetScore":71550,"starThresholds":[71550,103748,139523],"blueprint":["........","......GH","........","...##...","...##.F.","...H....","......CG","........"],"signature":"......../......GH/......../...##.../...##.F./...H..../......CG/........|blockers|0|30|71550|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":83,"numColors":6,"worldId":12,"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":291,"title":"Toffee Gallery","objectiveType":"score","moves":31,"targetScore":68195,"starThresholds":[68195,98883,132980],"blueprint":["##....##","#.BSSB.#","...SS...","...##...","S.B##..S","BS.....B","#......#","##....##"],"signature":"##....##/#.BSSB.#/...SS.../...##.../S.B##..S/BS.....B/#......#/##....##|score|0|31|68195|tp1|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":292,"title":"Aurora Arch","objectiveType":"jelly","moves":24,"targetScore":68340,"starThresholds":[68340,99093,133263],"blueprint":["###.22..","##...2.2","#..2....",".....2.2","...1....",".C..2.2#",".C2...##","2...1###"],"signature":"###.22../##...2.2/#..2..../.....2.2/...1..../.C..2.2#/.C2...##/2...1###|jelly|0|24|68340|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":293,"title":"Diamond Crossing","objectiveType":"blockers","moves":25,"targetScore":68485,"starThresholds":[68485,99303,133546],"blueprint":["....####","C......C","S......S","F..##..F",".SH##HS.","........","..H..H..","####...."],"signature":"....####/C......C/S......S/F..##..F/.SH##HS./......../..H..H../####....|blockers|0|25|68485|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":294,"title":"Starlight Sanctum","objectiveType":"ingredients","moves":26,"targetScore":68630,"starThresholds":[68630,99514,133829],"ingredientCount":5,"blueprint":["...##...","...##...","......FH","..####HG","G.####..","......G.","...##...","...##..."],"signature":"...##.../...##.../......FH/..####HG/G.####../......G./...##.../...##...|ingredients|5|26|68630|tp1|cv0","gemReward":35,"numColors":5,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":295,"title":"Bubblegum Boss 295","objectiveType":"jelly","moves":30,"targetScore":72275,"starThresholds":[72275,104799,140936],"blueprint":["#1.11.1#",".2....2.",".S....S.",".22..22.","1.F22F.1",".1.22.1.","H2....2H","#2.11.2#"],"signature":"#1.11.1#/.2....2./.S....S./.22..22./1.F22F.1/.1.22.1./H2....2H/#2.11.2#|jelly|0|30|72275|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":83,"numColors":6,"worldId":12,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":296,"title":"Sugar Terrace","objectiveType":"jelly","moves":28,"targetScore":68920,"starThresholds":[68920,99934,134394],"blueprint":["..11...1","..2....F","L2....LL","1######.",".######.","......2.",".2..1.1.",".1.11..."],"signature":"..11...1/..2....F/L2....LL/1######./.######./......2./.2..1.1./.1.11...|jelly|0|28|68920|tp2|cv0","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":297,"title":"Caramel Harbor","objectiveType":"blockers","moves":29,"targetScore":69065,"starThresholds":[69065,100144,134677],"blueprint":["##....##","##FFFF##","GF.....G","..F.....","..F.....","S..HH..S","##.SS.##","##....##"],"signature":"##....##/##FFFF##/GF.....G/..F...../..F...../S..HH..S/##.SS.##/##....##|blockers|0|29|69065|tp2|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":298,"title":"Honey Citadel","objectiveType":"ingredients","moves":30,"targetScore":69210,"starThresholds":[69210,100355,134960],"ingredientCount":5,"blueprint":["...##...","........","HF.....L","#......#","#......#",".L.....F","........","...##..."],"signature":"...##.../......../HF.....L/#......#/#......#/.L.....F/......../...##...|ingredients|5|30|69210|tp0|cv1","gemReward":35,"numColors":6,"worldId":12,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":299,"title":"Glacier Bastion","objectiveType":"score","moves":31,"targetScore":69355,"starThresholds":[69355,100565,135242],"blueprint":["........","S......S","........","########",".B....B.","........","BS....SB","........"],"signature":"......../S......S/......../########/.B....B./......../BS....SB/........|score|0|31|69355|tp2|cv1","gemReward":35,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":300,"title":"Prism Boss 300","objectiveType":"blockers","moves":30,"targetScore":73000,"starThresholds":[73000,105850,142350],"blueprint":["........","G.......","H.......","..F..S..","..G...H.",".......G",".....F..","........"],"signature":"......../G......./H......./..F..S../..G...H./.......G/.....F../........|blockers|0|30|73000|tp1|cv1","isBoss":true,"keyReward":1,"gemReward":86,"numColors":6,"worldId":12,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":301,"title":"Glazed Oasis","objectiveType":"ingredients","moves":26,"targetScore":69645,"starThresholds":[69645,100985,135808],"ingredientCount":5,"blueprint":["###.....","##......","#L....LH",".L....L.",".H....H.",".......#","......##",".....###"],"signature":"###...../##....../#L....LH/.L....L./.H....H./.......#/......##/.....###|ingredients|5|26|69645|tp0|cv1","gemReward":38,"numColors":5,"worldId":13,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":302,"title":"Cosmic Conveyor","objectiveType":"score","moves":27,"targetScore":69790,"starThresholds":[69790,101196,136091],"blueprint":["....####","....S...",".......S","...##...","...##...",".B......","S.......","####...."],"signature":"....####/....S.../.......S/...##.../...##.../.B....../S......./####....|score|0|27|69790|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":303,"title":"Royal Pagoda","objectiveType":"jelly","moves":28,"targetScore":69935,"starThresholds":[69935,101406,136373],"blueprint":["...##...",".H.##.H.","...11...",".2####2.","G.####.G","H.2112.H","2..##..2","...##.1."],"signature":"...##.../.H.##.H./...11.../.2####2./G.####.G/H.2112.H/2..##..2/...##.1.|jelly|0|28|69935|tp1|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":304,"title":"Crystal Crown","objectiveType":"blockers","moves":29,"targetScore":70080,"starThresholds":[70080,101616,136656],"blueprint":["#......#","HFFSSH..",".G......",".S......","........","........","....S.H.","#......#"],"signature":"#......#/HFFSSH../.G....../.S....../......../......../....S.H./#......#|blockers|0|29|70080|tp0|cv1","gemReward":38,"numColors":6,"worldId":13,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":305,"title":"Mint Boss 305","objectiveType":"jelly","moves":30,"targetScore":73725,"starThresholds":[73725,106901,143764],"blueprint":["........","L.H22H.L","........","C######C",".######.","...11...","212..212","...11..."],"signature":"......../L.H22H.L/......../C######C/.######./...11.../212..212/...11...|jelly|0|30|73725|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":86,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":306,"title":"Swirl Gallery","objectiveType":"score","moves":31,"targetScore":70370,"starThresholds":[70370,102037,137222],"blueprint":["##....##","##...B##","...S...L",".LB.S...",".......S","........","##....##","##....##"],"signature":"##....##/##...B##/...S...L/.LB.S.../.......S/......../##....##/##....##|score|0|31|70370|tp2|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":307,"title":"Sapphire Arch","objectiveType":"jelly","moves":24,"targetScore":70515,"starThresholds":[70515,102247,137504],"blueprint":[".1.##.1.",".1.22.1.","G2S..S2G","#12..21#","#S.11.S#",".1.22.1.",".S2..2S.","21.##.12"],"signature":".1.##.1./.1.22.1./G2S..S2G/#12..21#/#S.11.S#/.1.22.1./.S2..2S./21.##.12|jelly|0|24|70515|tp0|cv1","gemReward":38,"numColors":6,"worldId":13,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":308,"title":"Toffee Crossing","objectiveType":"blockers","moves":25,"targetScore":70660,"starThresholds":[70660,102457,137787],"blueprint":["........","....G.C.","........","########","...C....",".G.....F",".S..S...","........"],"signature":"......../....G.C./......../########/...C..../.G.....F/.S..S.../........|blockers|0|25|70660|tp2|cv0","gemReward":38,"numColors":5,"worldId":13,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":309,"title":"Aurora Sanctum","objectiveType":"ingredients","moves":26,"targetScore":70805,"starThresholds":[70805,102667,138070],"ingredientCount":5,"blueprint":["........","........","L......L",".L....L.",".L....L.","G......G","........","........"],"signature":"......../......../L......L/.L....L./.L....L./G......G/......../........|ingredients|5|26|70805|tp1|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":310,"title":"Diamond Boss 310","objectiveType":"blockers","moves":30,"targetScore":74450,"starThresholds":[74450,107953,145178],"blueprint":["...##...","..S##...","...##..S","...##...","S..##C..","...##..C","...##...","...##..."],"signature":"...##.../..S##.../...##..S/...##.../S..##C../...##..C/...##.../...##...|blockers|0|30|74450|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":86,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":311,"title":"Starlight Terrace","objectiveType":"jelly","moves":28,"targetScore":71095,"starThresholds":[71095,103088,138635],"blueprint":["212..212","L1.22.1L","#22..22#","##.22.##","##2222##","#......#","H.S11S.H","1.2..2.1"],"signature":"212..212/L1.22.1L/#22..22#/##.22.##/##2222##/#......#/H.S11S.H/1.2..2.1|jelly|0|28|71095|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":312,"title":"Bubblegum Harbor","objectiveType":"blockers","moves":29,"targetScore":71240,"starThresholds":[71240,103298,138918],"blueprint":["........","..#.C#S.",".C#..#..","...S.S..","........","..#C.#..","..#.S#..","........"],"signature":"......../..#.C#S./.C#..#../...S.S../......../..#C.#../..#.S#../........|blockers|0|29|71240|tp1|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":313,"title":"Sugar Citadel","objectiveType":"ingredients","moves":30,"targetScore":71385,"starThresholds":[71385,103508,139201],"ingredientCount":5,"blueprint":["#..##..#","........","F......F","H.#..#.H","L......L","........","#......#","##....##"],"signature":"#..##..#/......../F......F/H.#..#.H/L......L/......../#......#/##....##|ingredients|5|30|71385|tp0|cv1","gemReward":38,"numColors":6,"worldId":13,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":314,"title":"Caramel Bastion","objectiveType":"score","moves":31,"targetScore":71530,"starThresholds":[71530,103719,139484],"blueprint":["##....##","#......#","B.......","........",".......B",".B...B..","#......#","##....##"],"signature":"##....##/#......#/B......./......../.......B/.B...B../#......#/##....##|score|0|31|71530|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":315,"title":"Honey Boss 315","objectiveType":"jelly","moves":30,"targetScore":75175,"starThresholds":[75175,109004,146591],"blueprint":[".22..2..","...22...","G1L..L1G","F.L##L.F","12H##H21",".212212.","S2S..S2S","1.....21"],"signature":".22..2../...22.../G1L..L1G/F.L##L.F/12H##H21/.212212./S2S..S2S/1.....21|jelly|0|30|75175|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":86,"numColors":5,"worldId":13,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":316,"title":"Glacier Plaza","objectiveType":"blockers","moves":25,"targetScore":71820,"starThresholds":[71820,104139,140049],"blueprint":["##....##","#.F....#","........","...##.FH","...##..S","........","#.S.G..#","##....##"],"signature":"##....##/#.F....#/......../...##.FH/...##..S/......../#.S.G..#/##....##|blockers|0|25|71820|tp0|cv1","gemReward":38,"numColors":6,"worldId":13,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":317,"title":"Prism Courtyard","objectiveType":"ingredients","moves":26,"targetScore":71965,"starThresholds":[71965,104349,140332],"ingredientCount":5,"blueprint":["###.....","##......","#.......",".H....H.",".F....F.",".......#","......##",".....###"],"signature":"###...../##....../#......./.H....H./.F....F./.......#/......##/.....###|ingredients|5|26|71965|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":318,"title":"Frost Spire","objectiveType":"score","moves":27,"targetScore":72110,"starThresholds":[72110,104560,140615],"blueprint":["....####","........","........","...##...",".S.##...","...B.S..","....B...","####...."],"signature":"....####/......../......../...##.../.S.##.../...B.S../....B.../####....|score|0|27|72110|tp1|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":319,"title":"Golden Observatory","objectiveType":"jelly","moves":28,"targetScore":72255,"starThresholds":[72255,104770,140897],"blueprint":["121##121","..2##2..","C1.11.1C","..####..",".G####G.","11.FF.11","1.2##2.1","..2##2.."],"signature":"121##121/..2##2../C1.11.1C/..####../.G####G./11.FF.11/1.2##2.1/..2##2..|jelly|0|28|72255|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":320,"title":"Neon Boss 320","objectiveType":"blockers","moves":30,"targetScore":75900,"starThresholds":[75900,110055,148005],"blueprint":["#......#","SF...S..","....H...","......F.","........","..H.C...","....S...","#......#"],"signature":"#......#/SF...S../....H.../......F./......../..H.C.../....S.../#......#|blockers|0|30|75900|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":86,"numColors":6,"worldId":13},
+  {"id":321,"title":"Rainbow Summit","objectiveType":"ingredients","moves":30,"targetScore":72545,"starThresholds":[72545,105190,141463],"ingredientCount":5,"blueprint":["##....##","##....##","G......G","........","LH....HL","L......L","##....##","##....##"],"signature":"##....##/##....##/G......G/......../LH....HL/L......L/##....##/##....##|ingredients|5|30|72545|tp2|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":322,"title":"Ruby Lagoon","objectiveType":"score","moves":31,"targetScore":72690,"starThresholds":[72690,105401,141746],"blueprint":["##....##","##..B.##","L.......","........","........","........","##....##","##....##"],"signature":"##....##/##..B.##/L......./......../......../......../##....##/##....##|score|0|31|72690|tp0|cv1","gemReward":38,"numColors":5,"worldId":13,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":323,"title":"Truffle Garden","objectiveType":"jelly","moves":24,"targetScore":72835,"starThresholds":[72835,105611,142028],"blueprint":["21.##.12",".S....S.","112..211","#.F..F.#","#......#","222..222",".F2..2F.","1..##..1"],"signature":"21.##.12/.S....S./112..211/#.F..F.#/#......#/222..222/.F2..2F./1..##..1|jelly|0|24|72835|tp0|cv0","gemReward":38,"numColors":6,"worldId":13},
+  {"id":324,"title":"Velvet Bridge","objectiveType":"blockers","moves":25,"targetScore":72980,"starThresholds":[72980,105821,142311],"blueprint":["........",".G.C..S.","........","########",".......G",".....C..","........","........"],"signature":"......../.G.C..S./......../########/.......G/.....C../......../........|blockers|0|25|72980|tp2|cv0","gemReward":38,"numColors":6,"worldId":13,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":325,"title":"Glazed Boss 325","objectiveType":"jelly","moves":30,"targetScore":76625,"starThresholds":[76625,111106,149419],"blueprint":["12.11.21","...22...","G1....1G","FFF..FFF",".1.11.1.",".2....2.","...11...","22.11.22"],"signature":"12.11.21/...22.../G1....1G/FFF..FFF/.1.11.1./.2....2./...11.../22.11.22|jelly|0|30|76625|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":89,"numColors":6,"worldId":13,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":326,"title":"Aurora Terrace","objectiveType":"jelly","moves":28,"targetScore":73270,"starThresholds":[73270,106242,142877],"blueprint":["###...21","##.2....","#1.1..FG","....C.G.","..2.FL..","..S..11#","...F..##","2...2###"],"signature":"###...21/##.2..../#1.1..FG/....C.G./..2.FL../..S..11#/...F..##/2...2###|jelly|0|28|73270|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":327,"title":"Diamond Harbor","objectiveType":"blockers","moves":29,"targetScore":73415,"starThresholds":[73415,106452,143159],"blueprint":["....####",".....H..","........",".H.##.H.","SS.##.SS",".C.CC.C.",".G.CC.G.","####...."],"signature":"....####/.....H../......../.H.##.H./SS.##.SS/.C.CC.C./.G.CC.G./####....|blockers|0|29|73415|tp1|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":328,"title":"Starlight Citadel","objectiveType":"ingredients","moves":30,"targetScore":73560,"starThresholds":[73560,106662,143442],"ingredientCount":5,"blueprint":["...##...","...##...","........","L.####..","..####..",".L....H.","...##...","...##..."],"signature":"...##.../...##.../......../L.####../..####../.L....H./...##.../...##...|ingredients|5|30|73560|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":329,"title":"Bubblegum Bastion","objectiveType":"score","moves":31,"targetScore":73705,"starThresholds":[73705,106872,143725],"blueprint":["#......#","........","..S..S..","...SS...","........","B.L..L.B","..S..S..","#......#"],"signature":"#......#/......../..S..S../...SS.../......../B.L..L.B/..S..S../#......#|score|0|31|73705|tp0|cv0","gemReward":38,"numColors":5,"worldId":14},
+  {"id":330,"title":"Sugar Boss 330","objectiveType":"blockers","moves":30,"targetScore":77350,"starThresholds":[77350,112158,150833],"blueprint":["........","........","C...G...","F######.",".######.","........",".G.S....","........"],"signature":"......../......../C...G.../F######./.######./......../.G.S..../........|blockers|0|30|77350|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":89,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":331,"title":"Caramel Plaza","objectiveType":"blockers","moves":25,"targetScore":73995,"starThresholds":[73995,107293,144290],"blueprint":["##....##","##S..S##","...SS...","...CC...","G.G..G.G",".C....C.","##....##","##....##"],"signature":"##....##/##S..S##/...SS.../...CC.../G.G..G.G/.C....C./##....##/##....##|blockers|0|25|73995|tp0|cv1","gemReward":38,"numColors":6,"worldId":14,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":332,"title":"Honey Courtyard","objectiveType":"ingredients","moves":26,"targetScore":74140,"starThresholds":[74140,107503,144573],"ingredientCount":5,"blueprint":["...##...","........","F.......","#L....L#","#......#","F.......","........","...##..."],"signature":"...##.../......../F......./#L....L#/#......#/F......./......../...##...|ingredients|5|26|74140|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":333,"title":"Glacier Spire","objectiveType":"score","moves":27,"targetScore":74285,"starThresholds":[74285,107713,144856],"blueprint":["........","S......S","L......L","########","...SS...",".L.SS.L.","S......S","........"],"signature":"......../S......S/L......L/########/...SS.../.L.SS.L./S......S/........|score|0|27|74285|tp2|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":334,"title":"Prism Observatory","objectiveType":"jelly","moves":28,"targetScore":74430,"starThresholds":[74430,107924,145139],"blueprint":[".2...2..","..2.2H..","...2..H.",".1......","121..1.S","2...1...","22F..2H2","1......."],"signature":".2...2../..2.2H../...2..H./.1....../121..1.S/2...1.../22F..2H2/1.......|jelly|0|28|74430|tp0|cv1","gemReward":38,"numColors":6,"worldId":14,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":335,"title":"Frost Boss 335","objectiveType":"jelly","moves":30,"targetScore":78075,"starThresholds":[78075,113209,152246],"blueprint":["122##..1",".2.##.2.",".22##22.",".G2##2G.",".F.##.F.","...##...",".2H##H2.","2..##..2"],"signature":"122##..1/.2.##.2./.22##22./.G2##2G./.F.##.F./...##.../.2H##H2./2..##..2|jelly|0|30|78075|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":89,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":336,"title":"Golden Summit","objectiveType":"ingredients","moves":30,"targetScore":74720,"starThresholds":[74720,108344,145704],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#F.....#","........","........"],"signature":"......../......../#......#/##....##/##....##/#F.....#/......../........|ingredients|5|30|74720|tp1|cv0","gemReward":38,"numColors":5,"worldId":14,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":337,"title":"Neon Lagoon","objectiveType":"score","moves":31,"targetScore":74865,"starThresholds":[74865,108554,145987],"blueprint":["........","B.#..#.B","..#..#..","........","........","SL#..#LS","B.#..#.B","........"],"signature":"......../B.#..#.B/..#..#../......../......../SL#..#LS/B.#..#.B/........|score|0|31|74865|tp0|cv1","gemReward":38,"numColors":6,"worldId":14,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":338,"title":"Rainbow Garden","objectiveType":"jelly","moves":24,"targetScore":75010,"starThresholds":[75010,108765,146270],"blueprint":["#..##..#",".....F..","..C11..S","S.#..#1L","...21...",".1.1...1","#.1..2.#","##..1.##"],"signature":"#..##..#/.....F../..C11..S/S.#..#1L/...21.../.1.1...1/#.1..2.#/##..1.##|jelly|0|24|75010|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":339,"title":"Ruby Bridge","objectiveType":"blockers","moves":25,"targetScore":75155,"starThresholds":[75155,108975,146552],"blueprint":["##....##","#......#","........","H......H","........","..H..H..","#CS..SC#","##....##"],"signature":"##....##/#......#/......../H......H/......../..H..H../#CS..SC#/##....##|blockers|0|25|75155|tp1|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":340,"title":"Truffle Boss 340","objectiveType":"blockers","moves":30,"targetScore":78800,"starThresholds":[78800,114260,153660],"blueprint":["........","...S....","S.....G.",".C.##...","...##..C",".F......","F.F.....","........"],"signature":"......../...S..../S.....G./.C.##.../...##..C/.F....../F.F...../........|blockers|0|30|78800|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":89,"numColors":6,"worldId":14,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":341,"title":"Velvet Conveyor","objectiveType":"score","moves":27,"targetScore":75445,"starThresholds":[75445,109395,147118],"blueprint":["##....##","#.B..B.#","........","...##...","...##...","L......L","#B.BB.B#","##....##"],"signature":"##....##/#.B..B.#/......../...##.../...##.../L......L/#B.BB.B#/##....##|score|0|27|75445|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":342,"title":"Glazed Pagoda","objectiveType":"jelly","moves":28,"targetScore":75590,"starThresholds":[75590,109606,147401],"blueprint":["###...2.","##1.S1..","#..1....","1.22...2",".1....L.",".1..H..#","..2..2##","..1..###"],"signature":"###...2./##1.S1../#..1..../1.22...2/.1....L./.1..H..#/..2..2##/..1..###|jelly|0|28|75590|tp1|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":343,"title":"Cosmic Crown","objectiveType":"blockers","moves":29,"targetScore":75735,"starThresholds":[75735,109816,147683],"blueprint":["....####","SFSGGSFS","G......G","CG.##.GC",".F.##.F.","S......S",".C....C.","####...."],"signature":"....####/SFSGGSFS/G......G/CG.##.GC/.F.##.F./S......S/.C....C./####....|blockers|0|29|75735|tp0|cv1","gemReward":38,"numColors":5,"worldId":14,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":344,"title":"Royal Cascade","objectiveType":"ingredients","moves":30,"targetScore":75880,"starThresholds":[75880,110026,147966],"ingredientCount":5,"blueprint":["...##...","...##...","F.....G.","..####L.","..####L.","HL......","...##...","...##..."],"signature":"...##.../...##.../F.....G./..####L./..####L./HL....../...##.../...##...|ingredients|5|30|75880|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":345,"title":"Crystal Boss 345","objectiveType":"jelly","moves":30,"targetScore":79525,"starThresholds":[79525,115311,155074],"blueprint":["#..22..#","HH2..2HH","1.1221.1","F212212F","1LSFFSL1","1.1..1.1","2.L11L.2","#.....2#"],"signature":"#..22..#/HH2..2HH/1.1221.1/F212212F/1LSFFSL1/1.1..1.1/2.L11L.2/#.....2#|jelly|0|30|79525|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":89,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":346,"title":"Mint Arch","objectiveType":"jelly","moves":24,"targetScore":76170,"starThresholds":[76170,110447,148532],"blueprint":[".1......",".1.2.21.",".S..2..2",".######L",".######.","L......1","........","........"],"signature":".1....../.1.2.21./.S..2..2/.######L/.######./L......1/......../........|jelly|0|24|76170|tp2|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":347,"title":"Swirl Crossing","objectiveType":"blockers","moves":25,"targetScore":76315,"starThresholds":[76315,110657,148814],"blueprint":["##....##","##C..C##","..C..C..","...GG...","HFGHHGFH","........","##S..S##","##....##"],"signature":"##....##/##C..C##/..C..C../...GG.../HFGHHGFH/......../##S..S##/##....##|blockers|0|25|76315|tp0|cv0","gemReward":38,"numColors":6,"worldId":14},
+  {"id":348,"title":"Sapphire Sanctum","objectiveType":"ingredients","moves":26,"targetScore":76460,"starThresholds":[76460,110867,149097],"ingredientCount":5,"blueprint":["...##...","........","G.......","#L.....#","#L....G#",".L......","........","...##..."],"signature":"...##.../......../G......./#L.....#/#L....G#/.L....../......../...##...|ingredients|5|26|76460|tp1|cv0","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":349,"title":"Toffee Grotto","objectiveType":"score","moves":27,"targetScore":76605,"starThresholds":[76605,111077,149380],"blueprint":["........","..BSSB..","B......B","########","B......B","........","........","........"],"signature":"......../..BSSB../B......B/########/B......B/......../......../........|score|0|27|76605|tp2|cv1","gemReward":38,"numColors":6,"worldId":14,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":350,"title":"Aurora Boss 350","objectiveType":"blockers","moves":30,"targetScore":80250,"starThresholds":[80250,116363,156488],"blueprint":["........",".C.I....",".F......","..S.....","..G.F..S","...H....",".....SH.","........"],"signature":"......../.C.I..../.F....../..S...../..G.F..S/...H..../.....SH./........|blockers|0|30|80250|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":92,"numColors":5,"worldId":14},
+  {"id":351,"title":"Prism Summit","objectiveType":"ingredients","moves":30,"targetScore":76895,"starThresholds":[76895,111498,149945],"ingredientCount":5,"blueprint":["###.....","##......","#I....I.","F......F","I......I","LI....I#","......##",".....###"],"signature":"###...../##....../#I....I./F......F/I......I/LI....I#/......##/.....###|ingredients|5|30|76895|tp1|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":352,"title":"Frost Lagoon","objectiveType":"score","moves":31,"targetScore":77040,"starThresholds":[77040,111708,150228],"blueprint":["....####","L.......","........","SS.##...","...##...","S.......","..B.....","####...."],"signature":"....####/L......./......../SS.##.../...##.../S......./..B...../####....|score|0|31|77040|tp0|cv1","gemReward":41,"numColors":6,"worldId":15,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":353,"title":"Golden Garden","objectiveType":"jelly","moves":24,"targetScore":77185,"starThresholds":[77185,111918,150511],"blueprint":["1.1##1.1","1.1##1.1",".L1..1L.","L1####1L",".1####1.",".122221.","GS2##2SG","..2##2.."],"signature":"1.1##1.1/1.1##1.1/.L1..1L./L1####1L/.1####1./.122221./GS2##2SG/..2##2..|jelly|0|24|77185|tp0|cv0","gemReward":41,"numColors":6,"worldId":15},
+  {"id":354,"title":"Neon Bridge","objectiveType":"blockers","moves":25,"targetScore":77330,"starThresholds":[77330,112129,150794],"blueprint":["#......#",".C..SC..",".F.S....","........","I..C....",".F......",".......H","#......#"],"signature":"#......#/.C..SC../.F.S..../......../I..C..../.F....../.......H/#......#|blockers|0|25|77330|tp1|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":355,"title":"Rainbow Boss 355","objectiveType":"jelly","moves":30,"targetScore":80975,"starThresholds":[80975,117414,157901],"blueprint":["12122121","..L..L..","1C....C1","L######L",".######.","2..22..2","11S11S11",".2.22.2."],"signature":"12122121/..L..L../1C....C1/L######L/.######./2..22..2/11S11S11/.2.22.2.|jelly|0|30|80975|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":92,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":356,"title":"Ruby Conveyor","objectiveType":"score","moves":27,"targetScore":77620,"starThresholds":[77620,112549,151359],"blueprint":["##....##","##S...##","....B...","L..S....","........","LB......","##....##","##....##"],"signature":"##....##/##S...##/....B.../L..S..../......../LB....../##....##/##....##|score|0|27|77620|tp0|cv0","gemReward":41,"numColors":6,"worldId":15},
+  {"id":357,"title":"Truffle Pagoda","objectiveType":"jelly","moves":28,"targetScore":77765,"starThresholds":[77765,112759,151642],"blueprint":["212##2.2","F.1..1.F",".2C..C2.","#2S..S2#","#1H22H1#","11.11.11","........","..2##2.."],"signature":"212##2.2/F.1..1.F/.2C..C2./#2S..S2#/#1H22H1#/11.11.11/......../..2##2..|jelly|0|28|77765|tp1|cv0","gemReward":41,"numColors":5,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":358,"title":"Velvet Crown","objectiveType":"blockers","moves":29,"targetScore":77910,"starThresholds":[77910,112970,151925],"blueprint":["........","........",".H......","########",".......C","........",".......S","........"],"signature":"......../......../.H....../########/.......C/......../.......S/........|blockers|0|29|77910|tp2|cv1","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":359,"title":"Glazed Cascade","objectiveType":"ingredients","moves":30,"targetScore":78055,"starThresholds":[78055,113180,152207],"ingredientCount":5,"blueprint":["........","........","........","L......L","IH....HI","L......L","........","........"],"signature":"......../......../......../L......L/IH....HI/L......L/......../........|ingredients|5|30|78055|tp0|cv0","gemReward":41,"numColors":6,"worldId":15},
+  {"id":360,"title":"Cosmic Boss 360","objectiveType":"blockers","moves":30,"targetScore":81700,"starThresholds":[81700,118465,159315],"blueprint":["...##...","...##...","...##.I.",".I.##...","..G##..C","...##S..","..I##..F","...##..."],"signature":"...##.../...##.../...##.I./.I.##.../..G##..C/...##S../..I##..F/...##...|blockers|0|30|81700|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":92,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":361,"title":"Royal Arch","objectiveType":"jelly","moves":24,"targetScore":78345,"starThresholds":[78345,113600,152773],"blueprint":["..2..2..","21C11C12","#L.GG.L#","##L..L##","##.22.##","#......#","22....22",".211112."],"signature":"..2..2../21C11C12/#L.GG.L#/##L..L##/##.22.##/#......#/22....22/.211112.|jelly|0|24|78345|tp0|cv1","gemReward":41,"numColors":6,"worldId":15,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":362,"title":"Crystal Crossing","objectiveType":"blockers","moves":25,"targetScore":78490,"starThresholds":[78490,113811,153056],"blueprint":["........","..#..#S.","..#..#S.","...H....","H......S","..#.C#..","..#..#..","........"],"signature":"......../..#..#S./..#..#S./...H..../H......S/..#.C#../..#..#../........|blockers|0|25|78490|tp0|cv0","gemReward":41,"numColors":6,"worldId":15},
+  {"id":363,"title":"Mint Sanctum","objectiveType":"ingredients","moves":26,"targetScore":78635,"starThresholds":[78635,114021,153338],"ingredientCount":5,"blueprint":["#..##..#","........","LL....LL","L.#..#.L","LL....LL","L......L","#......#","##....##"],"signature":"#..##..#/......../LL....LL/L.#..#.L/LL....LL/L......L/#......#/##....##|ingredients|5|26|78635|tp1|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":364,"title":"Swirl Grotto","objectiveType":"score","moves":27,"targetScore":78780,"starThresholds":[78780,114231,153621],"blueprint":["##....##","#......#","........",".......S","........","........","#......#","##....##"],"signature":"##....##/#......#/......../.......S/......../......../#......#/##....##|score|0|27|78780|tp0|cv1","gemReward":41,"numColors":5,"worldId":15,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":365,"title":"Sapphire Boss 365","objectiveType":"jelly","moves":30,"targetScore":82425,"starThresholds":[82425,119516,160729],"blueprint":["1.1221.1","..2..2..",".1S11S1.","L21##12L",".LC##CL.","G1.22.1G","I1....1I","2......2"],"signature":"1.1221.1/..2..2../.1S11S1./L21##12L/.LC##CL./G1.22.1G/I1....1I/2......2|jelly|0|30|82425|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":92,"numColors":6,"worldId":15},
+  {"id":366,"title":"Toffee Harbor","objectiveType":"blockers","moves":29,"targetScore":79070,"starThresholds":[79070,114652,154187],"blueprint":["##....##","#...G.I#","C.S....I",".SG##..H","...##...","........","#..H.G.#","##....##"],"signature":"##....##/#...G.I#/C.S....I/.SG##..H/...##.../......../#..H.G.#/##....##|blockers|0|29|79070|tp1|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":367,"title":"Aurora Citadel","objectiveType":"ingredients","moves":30,"targetScore":79215,"starThresholds":[79215,114862,154469],"ingredientCount":5,"blueprint":["###.....","##......","#I....I.","........","HL....LH",".H....H#","......##",".....###"],"signature":"###...../##....../#I....I./......../HL....LH/.H....H#/......##/.....###|ingredients|5|30|79215|tp0|cv1","gemReward":41,"numColors":6,"worldId":15,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":368,"title":"Diamond Bastion","objectiveType":"score","moves":31,"targetScore":79360,"starThresholds":[79360,115072,154752],"blueprint":["....####","........","...S....","B..##B..","..S##...","..S.....","........","####...."],"signature":"....####/......../...S..../B..##B../..S##.../..S...../......../####....|score|0|31|79360|tp0|cv0","gemReward":41,"numColors":6,"worldId":15},
+  {"id":369,"title":"Starlight Portal","objectiveType":"jelly","moves":24,"targetScore":79505,"starThresholds":[79505,115282,155035],"blueprint":["...##...",".LL##LL.","1.H..H.1","I2####2I","S.####.S","2FG11GF2",".2.##.2.","..1##1.."],"signature":"...##.../.LL##LL./1.H..H.1/I2####2I/S.####.S/2FG11GF2/.2.##.2./..1##1..|jelly|0|24|79505|tp1|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":370,"title":"Bubblegum Boss 370","objectiveType":"blockers","moves":30,"targetScore":83150,"starThresholds":[83150,120568,162143],"blueprint":["#......#","H....S..","......S.",".......F","........","........",".C..I...","#......#"],"signature":"#......#/H....S../......S./.......F/......../......../.C..I.../#......#|blockers|0|30|83150|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":92,"numColors":6,"worldId":15,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":371,"title":"Sugar Courtyard","objectiveType":"ingredients","moves":26,"targetScore":79795,"starThresholds":[79795,115703,155600],"ingredientCount":5,"blueprint":["###.....","##......","#I.....L","I.......","........",".......#","......##",".....###"],"signature":"###...../##....../#I.....L/I......./......../.......#/......##/.....###|ingredients|5|26|79795|tp1|cv0","gemReward":41,"numColors":5,"worldId":15,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":372,"title":"Caramel Spire","objectiveType":"score","moves":27,"targetScore":79940,"starThresholds":[79940,115913,155883],"blueprint":["##....##","##.B..##",".......L","........","........","........","##.SSB##","##....##"],"signature":"##....##/##.B..##/.......L/......../......../......../##.SSB##/##....##|score|0|27|79940|tp2|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":373,"title":"Honey Observatory","objectiveType":"jelly","moves":28,"targetScore":80085,"starThresholds":[80085,116123,156166],"blueprint":["2.2##2.2",".1.22.1.","2GL..LG2","#.1..1.#","#12..21#","1......1","F..11..F","2.2##2.2"],"signature":"2.2##2.2/.1.22.1./2GL..LG2/#.1..1.#/#12..21#/1......1/F..11..F/2.2##2.2|jelly|0|28|80085|tp0|cv1","gemReward":41,"numColors":6,"worldId":15,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":374,"title":"Glacier Vault","objectiveType":"blockers","moves":29,"targetScore":80230,"starThresholds":[80230,116334,156449],"blueprint":["........","..I.C.GC",".......H","########","S.......","........","........","........"],"signature":"......../..I.C.GC/.......H/########/S......./......../......../........|blockers|0|29|80230|tp2|cv0","gemReward":41,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":375,"title":"Prism Boss 375","objectiveType":"jelly","moves":30,"targetScore":83875,"starThresholds":[83875,121619,163556],"blueprint":[".1.22...",".2....2.","........","...22...","L.GCCG.L","G......G","H.1II1.H","1.2..211"],"signature":".1.22.../.2....2./......../...22.../L.GCCG.L/G......G/H.1II1.H/1.2..211|jelly|0|30|83875|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":95,"numColors":6,"worldId":15,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":376,"title":"Glazed Arch","objectiveType":"jelly","moves":24,"targetScore":80520,"starThresholds":[80520,116754,157014],"blueprint":["###1....","##......","#.2.2..C",".....1..","G.2C..G.","F.1...2#","2...1.##",".2.11###"],"signature":"###1..../##....../#.2.2..C/.....1../G.2C..G./F.1...2#/2...1.##/.2.11###|jelly|0|24|80520|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":377,"title":"Cosmic Crossing","objectiveType":"blockers","moves":25,"targetScore":80665,"starThresholds":[80665,116964,157297],"blueprint":["....####","...II...","..ISSI..","I..##..I","...##...","G.G..G.G","F......F","####...."],"signature":"....####/...II.../..ISSI../I..##..I/...##.../G.G..G.G/F......F/####....|blockers|0|25|80665|tp0|cv0","gemReward":41,"numColors":6,"worldId":16},
+  {"id":378,"title":"Royal Sanctum","objectiveType":"ingredients","moves":26,"targetScore":80810,"starThresholds":[80810,117175,157580],"ingredientCount":5,"blueprint":["...##...","...##...","......L.","..####H.","..####.L","......G.","...##...","...##..."],"signature":"...##.../...##.../......L./..####H./..####.L/......G./...##.../...##...|ingredients|5|26|80810|tp1|cv0","gemReward":41,"numColors":5,"worldId":16,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":379,"title":"Crystal Grotto","objectiveType":"score","moves":27,"targetScore":80955,"starThresholds":[80955,117385,157862],"blueprint":["#......#","........",".S....S.","...SS...","........","B......B","........","#......#"],"signature":"#......#/......../.S....S./...SS.../......../B......B/......../#......#|score|0|27|80955|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":380,"title":"Mint Boss 380","objectiveType":"blockers","moves":30,"targetScore":84600,"starThresholds":[84600,122670,164970],"blueprint":["........","....H.H.","........",".######.",".######G","H.......","....C...","........"],"signature":"......../....H.H./......../.######./.######G/H......./....C.../........|blockers|0|30|84600|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":95,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":381,"title":"Swirl Harbor","objectiveType":"blockers","moves":29,"targetScore":81245,"starThresholds":[81245,117805,158428],"blueprint":["##....##","##G..G##","C.F..F.C",".F....F.","........","SC....CS","##....##","##....##"],"signature":"##....##/##G..G##/C.F..F.C/.F....F./......../SC....CS/##....##/##....##|blockers|0|29|81245|tp2|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":382,"title":"Sapphire Citadel","objectiveType":"ingredients","moves":30,"targetScore":81390,"starThresholds":[81390,118016,158711],"ingredientCount":5,"blueprint":["...##...","........","........","#L.....#","#......#",".F......","........","...##..."],"signature":"...##.../......../......../#L.....#/#......#/.F....../......../...##...|ingredients|5|30|81390|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":383,"title":"Toffee Bastion","objectiveType":"score","moves":31,"targetScore":81535,"starThresholds":[81535,118226,158993],"blueprint":["........",".B....B.","........","########","...BB...","........","..BBBB..","........"],"signature":"......../.B....B./......../########/...BB.../......../..BBBB../........|score|0|31|81535|tp2|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":384,"title":"Aurora Portal","objectiveType":"jelly","moves":24,"targetScore":81680,"starThresholds":[81680,118436,159276],"blueprint":[".2.1.2..","2...1.22","........",".1.2.2..",".....G..",".2121.1.",".F......","...1..22"],"signature":".2.1.2../2...1.22/......../.1.2.2../.....G../.2121.1./.F....../...1..22|jelly|0|24|81680|tp1|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":385,"title":"Diamond Boss 385","objectiveType":"jelly","moves":30,"targetScore":85325,"starThresholds":[85325,123721,166384],"blueprint":[".12##...","2C1##1C2","22.##F22","S..##L.S","2..##.I2","...##...",".2C##C2.","...##..."],"signature":".12##.../2C1##1C2/22.##F22/S..##L.S/2..##.I2/...##.../.2C##C2./...##...|jelly|0|30|85325|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":95,"numColors":5,"worldId":16,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":386,"title":"Starlight Courtyard","objectiveType":"ingredients","moves":26,"targetScore":81970,"starThresholds":[81970,118857,159842],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#.....G#","........","........"],"signature":"......../......../#......#/##....##/##....##/#.....G#/......../........|ingredients|5|26|81970|tp0|cv0","gemReward":41,"numColors":6,"worldId":16},
+  {"id":387,"title":"Bubblegum Spire","objectiveType":"score","moves":27,"targetScore":82115,"starThresholds":[82115,119067,160124],"blueprint":["........","..#..#..","..#..#..","..S..S..","........",".B#..#B.",".S#..#S.","........"],"signature":"......../..#..#../..#..#../..S..S../......../.B#..#B./.S#..#S./........|score|0|27|82115|tp1|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":388,"title":"Sugar Observatory","objectiveType":"jelly","moves":28,"targetScore":82260,"starThresholds":[82260,119277,160407],"blueprint":["#..##2.#",".S...22.","..2.1.L.",".2#2.#.1","........","..F.1112","#1...2.#","##...2##"],"signature":"#..##2.#/.S...22./..2.1.L./.2#2.#.1/......../..F.1112/#1...2.#/##...2##|jelly|0|28|82260|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":389,"title":"Caramel Vault","objectiveType":"blockers","moves":29,"targetScore":82405,"starThresholds":[82405,119487,160690],"blueprint":["##....##","#......#",".F.II.F.","H.IHHI.H",".G....G.","..C..C..","#I....I#","##....##"],"signature":"##....##/#......#/.F.II.F./H.IHHI.H/.G....G./..C..C../#I....I#/##....##|blockers|0|29|82405|tp0|cv0","gemReward":41,"numColors":6,"worldId":16},
+  {"id":390,"title":"Honey Boss 390","objectiveType":"blockers","moves":30,"targetScore":86050,"starThresholds":[86050,124773,167798],"blueprint":["........","....G...",".SS....G","I..##...","..C##...","..G.....",".C......","........"],"signature":"......../....G.../.SS....G/I..##.../..C##.../..G...../.C....../........|blockers|0|30|86050|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":95,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":391,"title":"Glacier Lagoon","objectiveType":"score","moves":31,"targetScore":82695,"starThresholds":[82695,119908,161255],"blueprint":["##....##","#.S..S.#","..L..L..","...##...","...##...",".L....L.","#......#","##....##"],"signature":"##....##/#.S..S.#/..L..L../...##.../...##.../.L....L./#......#/##....##|score|0|31|82695|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":392,"title":"Prism Garden","objectiveType":"jelly","moves":24,"targetScore":82840,"starThresholds":[82840,120118,161538],"blueprint":["###...2.","##1.....","#.22...1",".1...2.2","12.2..L.",".2..2.C#","..2.2H##","2....###"],"signature":"###...2./##1...../#.22...1/.1...2.2/12.2..L./.2..2.C#/..2.2H##/2....###|jelly|0|24|82840|tp0|cv0","gemReward":41,"numColors":5,"worldId":16},
+  {"id":393,"title":"Frost Bridge","objectiveType":"blockers","moves":25,"targetScore":82985,"starThresholds":[82985,120328,161821],"blueprint":["....####","...GGI..","S.F..F.S",".C.##.C.","C.G##G.C","........","S......S","####...."],"signature":"....####/...GGI../S.F..F.S/.C.##.C./C.G##G.C/......../S......S/####....|blockers|0|25|82985|tp1|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":394,"title":"Golden Oasis","objectiveType":"ingredients","moves":26,"targetScore":83130,"starThresholds":[83130,120539,162104],"ingredientCount":5,"blueprint":["...##...","...##...","FL....FL","..####..","..####H.",".......H","...##...","...##..."],"signature":"...##.../...##.../FL....FL/..####../..####H./.......H/...##.../...##...|ingredients|5|26|83130|tp0|cv0","gemReward":41,"numColors":6,"worldId":16},
+  {"id":395,"title":"Neon Boss 395","objectiveType":"jelly","moves":30,"targetScore":86775,"starThresholds":[86775,125824,169211],"blueprint":["#..11..#","2L1..1L2",".22..22.",".2ILLI2.",".1....1.",".22HH22.","1.2222.1","#12..21#"],"signature":"#..11..#/2L1..1L2/.22..22./.2ILLI2./.1....1./.22HH22./1.2222.1/#12..21#|jelly|0|30|86775|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":95,"numColors":6,"worldId":16},
+  {"id":396,"title":"Rainbow Pagoda","objectiveType":"jelly","moves":28,"targetScore":83420,"starThresholds":[83420,120959,162669],"blueprint":["..1.....","1.12.1L1","...S..22",".######.",".######.","........","......11","....1.11"],"signature":"..1...../1.12.1L1/...S..22/.######./.######./......../......11/....1.11|jelly|0|28|83420|tp2|cv0","gemReward":41,"numColors":6,"worldId":16,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":397,"title":"Ruby Crown","objectiveType":"blockers","moves":29,"targetScore":83565,"starThresholds":[83565,121169,162952],"blueprint":["##....##","##.FF.##","I..GG..I","..S..S..","HII..IIH","........","##....##","##....##"],"signature":"##....##/##.FF.##/I..GG..I/..S..S../HII..IIH/......../##....##/##....##|blockers|0|29|83565|tp0|cv1","gemReward":41,"numColors":6,"worldId":16,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":398,"title":"Truffle Cascade","objectiveType":"ingredients","moves":30,"targetScore":83710,"starThresholds":[83710,121380,163235],"ingredientCount":5,"blueprint":["...##...","........",".......H","#L.....#","#.....G#","L.......","........","...##..."],"signature":"...##.../......../.......H/#L.....#/#.....G#/L......./......../...##...|ingredients|5|30|83710|tp0|cv0","gemReward":41,"numColors":6,"worldId":16},
+  {"id":399,"title":"Velvet Gallery","objectiveType":"score","moves":31,"targetScore":83855,"starThresholds":[83855,121590,163517],"blueprint":["........","B......B","........","########","S......S","........","B..SS..B","........"],"signature":"......../B......B/......../########/S......S/......../B..SS..B/........|score|0|31|83855|tp2|cv0","gemReward":41,"numColors":5,"worldId":16,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":400,"title":"Glazed Boss 400","objectiveType":"blockers","moves":30,"targetScore":87500,"starThresholds":[87500,126875,170625],"blueprint":["........","......C.","......I.","....C...","........",".......G",".I...C..","........"],"signature":"......../......C./......I./....C.../......../.......G/.I...C../........|blockers|0|30|87500|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":98,"numColors":6,"worldId":16,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":401,"title":"Aurora Courtyard","objectiveType":"ingredients","moves":26,"targetScore":84145,"starThresholds":[84145,122010,164083],"ingredientCount":5,"blueprint":["###.....","##......","#......L","L......L","LF....FL","F......#","......##",".....###"],"signature":"###...../##....../#......L/L......L/LF....FL/F......#/......##/.....###|ingredients|5|26|84145|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":402,"title":"Diamond Spire","objectiveType":"score","moves":27,"targetScore":84290,"starThresholds":[84290,122221,164366],"blueprint":["....####","...L....","....L.S.","..S##...","...##...","....B...","......S.","####...."],"signature":"....####/...L..../....L.S./..S##.../...##.../....B.../......S./####....|score|0|27|84290|tp1|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":403,"title":"Starlight Observatory","objectiveType":"jelly","moves":28,"targetScore":84435,"starThresholds":[84435,122431,164648],"blueprint":["...##...",".G.##.G.","211..112","L1####1L","C2####2C","2.2LL2.2","..2##2..","122##221"],"signature":"...##.../.G.##.G./211..112/L1####1L/C2####2C/2.2LL2.2/..2##2../122##221|jelly|0|28|84435|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":404,"title":"Bubblegum Vault","objectiveType":"blockers","moves":29,"targetScore":84580,"starThresholds":[84580,122641,164931],"blueprint":["#......#",".....F..","..C.....","........","..S....S","CC...H..","...HS..H","#......#"],"signature":"#......#/.....F../..C...../......../..S....S/CC...H../...HS..H/#......#|blockers|0|29|84580|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":405,"title":"Sugar Boss 405","objectiveType":"jelly","moves":30,"targetScore":88225,"starThresholds":[88225,127926,172039],"blueprint":[".112211.","H121121H","1......1","S######S",".######.","G1.11.1G","I.G11G.I","1.2..2.1"],"signature":".112211./H121121H/1......1/S######S/.######./G1.11.1G/I.G11G.I/1.2..2.1|jelly|0|30|88225|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":98,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":406,"title":"Caramel Lagoon","objectiveType":"score","moves":31,"targetScore":84870,"starThresholds":[84870,123062,165497],"blueprint":["##....##","##....##","B.....S.",".......B","...L...B","........","##....##","##....##"],"signature":"##....##/##....##/B.....S./.......B/...L...B/......../##....##/##....##|score|0|31|84870|tp0|cv1","gemReward":44,"numColors":5,"worldId":17,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":407,"title":"Honey Garden","objectiveType":"jelly","moves":24,"targetScore":85015,"starThresholds":[85015,123272,165779],"blueprint":["...##...","121..121","S......S","#.2..2.#","#.GCCG.#","212CC212","L..SS..L","...##..."],"signature":"...##.../121..121/S......S/#.2..2.#/#.GCCG.#/212CC212/L..SS..L/...##...|jelly|0|24|85015|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":408,"title":"Glacier Bridge","objectiveType":"blockers","moves":25,"targetScore":85160,"starThresholds":[85160,123482,166062],"blueprint":["........","S..G....","........","########","SH......",".....S.S","C.......","........"],"signature":"......../S..G..../......../########/SH....../.....S.S/C......./........|blockers|0|25|85160|tp2|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":409,"title":"Prism Oasis","objectiveType":"ingredients","moves":26,"targetScore":85305,"starThresholds":[85305,123692,166345],"ingredientCount":5,"blueprint":["........","........",".I....I.",".G....G.","L......L",".H....H.","........","........"],"signature":"......../......../.I....I./.G....G./L......L/.H....H./......../........|ingredients|5|26|85305|tp0|cv1","gemReward":44,"numColors":6,"worldId":17,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":410,"title":"Frost Boss 410","objectiveType":"blockers","moves":30,"targetScore":88950,"starThresholds":[88950,128978,173453],"blueprint":["...##...","...##S..","IC.##...",".S.##S.I","S..##...",".H.##.H.","...##C..","...##..."],"signature":"...##.../...##S../IC.##.../.S.##S.I/S..##.../.H.##.H./...##C../...##...|blockers|0|30|88950|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":98,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":411,"title":"Golden Pagoda","objectiveType":"jelly","moves":28,"targetScore":85595,"starThresholds":[85595,124113,166910],"blueprint":[".22..2..","1......1","#.I..I.#","##2112##","##2222##","#S.22.S#","FS....SF","2......2"],"signature":".22..2../1......1/#.I..I.#/##2112##/##2222##/#S.22.S#/FS....SF/2......2|jelly|0|28|85595|tp1|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":412,"title":"Neon Crown","objectiveType":"blockers","moves":29,"targetScore":85740,"starThresholds":[85740,124323,167193],"blueprint":["........","..#..#.F","..#C.#..","........","......G.","..#.S#..","..#S.#..","........"],"signature":"......../..#..#.F/..#C.#../......../......G./..#.S#../..#S.#../........|blockers|0|29|85740|tp0|cv1","gemReward":44,"numColors":6,"worldId":17,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":413,"title":"Rainbow Cascade","objectiveType":"ingredients","moves":30,"targetScore":85885,"starThresholds":[85885,124533,167476],"ingredientCount":5,"blueprint":["#..##..#","........","L......L","F.#..#.F","........","L......L","#......#","##....##"],"signature":"#..##..#/......../L......L/F.#..#.F/......../L......L/#......#/##....##|ingredients|5|30|85885|tp0|cv0","gemReward":44,"numColors":5,"worldId":17},
+  {"id":414,"title":"Ruby Gallery","objectiveType":"score","moves":31,"targetScore":86030,"starThresholds":[86030,124744,167759],"blueprint":["##....##","#B.B...#","L.......","B.......","........",".....BL.","#....SB#","##....##"],"signature":"##....##/#B.B...#/L......./B......./......../.....BL./#....SB#/##....##|score|0|31|86030|tp1|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":415,"title":"Truffle Boss 415","objectiveType":"jelly","moves":30,"targetScore":89675,"starThresholds":[89675,130029,174866],"blueprint":["........","GSL22LSG","1..11..1","2..##..2","C..##..C","11.22.11","11....11",".2....2."],"signature":"......../GSL22LSG/1..11..1/2..##..2/C..##..C/11.22.11/11....11/.2....2.|jelly|0|30|89675|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":98,"numColors":6,"worldId":17,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":416,"title":"Velvet Crossing","objectiveType":"blockers","moves":25,"targetScore":86320,"starThresholds":[86320,125164,168324],"blueprint":["##....##","#......#","F...F...","HIC##..H","..S##..G","......S.","#...SI.#","##....##"],"signature":"##....##/#......#/F...F.../HIC##..H/..S##..G/......S./#...SI.#/##....##|blockers|0|25|86320|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":417,"title":"Glazed Sanctum","objectiveType":"ingredients","moves":26,"targetScore":86465,"starThresholds":[86465,125374,168607],"ingredientCount":5,"blueprint":["###.....","##......","#......L",".I....I.","LL....LL","G......#","......##",".....###"],"signature":"###...../##....../#......L/.I....I./LL....LL/G......#/......##/.....###|ingredients|5|26|86465|tp1|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":418,"title":"Cosmic Grotto","objectiveType":"score","moves":27,"targetScore":86610,"starThresholds":[86610,125585,168890],"blueprint":["....####","B.......",".L......","...##..B","...##.B.",".......B","L.......","####...."],"signature":"....####/B......./.L....../...##..B/...##.B./.......B/L......./####....|score|0|27|86610|tp0|cv1","gemReward":44,"numColors":6,"worldId":17,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":419,"title":"Royal Terrace","objectiveType":"jelly","moves":28,"targetScore":86755,"starThresholds":[86755,125795,169172],"blueprint":["2..##..2","2.1##1.2","22C22C22","S2####2S",".2####2.",".SHLLHS.","G2.##.2G","..1##1.."],"signature":"2..##..2/2.1##1.2/22C22C22/S2####2S/.2####2./.SHLLHS./G2.##.2G/..1##1..|jelly|0|28|86755|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":420,"title":"Crystal Boss 420","objectiveType":"blockers","moves":30,"targetScore":90400,"starThresholds":[90400,131080,176280],"blueprint":["#......#",".....C..","........","........",".I.C...F","..F..SC.",".....S.S","#......#"],"signature":"#......#/.....C../......../......../.I.C...F/..F..SC./.....S.S/#......#|blockers|0|30|90400|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":98,"numColors":5,"worldId":17,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":421,"title":"Mint Citadel","objectiveType":"ingredients","moves":30,"targetScore":87045,"starThresholds":[87045,126215,169738],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#L....L#","........","........"],"signature":"......../......../#......#/##....##/##....##/#L....L#/......../........|ingredients|5|30|87045|tp0|cv1","gemReward":44,"numColors":6,"worldId":17,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":422,"title":"Swirl Bastion","objectiveType":"score","moves":31,"targetScore":87190,"starThresholds":[87190,126426,170021],"blueprint":["##....##","##...B##","......B.","...S....","........",".......S","##....##","##....##"],"signature":"##....##/##...B##/......B./...S..../......../.......S/##....##/##....##|score|0|31|87190|tp0|cv0","gemReward":44,"numColors":6,"worldId":17},
+  {"id":423,"title":"Sapphire Portal","objectiveType":"jelly","moves":24,"targetScore":87335,"starThresholds":[87335,126636,170303],"blueprint":["..2##2..",".1FLLF1.","L.I..I.L","#221122#","#.2222.#","122..221","11S..S11","...##.2."],"signature":"..2##2../.1FLLF1./L.I..I.L/#221122#/#.2222.#/122..221/11S..S11/...##.2.|jelly|0|24|87335|tp1|cv0","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":424,"title":"Toffee Plaza","objectiveType":"blockers","moves":25,"targetScore":87480,"starThresholds":[87480,126846,170586],"blueprint":["........","..SS...S","...F....","########",".I......","S......G",".G....G.","........"],"signature":"......../..SS...S/...F..../########/.I....../S......G/.G....G./........|blockers|0|25|87480|tp2|cv1","gemReward":44,"numColors":6,"worldId":17,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":425,"title":"Aurora Boss 425","objectiveType":"jelly","moves":30,"targetScore":91125,"starThresholds":[91125,132131,177694],"blueprint":["21.22.12","H.L11L.H",".112211.","1.1221.1","L2.FF.2L","I122221I",".C1SS1C.","..1111.."],"signature":"21.22.12/H.L11L.H/.112211./1.1221.1/L2.FF.2L/I122221I/.C1SS1C./..1111..|jelly|0|30|91125|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":101,"numColors":6,"worldId":17},
+  {"id":426,"title":"Prism Pagoda","objectiveType":"jelly","moves":28,"targetScore":87770,"starThresholds":[87770,127267,171152],"blueprint":["###.....","##..22..","#122..2.",".1.....1","2...H121","G..F1H.#","......##","2..2.###"],"signature":"###...../##..22../#122..2./.1.....1/2...H121/G..F1H.#/......##/2..2.###|jelly|0|28|87770|tp1|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":427,"title":"Frost Crown","objectiveType":"blockers","moves":29,"targetScore":87915,"starThresholds":[87915,127477,171434],"blueprint":["....####","..FFFF..","G......G","H..##..H",".S.##.S.","C......C",".G....G.","####...."],"signature":"....####/..FFFF../G......G/H..##..H/.S.##.S./C......C/.G....G./####....|blockers|0|29|87915|tp0|cv1","gemReward":44,"numColors":5,"worldId":18,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":428,"title":"Golden Cascade","objectiveType":"ingredients","moves":30,"targetScore":88060,"starThresholds":[88060,127687,171717],"ingredientCount":5,"blueprint":["...##...","...##...","F.......",".I####LF","..####.I",".I.....F","...##...","...##..."],"signature":"...##.../...##.../F......./.I####LF/..####.I/.I.....F/...##.../...##...|ingredients|5|30|88060|tp0|cv0","gemReward":44,"numColors":6,"worldId":18},
+  {"id":429,"title":"Neon Gallery","objectiveType":"score","moves":31,"targetScore":88205,"starThresholds":[88205,127897,172000],"blueprint":["#......#","...SS...","........","...LL...","S.BBBB.S","...SS...",".BL..LB.","#......#"],"signature":"#......#/...SS.../......../...LL.../S.BBBB.S/...SS.../.BL..LB./#......#|score|0|31|88205|tp1|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":430,"title":"Rainbow Boss 430","objectiveType":"blockers","moves":30,"targetScore":91850,"starThresholds":[91850,133183,179108],"blueprint":["........","..I.S...","........","F######.",".######.","....I...","........","........"],"signature":"......../..I.S.../......../F######./.######./....I.../......../........|blockers|0|30|91850|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":101,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":431,"title":"Ruby Crossing","objectiveType":"blockers","moves":25,"targetScore":88495,"starThresholds":[88495,128318,172565],"blueprint":["##....##","##.II.##","..SCCS..","FS....SF","I.C..C.I","..S..S..","##I..I##","##....##"],"signature":"##....##/##.II.##/..SCCS../FS....SF/I.C..C.I/..S..S../##I..I##/##....##|blockers|0|25|88495|tp0|cv0","gemReward":44,"numColors":6,"worldId":18},
+  {"id":432,"title":"Truffle Sanctum","objectiveType":"ingredients","moves":26,"targetScore":88640,"starThresholds":[88640,128528,172848],"ingredientCount":5,"blueprint":["...##...","........","......GH","#G.....#","#.....L#","H......H","........","...##..."],"signature":"...##.../......../......GH/#G.....#/#.....L#/H......H/......../...##...|ingredients|5|26|88640|tp1|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":433,"title":"Velvet Grotto","objectiveType":"score","moves":27,"targetScore":88785,"starThresholds":[88785,128738,173131],"blueprint":["........","...SS...",".S.BB.S.","########","L......L","B......B","........","........"],"signature":"......../...SS.../.S.BB.S./########/L......L/B......B/......../........|score|0|27|88785|tp2|cv1","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":434,"title":"Glazed Terrace","objectiveType":"jelly","moves":28,"targetScore":88930,"starThresholds":[88930,128949,173414],"blueprint":["........",".G2C.C.L","..2...1.","..2...11","..2.I.F.","..22.S22","1...1I..","2......2"],"signature":"......../.G2C.C.L/..2...1./..2...11/..2.I.F./..22.S22/1...1I../2......2|jelly|0|28|88930|tp0|cv0","gemReward":44,"numColors":5,"worldId":18},
+  {"id":435,"title":"Cosmic Boss 435","objectiveType":"jelly","moves":30,"targetScore":92575,"starThresholds":[92575,134234,180521],"blueprint":["2..##..2","G..##..G","1I2##2I1","2..##..2","F2.##.2F","H.1##1.H","1.1##1.1","2..##1.2"],"signature":"2..##..2/G..##..G/1I2##2I1/2..##..2/F2.##.2F/H.1##1.H/1.1##1.1/2..##1.2|jelly|0|30|92575|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":101,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":436,"title":"Royal Citadel","objectiveType":"ingredients","moves":30,"targetScore":89220,"starThresholds":[89220,129369,173979],"ingredientCount":5,"blueprint":["........","........","#I....H#","##....##","##....##","#......#","........","........"],"signature":"......../......../#I....H#/##....##/##....##/#......#/......../........|ingredients|5|30|89220|tp0|cv1","gemReward":44,"numColors":6,"worldId":18,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":437,"title":"Crystal Bastion","objectiveType":"score","moves":31,"targetScore":89365,"starThresholds":[89365,129579,174262],"blueprint":["........","..#SS#..","..#..#..",".SLLLLS.","B......B","B.#..#.B","..#..#..","........"],"signature":"......../..#SS#../..#..#../.SLLLLS./B......B/B.#..#.B/..#..#../........|score|0|31|89365|tp0|cv0","gemReward":44,"numColors":6,"worldId":18},
+  {"id":438,"title":"Mint Portal","objectiveType":"jelly","moves":24,"targetScore":89510,"starThresholds":[89510,129790,174545],"blueprint":["#1.##..#","....2...","...G..S.","..#21#1.","1...2L..",".H.222..","#.222..#","##....##"],"signature":"#1.##..#/....2.../...G..S./..#21#1./1...2L../.H.222../#.222..#/##....##|jelly|0|24|89510|tp1|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":439,"title":"Swirl Plaza","objectiveType":"blockers","moves":25,"targetScore":89655,"starThresholds":[89655,130000,174827],"blueprint":["##....##","#......#","........","...HH...",".SC..CS.","S......S","#......#","##....##"],"signature":"##....##/#......#/......../...HH.../.SC..CS./S......S/#......#/##....##|blockers|0|25|89655|tp0|cv1","gemReward":44,"numColors":6,"worldId":18,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":440,"title":"Sapphire Boss 440","objectiveType":"blockers","moves":30,"targetScore":93300,"starThresholds":[93300,135285,181935],"blueprint":["........","....I.I.","G..F.CH.","...##.G.","...##G..",".GC.H...",".C..G...","........"],"signature":"......../....I.I./G..F.CH./...##.G./...##G../.GC.H.../.C..G.../........|blockers|0|30|93300|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":101,"numColors":6,"worldId":18},
+  {"id":441,"title":"Toffee Spire","objectiveType":"score","moves":27,"targetScore":89945,"starThresholds":[89945,130420,175393],"blueprint":["##....##","#......#","........","...##...","SS.##.SS","........","#.LBBL.#","##....##"],"signature":"##....##/#......#/......../...##.../SS.##.SS/......../#.LBBL.#/##....##|score|0|27|89945|tp1|cv0","gemReward":44,"numColors":5,"worldId":18,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":442,"title":"Aurora Observatory","objectiveType":"jelly","moves":28,"targetScore":90090,"starThresholds":[90090,130631,175676],"blueprint":["###....2","##.C.C.1","#2.....2","2.......","2.......","...2..C#","I2.I..##",".2...###"],"signature":"###....2/##.C.C.1/#2.....2/2......./2......./...2..C#/I2.I..##/.2...###|jelly|0|28|90090|tp0|cv1","gemReward":44,"numColors":6,"worldId":18,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":443,"title":"Diamond Vault","objectiveType":"blockers","moves":29,"targetScore":90235,"starThresholds":[90235,130841,175958],"blueprint":["....####","C......C",".SCSSCS.",".SG##GS.","HG.##.GH","C.F..F.C","........","####...."],"signature":"....####/C......C/.SCSSCS./.SG##GS./HG.##.GH/C.F..F.C/......../####....|blockers|0|29|90235|tp0|cv0","gemReward":44,"numColors":6,"worldId":18},
+  {"id":444,"title":"Starlight Summit","objectiveType":"ingredients","moves":30,"targetScore":90380,"starThresholds":[90380,131051,176241],"ingredientCount":5,"blueprint":["...##...","...##...","......H.","LL####..",".H####I.","........","...##...","...##..."],"signature":"...##.../...##.../......H./LL####../.H####I./......../...##.../...##...|ingredients|5|30|90380|tp1|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":445,"title":"Bubblegum Boss 445","objectiveType":"jelly","moves":30,"targetScore":94025,"starThresholds":[94025,136336,183349],"blueprint":["#.2222.#",".22..22.","L......L","2G1..1G2","G22HH22G","..2222..",".L2..2L.","#.1..1.#"],"signature":"#.2222.#/.22..22./L......L/2G1..1G2/G22HH22G/..2222../.L2..2L./#.1..1.#|jelly|0|30|94025|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":101,"numColors":6,"worldId":18,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":446,"title":"Sugar Garden","objectiveType":"jelly","moves":24,"targetScore":90670,"starThresholds":[90670,131472,176807],"blueprint":["22...2..",".H1.2..2","...H..1.",".######G",".######.","...11...",".1......","......22"],"signature":"22...2../.H1.2..2/...H..1./.######G/.######./...11.../.1....../......22|jelly|0|24|90670|tp2|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":447,"title":"Caramel Bridge","objectiveType":"blockers","moves":25,"targetScore":90815,"starThresholds":[90815,131682,177089],"blueprint":["##....##","##.FF.##","........","FS.II.SF","..S..S..",".H....H.","##....##","##....##"],"signature":"##....##/##.FF.##/......../FS.II.SF/..S..S../.H....H./##....##/##....##|blockers|0|25|90815|tp2|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":448,"title":"Honey Oasis","objectiveType":"ingredients","moves":26,"targetScore":90960,"starThresholds":[90960,131892,177372],"ingredientCount":5,"blueprint":["...##...","........","LG......","#......#","#......#","L.......","........","...##..."],"signature":"...##.../......../LG....../#......#/#......#/L......./......../...##...|ingredients|5|26|90960|tp0|cv1","gemReward":44,"numColors":5,"worldId":18,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":449,"title":"Glacier Conveyor","objectiveType":"score","moves":27,"targetScore":91105,"starThresholds":[91105,132102,177655],"blueprint":["........","BBS..SBB",".L....L.","########","........",".L....L.","B..SS..B","........"],"signature":"......../BBS..SBB/.L....L./########/......../.L....L./B..SS..B/........|score|0|27|91105|tp2|cv0","gemReward":44,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":450,"title":"Prism Boss 450","objectiveType":"blockers","moves":30,"targetScore":94750,"starThresholds":[94750,137388,184763],"blueprint":["........",".S......",".G.....S","......F.","........",".HG.IFHS",".S......","........"],"signature":"......../.S....../.G.....S/......F./......../.HG.IFHS/.S....../........|blockers|0|30|94750|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":104,"numColors":6,"worldId":18,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":451,"title":"Glazed Citadel","objectiveType":"ingredients","moves":30,"targetScore":91395,"starThresholds":[91395,132523,178220],"ingredientCount":5,"blueprint":["###.....","##......","#L....L.","HI....IH","H......H","FF....F#","......##",".....###"],"signature":"###...../##....../#L....L./HI....IH/H......H/FF....F#/......##/.....###|ingredients|5|30|91395|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":452,"title":"Cosmic Bastion","objectiveType":"score","moves":31,"targetScore":91540,"starThresholds":[91540,132733,178503],"blueprint":["....####","..S.....","........","...##...","...##...","........","B....B.L","####...."],"signature":"....####/..S...../......../...##.../...##.../......../B....B.L/####....|score|0|31|91540|tp0|cv0","gemReward":47,"numColors":6,"worldId":19},
+  {"id":453,"title":"Royal Portal","objectiveType":"jelly","moves":24,"targetScore":91685,"starThresholds":[91685,132943,178786],"blueprint":["21.##..2","G..##..G","...CC...","..####..","1.####.1","1H....H1","...##...","2..##..2"],"signature":"21.##..2/G..##..G/...CC.../..####../1.####.1/1H....H1/...##.../2..##..2|jelly|0|24|91685|tp1|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":454,"title":"Crystal Plaza","objectiveType":"blockers","moves":25,"targetScore":91830,"starThresholds":[91830,133154,179069],"blueprint":["#......#","........","......F.","....I...","........","........","..ISG.I.","#......#"],"signature":"#......#/......../......F./....I.../......../......../..ISG.I./#......#|blockers|0|25|91830|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":455,"title":"Mint Boss 455","objectiveType":"jelly","moves":30,"targetScore":95475,"starThresholds":[95475,138439,186176],"blueprint":["22222222",".S....S.","2L.22.L2","L######L",".######.","LH.22.HL",".1....1.","1......1"],"signature":"22222222/.S....S./2L.22.L2/L######L/.######./LH.22.HL/.1....1./1......1|jelly|0|30|95475|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":104,"numColors":5,"worldId":19,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":456,"title":"Swirl Spire","objectiveType":"score","moves":27,"targetScore":92120,"starThresholds":[92120,133574,179634],"blueprint":["##....##","##....##",".......L","..S.....",".L..S...","........","##.B..##","##....##"],"signature":"##....##/##....##/.......L/..S...../.L..S.../......../##.B..##/##....##|score|0|27|92120|tp2|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":457,"title":"Sapphire Observatory","objectiveType":"jelly","moves":28,"targetScore":92265,"starThresholds":[92265,133784,179917],"blueprint":[".22##22.","2..22..2",".21II12.","#..II..#","#1L22L1#","2L1..1L2","2L....L2","222##222"],"signature":".22##22./2..22..2/.21II12./#..II..#/#1L22L1#/2L1..1L2/2L....L2/222##222|jelly|0|28|92265|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":458,"title":"Toffee Vault","objectiveType":"blockers","moves":29,"targetScore":92410,"starThresholds":[92410,133995,180200],"blueprint":["........","CHC....F","...S....","########","H.....IG","......C.","........","........"],"signature":"......../CHC....F/...S..../########/H.....IG/......C./......../........|blockers|0|29|92410|tp2|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":459,"title":"Aurora Summit","objectiveType":"ingredients","moves":30,"targetScore":92555,"starThresholds":[92555,134205,180482],"ingredientCount":5,"blueprint":["........","........","L......L","........","LH....HL","LL....LL","........","........"],"signature":"......../......../L......L/......../LH....HL/LL....LL/......../........|ingredients|5|30|92555|tp1|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":460,"title":"Diamond Boss 460","objectiveType":"blockers","moves":30,"targetScore":96200,"starThresholds":[96200,139490,187590],"blueprint":["...##...","S..##...","...##H..","...##...","F..##...","...##...","...##S..","...##..."],"signature":"...##.../S..##.../...##H../...##.../F..##.../...##.../...##S../...##...|blockers|0|30|96200|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":104,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":461,"title":"Starlight Garden","objectiveType":"jelly","moves":24,"targetScore":92845,"starThresholds":[92845,134625,181048],"blueprint":["122..221","2.1..1.2","#2.22.2#","##.CC.##","##1221##","#.2LL2.#",".221122.","222..222"],"signature":"122..221/2.1..1.2/#2.22.2#/##.CC.##/##1221##/#.2LL2.#/.221122./222..222|jelly|0|24|92845|tp0|cv0","gemReward":47,"numColors":6,"worldId":19},
+  {"id":462,"title":"Bubblegum Bridge","objectiveType":"blockers","moves":25,"targetScore":92990,"starThresholds":[92990,134836,181331],"blueprint":["........","..#H.#S.","..#F.#G.",".F...C..","....G..S","..#..#..","..#.I#..","........"],"signature":"......../..#H.#S./..#F.#G./.F...C../....G..S/..#..#../..#.I#../........|blockers|0|25|92990|tp1|cv0","gemReward":47,"numColors":5,"worldId":19,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":463,"title":"Sugar Oasis","objectiveType":"ingredients","moves":26,"targetScore":93135,"starThresholds":[93135,135046,181613],"ingredientCount":5,"blueprint":["#..##..#","........","H......H","LL#..#LL","F......F","........","#......#","##....##"],"signature":"#..##..#/......../H......H/LL#..#LL/F......F/......../#......#/##....##|ingredients|5|26|93135|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":464,"title":"Caramel Conveyor","objectiveType":"score","moves":27,"targetScore":93280,"starThresholds":[93280,135256,181896],"blueprint":["##....##","#S.....#","........",".......B",".....L..","........","#......#","##....##"],"signature":"##....##/#S.....#/......../.......B/.....L../......../#......#/##....##|score|0|27|93280|tp0|cv0","gemReward":47,"numColors":6,"worldId":19},
+  {"id":465,"title":"Honey Boss 465","objectiveType":"jelly","moves":30,"targetScore":96925,"starThresholds":[96925,140541,189004],"blueprint":["2......2","..G11G..","21.LL.12","I.1##1.I",".H.##.H.",".1....1.","22111122","........"],"signature":"2......2/..G11G../21.LL.12/I.1##1.I/.H.##.H./.1....1./22111122/........|jelly|0|30|96925|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":104,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":466,"title":"Glacier Crown","objectiveType":"blockers","moves":29,"targetScore":93570,"starThresholds":[93570,135677,182462],"blueprint":["##....##","#F....H#","......G.",".C.##...","...##...","GC......","#.FI...#","##....##"],"signature":"##....##/#F....H#/......G./.C.##.../...##.../GC....../#.FI...#/##....##|blockers|0|29|93570|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":467,"title":"Prism Cascade","objectiveType":"ingredients","moves":30,"targetScore":93715,"starThresholds":[93715,135887,182744],"ingredientCount":5,"blueprint":["###.....","##......","#.......","LH....HL","IG....GI",".L....L#","......##",".....###"],"signature":"###...../##....../#......./LH....HL/IG....GI/.L....L#/......##/.....###|ingredients|5|30|93715|tp0|cv0","gemReward":47,"numColors":6,"worldId":19},
+  {"id":468,"title":"Frost Gallery","objectiveType":"score","moves":31,"targetScore":93860,"starThresholds":[93860,136097,183027],"blueprint":["....####","...B....","....S...",".SS##...","...##...","......S.",".B......","####...."],"signature":"....####/...B..../....S.../.SS##.../...##.../......S./.B....../####....|score|0|31|93860|tp1|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":469,"title":"Golden Arch","objectiveType":"jelly","moves":24,"targetScore":94005,"starThresholds":[94005,136307,183310],"blueprint":[".21##12.","1.1##1.1","22122122","..####..",".S####S.","C......C",".S.##.S.","..2##2.."],"signature":".21##12./1.1##1.1/22122122/..####../.S####S./C......C/.S.##.S./..2##2..|jelly|0|24|94005|tp0|cv0","gemReward":47,"numColors":5,"worldId":19},
+  {"id":470,"title":"Neon Boss 470","objectiveType":"blockers","moves":30,"targetScore":97650,"starThresholds":[97650,141593,190418],"blueprint":["#......#",".......S","G.......",".F......","SH......","........","S.S.....","#......#"],"signature":"#......#/.......S/G......./.F....../SH....../......../S.S...../#......#|blockers|0|30|97650|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":104,"numColors":6,"worldId":19},
+  {"id":471,"title":"Rainbow Sanctum","objectiveType":"ingredients","moves":26,"targetScore":94295,"starThresholds":[94295,136728,183875],"ingredientCount":5,"blueprint":["##....##","##....##","L......L",".L....L.","........",".L....L.","##....##","##....##"],"signature":"##....##/##....##/L......L/.L....L./......../.L....L./##....##/##....##|ingredients|5|26|94295|tp2|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":472,"title":"Ruby Grotto","objectiveType":"score","moves":27,"targetScore":94440,"starThresholds":[94440,136938,184158],"blueprint":["##....##","##B...##",".L......","S.....B.","....L...","........","##....##","##....##"],"signature":"##....##/##B...##/.L....../S.....B./....L.../......../##....##/##....##|score|0|27|94440|tp0|cv1","gemReward":47,"numColors":6,"worldId":19,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":473,"title":"Truffle Terrace","objectiveType":"jelly","moves":28,"targetScore":94585,"starThresholds":[94585,137148,184441],"blueprint":["1..##..1",".212212.","LS2..2SL","#L....L#","#......#",".G2..2G.","F.2LL2.F","2.2##2.2"],"signature":"1..##..1/.212212./LS2..2SL/#L....L#/#......#/.G2..2G./F.2LL2.F/2.2##2.2|jelly|0|28|94585|tp0|cv0","gemReward":47,"numColors":6,"worldId":19},
+  {"id":474,"title":"Velvet Harbor","objectiveType":"blockers","moves":29,"targetScore":94730,"starThresholds":[94730,137359,184724],"blueprint":["........","..S.S...",".S.....F","########","....S.S.",".I......","...G.I..","........"],"signature":"......../..S.S.../.S.....F/########/....S.S./.I....../...G.I../........|blockers|0|29|94730|tp2|cv0","gemReward":47,"numColors":6,"worldId":19,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":475,"title":"Glazed Boss 475","objectiveType":"jelly","moves":30,"targetScore":98375,"starThresholds":[98375,142644,191831],"blueprint":[".1.11.1.",".2....2.",".2....2.",".LL22LL.",".2S..S2.",".12..21.","12....21","11.22.11"],"signature":".1.11.1./.2....2./.2....2./.LL22LL./.2S..S2./.12..21./12....21/11.22.11|jelly|0|30|98375|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":107,"numColors":6,"worldId":19,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":476,"title":"Aurora Garden","objectiveType":"jelly","moves":24,"targetScore":95020,"starThresholds":[95020,137779,185289],"blueprint":["###..2..","##....1I","#L22.2S.","22.1.F12",".....G2.","S.22...#",".212.2##",".....###"],"signature":"###..2../##....1I/#L22.2S./22.1.F12/.....G2./S.22...#/.212.2##/.....###|jelly|0|24|95020|tp0|cv0","gemReward":47,"numColors":5,"worldId":20},
+  {"id":477,"title":"Diamond Bridge","objectiveType":"blockers","moves":25,"targetScore":95165,"starThresholds":[95165,137989,185572],"blueprint":["....####","H......H","G..HH..G","...##...","S.G##G.S","........","...IIF..","####...."],"signature":"....####/H......H/G..HH..G/...##.../S.G##G.S/......../...IIF../####....|blockers|0|25|95165|tp1|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":478,"title":"Starlight Oasis","objectiveType":"ingredients","moves":26,"targetScore":95310,"starThresholds":[95310,138200,185855],"ingredientCount":5,"blueprint":["...##...","...##...","........","..####.L",".H####..","LL......","...##...","...##..."],"signature":"...##.../...##.../......../..####.L/.H####../LL....../...##.../...##...|ingredients|5|26|95310|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":479,"title":"Bubblegum Conveyor","objectiveType":"score","moves":27,"targetScore":95455,"starThresholds":[95455,138410,186137],"blueprint":["#......#",".SS..SS.","........","..B..B..","........","..L..L..","BB....BB","#......#"],"signature":"#......#/.SS..SS./......../..B..B../......../..L..L../BB....BB/#......#|score|0|27|95455|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":480,"title":"Sugar Boss 480","objectiveType":"blockers","moves":30,"targetScore":99100,"starThresholds":[99100,143695,193245],"blueprint":["........","..H.S...","......I.",".######.",".######.","G...C...",".......G","........"],"signature":"......../..H.S.../......I./.######./.######./G...C.../.......G/........|blockers|0|30|99100|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":107,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":481,"title":"Caramel Crown","objectiveType":"blockers","moves":29,"targetScore":95745,"starThresholds":[95745,138830,186703],"blueprint":["##....##","##G..G##","..CHHC..","I.HCCH.I","CG....GC","........","##....##","##....##"],"signature":"##....##/##G..G##/..CHHC../I.HCCH.I/CG....GC/......../##....##/##....##|blockers|0|29|95745|tp0|cv1","gemReward":47,"numColors":6,"worldId":20,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":482,"title":"Honey Cascade","objectiveType":"ingredients","moves":30,"targetScore":95890,"starThresholds":[95890,139041,186986],"ingredientCount":5,"blueprint":["...##...","........","HH....FG","#.....I#","#......#","........","........","...##..."],"signature":"...##.../......../HH....FG/#.....I#/#......#/......../......../...##...|ingredients|5|30|95890|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":483,"title":"Glacier Gallery","objectiveType":"score","moves":31,"targetScore":96035,"starThresholds":[96035,139251,187268],"blueprint":["........","..S..S..","S......S","########","SB.LL.BS","...LL...","........","........"],"signature":"......../..S..S../S......S/########/SB.LL.BS/...LL.../......../........|score|0|31|96035|tp2|cv0","gemReward":47,"numColors":5,"worldId":20,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":484,"title":"Prism Arch","objectiveType":"jelly","moves":24,"targetScore":96180,"starThresholds":[96180,139461,187551],"blueprint":["......2.","I....H..",".2.1...2","......2.","..22....","....2...","1.LG...1","2....1.."],"signature":"......2./I....H../.2.1...2/......2./..22..../....2.../1.LG...1/2....1..|jelly|0|24|96180|tp0|cv1","gemReward":47,"numColors":6,"worldId":20,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":485,"title":"Frost Boss 485","objectiveType":"jelly","moves":30,"targetScore":99825,"starThresholds":[99825,144746,194659],"blueprint":["2..##..2","..1##1..",".2.##.2.",".C.##.C.",".2S##S2.","22I##I22",".I.##.I.","2..##.22"],"signature":"2..##..2/..1##1../.2.##.2./.C.##.C./.2S##S2./22I##I22/.I.##.I./2..##.22|jelly|0|30|99825|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":107,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":486,"title":"Golden Sanctum","objectiveType":"ingredients","moves":26,"targetScore":96470,"starThresholds":[96470,139882,188117],"ingredientCount":5,"blueprint":["........","........","#.....F#","##....##","##....##","#......#","........","........"],"signature":"......../......../#.....F#/##....##/##....##/#......#/......../........|ingredients|5|26|96470|tp1|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":487,"title":"Neon Grotto","objectiveType":"score","moves":27,"targetScore":96615,"starThresholds":[96615,140092,188399],"blueprint":["........","..#..#..","..#..#..","BS....SB","........","..#..#..","S.#LL#.S","........"],"signature":"......../..#..#../..#..#../BS....SB/......../..#..#../S.#LL#.S/........|score|0|27|96615|tp0|cv1","gemReward":47,"numColors":6,"worldId":20,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":488,"title":"Rainbow Terrace","objectiveType":"jelly","moves":28,"targetScore":96760,"starThresholds":[96760,140302,188682],"blueprint":["#.2##..#",".11L....","...1....","..#..#..","....2...","......1.","#..S..2#","##1.1.##"],"signature":"#.2##..#/.11L..../...1..../..#..#../....2.../......1./#..S..2#/##1.1.##|jelly|0|28|96760|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":489,"title":"Ruby Harbor","objectiveType":"blockers","moves":29,"targetScore":96905,"starThresholds":[96905,140512,188965],"blueprint":["##....##","#.CGGC.#","F......F",".G.HH.G.","S......S","..G..G..","#..HH..#","##....##"],"signature":"##....##/#.CGGC.#/F......F/.G.HH.G./S......S/..G..G../#..HH..#/##....##|blockers|0|29|96905|tp1|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":490,"title":"Truffle Boss 490","objectiveType":"blockers","moves":30,"targetScore":100550,"starThresholds":[100550,145798,196073],"blueprint":["........","........","S.......","...##.SG","S..##.S.","........","..S.S...","........"],"signature":"......../......../S......./...##.SG/S..##.S./......../..S.S.../........|blockers|0|30|100550|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":107,"numColors":5,"worldId":20,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":491,"title":"Velvet Bastion","objectiveType":"score","moves":31,"targetScore":97195,"starThresholds":[97195,140933,189530],"blueprint":["##....##","#.L..L.#","B.B..B.B",".B.##.B.","...##...","S......S","#..SS..#","##....##"],"signature":"##....##/#.L..L.#/B.B..B.B/.B.##.B./...##.../S......S/#..SS..#/##....##|score|0|31|97195|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":492,"title":"Glazed Portal","objectiveType":"jelly","moves":24,"targetScore":97340,"starThresholds":[97340,141143,189813],"blueprint":["###1.1.2","##112...","#1H2..2.","F2.1..1.","L.L...2.","222..SC#","......##","2....###"],"signature":"###1.1.2/##112.../#1H2..2./F2.1..1./L.L...2./222..SC#/......##/2....###|jelly|0|24|97340|tp1|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":493,"title":"Cosmic Plaza","objectiveType":"blockers","moves":25,"targetScore":97485,"starThresholds":[97485,141353,190096],"blueprint":["....####","........","H......H","I.G##G.I","...##...","CF....FC",".H....H.","####...."],"signature":"....####/......../H......H/I.G##G.I/...##.../CF....FC/.H....H./####....|blockers|0|25|97485|tp0|cv1","gemReward":47,"numColors":6,"worldId":20,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":494,"title":"Royal Courtyard","objectiveType":"ingredients","moves":26,"targetScore":97630,"starThresholds":[97630,141564,190379],"ingredientCount":5,"blueprint":["...##...","...##...","G......H",".G####I.","..####..","G.......","...##...","...##..."],"signature":"...##.../...##.../G......H/.G####I./..####../G......./...##.../...##...|ingredients|5|26|97630|tp0|cv0","gemReward":47,"numColors":6,"worldId":20},
+  {"id":495,"title":"Crystal Boss 495","objectiveType":"jelly","moves":30,"targetScore":101275,"starThresholds":[101275,146849,197486],"blueprint":["#.2..2.#","..1LL1..","21122112","...SS...",".22CC22.","S22FF22S","L2.11.2L","#.....2#"],"signature":"#.2..2.#/..1LL1../21122112/...SS.../.22CC22./S22FF22S/L2.11.2L/#.....2#|jelly|0|30|101275|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":107,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":496,"title":"Mint Observatory","objectiveType":"jelly","moves":28,"targetScore":97920,"starThresholds":[97920,141984,190944],"blueprint":["2.1..21.","...2.2..","22.L...2",".######.",".######.","........","..11...S","....2..2"],"signature":"2.1..21./...2.2../22.L...2/.######./.######./......../..11...S/....2..2|jelly|0|28|97920|tp2|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":497,"title":"Swirl Vault","objectiveType":"blockers","moves":29,"targetScore":98065,"starThresholds":[98065,142194,191227],"blueprint":["##....##","##....##",".H.SS.H.",".G....G.",".S.CC.S.","..C..C..","##.II.##","##....##"],"signature":"##....##/##....##/.H.SS.H./.G....G./.S.CC.S./..C..C../##.II.##/##....##|blockers|0|29|98065|tp0|cv0","gemReward":47,"numColors":5,"worldId":20},
+  {"id":498,"title":"Sapphire Summit","objectiveType":"ingredients","moves":30,"targetScore":98210,"starThresholds":[98210,142405,191510],"ingredientCount":5,"blueprint":["...##...","........",".L.....L","#L.....#","#......#",".H.....L","........","...##..."],"signature":"...##.../......../.L.....L/#L.....#/#......#/.H.....L/......../...##...|ingredients|5|30|98210|tp1|cv0","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":499,"title":"Toffee Lagoon","objectiveType":"score","moves":31,"targetScore":98355,"starThresholds":[98355,142615,191792],"blueprint":["........","...BB...","........","########","........",".B....B.",".B....B.","........"],"signature":"......../...BB.../......../########/......../.B....B./.B....B./........|score|0|31|98355|tp2|cv1","gemReward":47,"numColors":6,"worldId":20,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":500,"title":"Aurora Boss 500","objectiveType":"blockers","moves":30,"targetScore":102000,"starThresholds":[102000,147900,198900],"blueprint":["........","..SH....","...J....",".G......","...C..S.","..HG...S","S..H....","........"],"signature":"......../..SH..../...J..../.G....../...C..S./..HG...S/S..H..../........|blockers|0|30|102000|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":110,"numColors":6,"worldId":20},
+  {"id":501,"title":"Prism Sanctum","objectiveType":"ingredients","moves":26,"targetScore":98645,"starThresholds":[98645,143035,192358],"ingredientCount":5,"blueprint":["###.....","##......","#.......","I......I",".L....L.","JH....H#","......##",".....###"],"signature":"###...../##....../#......./I......I/.L....L./JH....H#/......##/.....###|ingredients|5|26|98645|tp1|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":502,"title":"Frost Grotto","objectiveType":"score","moves":27,"targetScore":98790,"starThresholds":[98790,143246,192641],"blueprint":["....####","..S.....","........","...##...","...##...","......S.","..B.....","####...."],"signature":"....####/..S...../......../...##.../...##.../......S./..B...../####....|score|0|27|98790|tp0|cv1","gemReward":50,"numColors":6,"worldId":21,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":503,"title":"Golden Terrace","objectiveType":"jelly","moves":28,"targetScore":98935,"starThresholds":[98935,143456,192923],"blueprint":[".11##11.","S..##..S","SI....IS","J.####.J","..####..","........","..G##G..","...##..."],"signature":".11##11./S..##..S/SI....IS/J.####.J/..####../......../..G##G../...##...|jelly|0|28|98935|tp0|cv0","gemReward":50,"numColors":6,"worldId":21},
+  {"id":504,"title":"Neon Harbor","objectiveType":"blockers","moves":29,"targetScore":99080,"starThresholds":[99080,143666,193206],"blueprint":["#......#",".....J..","G...S...","C....SIC","........","......JI","..C.....","#......#"],"signature":"#......#/.....J../G...S.../C....SIC/......../......JI/..C...../#......#|blockers|0|29|99080|tp1|cv0","gemReward":50,"numColors":5,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":505,"title":"Rainbow Boss 505","objectiveType":"jelly","moves":30,"targetScore":102725,"starThresholds":[102725,148951,200314],"blueprint":[".1....1.","L2L11L2L",".1....1.",".######.","2######2",".1.JJ.1.","2SL11LS2","........"],"signature":".1....1./L2L11L2L/.1....1./.######./2######2/.1.JJ.1./2SL11LS2/........|jelly|0|30|102725|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":110,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":506,"title":"Ruby Bastion","objectiveType":"score","moves":31,"targetScore":99370,"starThresholds":[99370,144087,193772],"blueprint":["##....##","##....##",".....S..","....S...","........","........","##..S.##","##....##"],"signature":"##....##/##....##/.....S../....S.../......../......../##..S.##/##....##|score|0|31|99370|tp0|cv0","gemReward":50,"numColors":6,"worldId":21},
+  {"id":507,"title":"Truffle Portal","objectiveType":"jelly","moves":24,"targetScore":99515,"starThresholds":[99515,144297,194054],"blueprint":["222##2.2","22.11.22",".1.11.1.","#ICIICI#","#2....2#","2IL..LI2","I1....1I","2..##..2"],"signature":"222##2.2/22.11.22/.1.11.1./#ICIICI#/#2....2#/2IL..LI2/I1....1I/2..##..2|jelly|0|24|99515|tp1|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":508,"title":"Velvet Plaza","objectiveType":"blockers","moves":25,"targetScore":99660,"starThresholds":[99660,144507,194337],"blueprint":["........","...G....",".I.....H","########","........","......S.","GS......","........"],"signature":"......../...G..../.I.....H/########/......../......S./GS....../........|blockers|0|25|99660|tp2|cv1","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":509,"title":"Glazed Courtyard","objectiveType":"ingredients","moves":26,"targetScore":99805,"starThresholds":[99805,144717,194620],"ingredientCount":5,"blueprint":["........","........","LH....HL","LJ....JL","L......L","IL....LI","........","........"],"signature":"......../......../LH....HL/LJ....JL/L......L/IL....LI/......../........|ingredients|5|26|99805|tp0|cv0","gemReward":50,"numColors":6,"worldId":21},
+  {"id":510,"title":"Cosmic Boss 510","objectiveType":"blockers","moves":30,"targetScore":103450,"starThresholds":[103450,150003,201728],"blueprint":["...##...",".IS##..I","...##.C.","...##...","...##...","H..##...","...##I..","...##..."],"signature":"...##.../.IS##..I/...##.C./...##.../...##.../H..##.../...##I../...##...|blockers|0|30|103450|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":110,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":511,"title":"Royal Observatory","objectiveType":"jelly","moves":28,"targetScore":100095,"starThresholds":[100095,145138,195185],"blueprint":["2......2","2......2","#..11..#","##....##","##.22.##","#J1..1J#","L2....2L","..2112.."],"signature":"2......2/2......2/#..11..#/##....##/##.22.##/#J1..1J#/L2....2L/..2112..|jelly|0|28|100095|tp0|cv1","gemReward":50,"numColors":5,"worldId":21,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":512,"title":"Crystal Vault","objectiveType":"blockers","moves":29,"targetScore":100240,"starThresholds":[100240,145348,195468],"blueprint":["........","..#C.#..","..#..#..",".....CH.",".....C..","C.#S.#G.","G.#I.#.C","........"],"signature":"......../..#C.#../..#..#../.....CH./.....C../C.#S.#G./G.#I.#.C/........|blockers|0|29|100240|tp0|cv0","gemReward":50,"numColors":6,"worldId":21},
+  {"id":513,"title":"Mint Summit","objectiveType":"ingredients","moves":30,"targetScore":100385,"starThresholds":[100385,145558,195751],"ingredientCount":5,"blueprint":["#..##..#","........","HL....LH","HI#..#IH","........",".L....L.","#......#","##....##"],"signature":"#..##..#/......../HL....LH/HI#..#IH/......../.L....L./#......#/##....##|ingredients|5|30|100385|tp1|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":514,"title":"Swirl Lagoon","objectiveType":"score","moves":31,"targetScore":100530,"starThresholds":[100530,145769,196034],"blueprint":["##....##","#..B...#","......S.","........","B..B....",".B......","#.L....#","##....##"],"signature":"##....##/#..B...#/......S./......../B..B..../.B....../#.L....#/##....##|score|0|31|100530|tp0|cv1","gemReward":50,"numColors":6,"worldId":21,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":515,"title":"Sapphire Boss 515","objectiveType":"jelly","moves":30,"targetScore":104175,"starThresholds":[104175,151054,203141],"blueprint":["........","C221122C","S2.SS.2S","2..##..2","1I1##1I1",".21..12.","HG2SS2GH","211..112"],"signature":"......../C221122C/S2.SS.2S/2..##..2/1I1##1I1/.21..12./HG2SS2GH/211..112|jelly|0|30|104175|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":110,"numColors":6,"worldId":21},
+  {"id":516,"title":"Toffee Bridge","objectiveType":"blockers","moves":25,"targetScore":100820,"starThresholds":[100820,146189,196599],"blueprint":["##....##","#......#","........","...##..G","C..##S..","G.S.....","#.S....#","##....##"],"signature":"##....##/#......#/......../...##..G/C..##S../G.S...../#.S....#/##....##|blockers|0|25|100820|tp1|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":517,"title":"Aurora Oasis","objectiveType":"ingredients","moves":26,"targetScore":100965,"starThresholds":[100965,146399,196882],"ingredientCount":5,"blueprint":["###.....","##......","#J....JH","LI....IL",".L....L.",".......#","......##",".....###"],"signature":"###...../##....../#J....JH/LI....IL/.L....L./.......#/......##/.....###|ingredients|5|26|100965|tp0|cv1","gemReward":50,"numColors":6,"worldId":21,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":518,"title":"Diamond Conveyor","objectiveType":"score","moves":27,"targetScore":101110,"starThresholds":[101110,146610,197165],"blueprint":["....####","........","........","..L##...","...##...","........","S.......","####...."],"signature":"....####/......../......../..L##.../...##.../......../S......./####....|score|0|27|101110|tp0|cv0","gemReward":50,"numColors":5,"worldId":21},
+  {"id":519,"title":"Starlight Pagoda","objectiveType":"jelly","moves":28,"targetScore":101255,"starThresholds":[101255,146820,197447],"blueprint":[".2.##...",".L.##.L.",".S2SS2S.","..####..","..####..",".S1221S.","...##...","2.2##212"],"signature":".2.##.../.L.##.L./.S2SS2S./..####../..####../.S1221S./...##.../2.2##212|jelly|0|28|101255|tp1|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":520,"title":"Bubblegum Boss 520","objectiveType":"blockers","moves":30,"targetScore":104900,"starThresholds":[104900,152105,204555],"blueprint":["#......#","...I....","........","...H....","....J...","........","........","#......#"],"signature":"#......#/...I..../......../...H..../....J.../......../......../#......#|blockers|0|30|104900|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":110,"numColors":6,"worldId":21,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":521,"title":"Sugar Cascade","objectiveType":"ingredients","moves":30,"targetScore":101545,"starThresholds":[101545,147240,198013],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#J....J#","........","........"],"signature":"......../......../#......#/##....##/##....##/#J....J#/......../........|ingredients|5|30|101545|tp0|cv0","gemReward":50,"numColors":6,"worldId":21},
+  {"id":522,"title":"Caramel Gallery","objectiveType":"score","moves":31,"targetScore":101690,"starThresholds":[101690,147451,198296],"blueprint":["##....##","##..B.##","........",".B......","......B.",".......B","##....##","##....##"],"signature":"##....##/##..B.##/......../.B....../......B./.......B/##....##/##....##|score|0|31|101690|tp2|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":523,"title":"Honey Arch","objectiveType":"jelly","moves":24,"targetScore":101835,"starThresholds":[101835,147661,198578],"blueprint":["..1##1..","2G.22.G2",".J.22.J.","#L2222L#","#SC..CS#","2......2","HL....LH",".1.##.1."],"signature":"..1##1../2G.22.G2/.J.22.J./#L2222L#/#SC..CS#/2......2/HL....LH/.1.##.1.|jelly|0|24|101835|tp0|cv1","gemReward":50,"numColors":6,"worldId":21,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":524,"title":"Glacier Crossing","objectiveType":"blockers","moves":25,"targetScore":101980,"starThresholds":[101980,147871,198861],"blueprint":["........",".C......","........","########","I..S....",".......I",".G...H..","........"],"signature":"......../.C....../......../########/I..S..../.......I/.G...H../........|blockers|0|25|101980|tp2|cv0","gemReward":50,"numColors":6,"worldId":21,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":525,"title":"Prism Boss 525","objectiveType":"jelly","moves":30,"targetScore":105625,"starThresholds":[105625,153156,205969],"blueprint":[".22112..","G......G",".12..21.","22J..J22","L221122L","S21HH12S","H......H","..22222."],"signature":".22112../G......G/.12..21./22J..J22/L221122L/S21HH12S/H......H/..22222.|jelly|0|30|105625|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":113,"numColors":5,"worldId":21,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":526,"title":"Glazed Observatory","objectiveType":"jelly","moves":28,"targetScore":102270,"starThresholds":[102270,148292,199427],"blueprint":["###12.1.","##..1C.J","#21.....","21.2L.1.",".......L","H......#","22.J2.##","..12.###"],"signature":"###12.1./##..1C.J/#21...../21.2L.1./.......L/H......#/22.J2.##/..12.###|jelly|0|28|102270|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":527,"title":"Cosmic Vault","objectiveType":"blockers","moves":29,"targetScore":102415,"starThresholds":[102415,148502,199709],"blueprint":["....####",".I....I.",".G....G.","...##...","C.C##C.C","........","..S..S..","####...."],"signature":"....####/.I....I./.G....G./...##.../C.C##C.C/......../..S..S../####....|blockers|0|29|102415|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":528,"title":"Royal Summit","objectiveType":"ingredients","moves":30,"targetScore":102560,"starThresholds":[102560,148712,199992],"ingredientCount":5,"blueprint":["...##...","...##...",".L.....J","I.####L.","..####L.",".L......","...##...","...##..."],"signature":"...##.../...##.../.L.....J/I.####L./..####L./.L....../...##.../...##...|ingredients|5|30|102560|tp1|cv0","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":529,"title":"Crystal Lagoon","objectiveType":"score","moves":31,"targetScore":102705,"starThresholds":[102705,148922,200275],"blueprint":["#......#","S......S","........","..B..B..","B......B","........","........","#......#"],"signature":"#......#/S......S/......../..B..B../B......B/......../......../#......#|score|0|31|102705|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":530,"title":"Mint Boss 530","objectiveType":"blockers","moves":30,"targetScore":106350,"starThresholds":[106350,154208,207383],"blueprint":["........",".....I..","S.....IS",".######.",".######G","........",".S..J...","........"],"signature":"......../.....I../S.....IS/.######./.######G/......../.S..J.../........|blockers|0|30|106350|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":113,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":531,"title":"Swirl Bridge","objectiveType":"blockers","moves":25,"targetScore":102995,"starThresholds":[102995,149343,200840],"blueprint":["##....##","##I..I##",".JC.....","GH.....G",".S......","C..JJ..C","##HJJH##","##....##"],"signature":"##....##/##I..I##/.JC...../GH.....G/.S....../C..JJ..C/##HJJH##/##....##|blockers|0|25|102995|tp2|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":532,"title":"Sapphire Oasis","objectiveType":"ingredients","moves":26,"targetScore":103140,"starThresholds":[103140,149553,201123],"ingredientCount":5,"blueprint":["...##...","........","J......L","#......#","#.....G#",".L....L.","........","...##..."],"signature":"...##.../......../J......L/#......#/#.....G#/.L....L./......../...##...|ingredients|5|26|103140|tp0|cv1","gemReward":50,"numColors":5,"worldId":22,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":533,"title":"Toffee Conveyor","objectiveType":"score","moves":27,"targetScore":103285,"starThresholds":[103285,149763,201406],"blueprint":["........",".L....L.","...SS...","########","........","........","B......B","........"],"signature":"......../.L....L./...SS.../########/......../......../B......B/........|score|0|27|103285|tp2|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":534,"title":"Aurora Pagoda","objectiveType":"jelly","moves":28,"targetScore":103430,"starThresholds":[103430,149974,201689],"blueprint":["12......",".....12.","2......2",".2.2..2.",".I2.CG.2","21.J....","12......","....1..."],"signature":"12....../.....12./2......2/.2.2..2./.I2.CG.2/21.J..../12....../....1...|jelly|0|28|103430|tp1|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":535,"title":"Diamond Boss 535","objectiveType":"jelly","moves":30,"targetScore":107075,"starThresholds":[107075,155259,208796],"blueprint":[".2.##...","22.##.22","2.2##2.2","22.##.22","2..##..2","1..##..1","L.1##1.L","2..##2.2"],"signature":".2.##.../22.##.22/2.2##2.2/22.##.22/2..##..2/1..##..1/L.1##1.L/2..##2.2|jelly|0|30|107075|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":113,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":536,"title":"Starlight Cascade","objectiveType":"ingredients","moves":30,"targetScore":103720,"starThresholds":[103720,150394,202254],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#G....J#","........","........"],"signature":"......../......../#......#/##....##/##....##/#G....J#/......../........|ingredients|5|30|103720|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":537,"title":"Bubblegum Gallery","objectiveType":"score","moves":31,"targetScore":103865,"starThresholds":[103865,150604,202537],"blueprint":["........","..#..#..","B.#..#.B","L......L","........",".B#..#B.","..#SS#..","........"],"signature":"......../..#..#../B.#..#.B/L......L/......../.B#..#B./..#SS#../........|score|0|31|103865|tp1|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":538,"title":"Sugar Arch","objectiveType":"jelly","moves":24,"targetScore":104010,"starThresholds":[104010,150815,202820],"blueprint":["#..##..#","......22","2.....22","..#1H#.S","...L....","SH..22.C","#1.....#","##.2..##"],"signature":"#..##..#/......22/2.....22/..#1H#.S/...L..../SH..22.C/#1.....#/##.2..##|jelly|0|24|104010|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":539,"title":"Caramel Crossing","objectiveType":"blockers","moves":25,"targetScore":104155,"starThresholds":[104155,151025,203102],"blueprint":["##....##","#..HH..#","..S..S..","........","C......C","..H..H..","#......#","##....##"],"signature":"##....##/#..HH..#/..S..S../......../C......C/..H..H../#......#/##....##|blockers|0|25|104155|tp0|cv1","gemReward":50,"numColors":5,"worldId":22,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":540,"title":"Honey Boss 540","objectiveType":"blockers","moves":30,"targetScore":107800,"starThresholds":[107800,156310,210210],"blueprint":["........","........",".S......","S.S##II.","..G##...",".C.S....",".....I..","........"],"signature":"......../......../.S....../S.S##II./..G##.../.C.S..../.....I../........|blockers|0|30|107800|tp1|cv1","isBoss":true,"keyReward":1,"gemReward":113,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}],"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":541,"title":"Glacier Grotto","objectiveType":"score","moves":27,"targetScore":104445,"starThresholds":[104445,151445,203668],"blueprint":["##....##","#......#",".BB..BB.",".L.##.L.","..L##L..","L......L","#B....B#","##....##"],"signature":"##....##/#......#/.BB..BB./.L.##.L./..L##L../L......L/#B....B#/##....##|score|0|27|104445|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":542,"title":"Prism Terrace","objectiveType":"jelly","moves":28,"targetScore":104590,"starThresholds":[104590,151656,203951],"blueprint":["###2....","##..2C.1","#....1.2","H...L...","........","......S#",".H.2..##","..2..###"],"signature":"###2..../##..2C.1/#....1.2/H...L.../......../......S#/.H.2..##/..2..###|jelly|0|28|104590|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":543,"title":"Frost Harbor","objectiveType":"blockers","moves":29,"targetScore":104735,"starThresholds":[104735,151866,204233],"blueprint":["....####",".....C..","..CSS...",".HJ##...",".I.##...","........",".C.CC.C.","####...."],"signature":"....####/.....C../..CSS.../.HJ##.../.I.##.../......../.C.CC.C./####....|blockers|0|29|104735|tp1|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}],"conveyors":[[{"row":2,"col":5},{"row":2,"col":6},{"row":3,"col":6},{"row":4,"col":6},{"row":5,"col":6},{"row":5,"col":5},{"row":4,"col":5},{"row":3,"col":5}]]},
+  {"id":544,"title":"Golden Citadel","objectiveType":"ingredients","moves":30,"targetScore":104880,"starThresholds":[104880,152076,204516],"ingredientCount":5,"blueprint":["...##...","...##...","........","L.####..",".L####L.","........","...##...","...##..."],"signature":"...##.../...##.../......../L.####../.L####L./......../...##.../...##...|ingredients|5|30|104880|tp0|cv0","gemReward":50,"numColors":6,"worldId":22},
+  {"id":545,"title":"Neon Boss 545","objectiveType":"jelly","moves":30,"targetScore":108525,"starThresholds":[108525,157361,211624],"blueprint":["#.2..2.#",".1G11G1.","S.GSSG.S","..1..1..","1......1",".2L..L2.",".L.22.L.","#.1..1.#"],"signature":"#.2..2.#/.1G11G1./S.GSSG.S/..1..1../1......1/.2L..L2./.L.22.L./#.1..1.#|jelly|0|30|108525|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":113,"numColors":6,"worldId":22,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":546,"title":"Rainbow Portal","objectiveType":"jelly","moves":24,"targetScore":105170,"starThresholds":[105170,152497,205082],"blueprint":["....1..2","2..I..22",".S.2..1.",".######J",".######1","1...2...","......GG","1.1....."],"signature":"....1..2/2..I..22/.S.2..1./.######J/.######1/1...2.../......GG/1.1.....|jelly|0|24|105170|tp2|cv0","gemReward":50,"numColors":5,"worldId":22,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":547,"title":"Ruby Plaza","objectiveType":"blockers","moves":25,"targetScore":105315,"starThresholds":[105315,152707,205364],"blueprint":["##....##","##I..I##","........",".CC..CC.","S..CC..S","S......S","##....##","##....##"],"signature":"##....##/##I..I##/......../.CC..CC./S..CC..S/S......S/##....##/##....##|blockers|0|25|105315|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":548,"title":"Truffle Courtyard","objectiveType":"ingredients","moves":26,"targetScore":105460,"starThresholds":[105460,152917,205647],"ingredientCount":5,"blueprint":["...##...","........","........","#......#","#......#","......II","........","...##..."],"signature":"...##.../......../......../#......#/#......#/......II/......../...##...|ingredients|5|26|105460|tp0|cv1","gemReward":50,"numColors":6,"worldId":22,"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":549,"title":"Velvet Spire","objectiveType":"score","moves":27,"targetScore":105605,"starThresholds":[105605,153127,205930],"blueprint":["........","........","........","########","........","........","........","........"],"signature":"......../......../......../########/......../......../......../........|score|0|27|105605|tp2|cv1","gemReward":50,"numColors":6,"worldId":22,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":550,"title":"Glazed Boss 550","objectiveType":"blockers","moves":30,"targetScore":109250,"starThresholds":[109250,158413,213038],"blueprint":["........","J.SC....","........","...SI...","C......I",".......S","......CG","........"],"signature":"......../J.SC..../......../...SI.../C......I/.......S/......CG/........|blockers|0|30|109250|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":116,"numColors":6,"worldId":22,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":551,"title":"Aurora Cascade","objectiveType":"ingredients","moves":30,"targetScore":105895,"starThresholds":[105895,153548,206495],"ingredientCount":5,"blueprint":["###.....","##......","#......G","LL....LL","L......L",".......#","......##",".....###"],"signature":"###...../##....../#......G/LL....LL/L......L/.......#/......##/.....###|ingredients|5|30|105895|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":552,"title":"Diamond Gallery","objectiveType":"score","moves":31,"targetScore":106040,"starThresholds":[106040,153758,206778],"blueprint":["....####","........","S.....S.","...##.L.","S..##..B","........","........","####...."],"signature":"....####/......../S.....S./...##.L./S..##..B/......../......../####....|score|0|31|106040|tp1|cv0","gemReward":53,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":553,"title":"Starlight Arch","objectiveType":"jelly","moves":24,"targetScore":106185,"starThresholds":[106185,153968,207061],"blueprint":["122##221","LJ.##.JL","..1..1..","1C####C1","12####21",".12JJ21.","12L##L21",".2.##.2."],"signature":"122##221/LJ.##.JL/..1..1../1C####C1/12####21/.12JJ21./12L##L21/.2.##.2.|jelly|0|24|106185|tp0|cv0","gemReward":53,"numColors":5,"worldId":23},
+  {"id":554,"title":"Bubblegum Crossing","objectiveType":"blockers","moves":25,"targetScore":106330,"starThresholds":[106330,154179,207344],"blueprint":["#......#","........",".GJ.I...",".I......",".......S","G.S.....","..G....S","#......#"],"signature":"#......#/......../.GJ.I.../.I....../.......S/G.S...../..G....S/#......#|blockers|0|25|106330|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":555,"title":"Sugar Boss 555","objectiveType":"jelly","moves":30,"targetScore":109975,"starThresholds":[109975,159464,214451],"blueprint":["2..22..2","G.L..L.G","2I....I2","I######I","1######1",".1.22.1.","2.1221.2",".22..22."],"signature":"2..22..2/G.L..L.G/2I....I2/I######I/1######1/.1.22.1./2.1221.2/.22..22.|jelly|0|30|109975|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":116,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":556,"title":"Caramel Grotto","objectiveType":"score","moves":27,"targetScore":106620,"starThresholds":[106620,154599,207909],"blueprint":["##....##","##...S##","B.......","........","........","........","##....##","##....##"],"signature":"##....##/##...S##/B......./......../......../......../##....##/##....##|score|0|27|106620|tp0|cv1","gemReward":53,"numColors":6,"worldId":23,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":557,"title":"Honey Terrace","objectiveType":"jelly","moves":28,"targetScore":106765,"starThresholds":[106765,154809,208192],"blueprint":[".11##11.","..L11L..","..2112..","#21SS12#","#.2112.#","C1I11I1C","LHL11LHL","21.##.12"],"signature":".11##11./..L11L../..2112../#21SS12#/#.2112.#/C1I11I1C/LHL11LHL/21.##.12|jelly|0|28|106765|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":558,"title":"Glacier Harbor","objectiveType":"blockers","moves":29,"targetScore":106910,"starThresholds":[106910,155020,208475],"blueprint":["........","..JS....","...S....","########","........",".I...GIG","....C..C","........"],"signature":"......../..JS..../...S..../########/......../.I...GIG/....C..C/........|blockers|0|29|106910|tp2|cv0","gemReward":53,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":559,"title":"Prism Citadel","objectiveType":"ingredients","moves":30,"targetScore":107055,"starThresholds":[107055,155230,208757],"ingredientCount":5,"blueprint":["........","........","IG....GI","........","LG....GL",".I....I.","........","........"],"signature":"......../......../IG....GI/......../LG....GL/.I....I./......../........|ingredients|5|30|107055|tp0|cv1","gemReward":53,"numColors":6,"worldId":23,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":560,"title":"Frost Boss 560","objectiveType":"blockers","moves":30,"targetScore":110700,"starThresholds":[110700,160515,215865],"blueprint":["...##...","S.C##...","...##.H.",".S.##.C.",".S.##...","...##...",".CG##S..","...##..."],"signature":"...##.../S.C##.../...##.H./.S.##.C./.S.##.../...##.../.CG##S../...##...|blockers|0|30|110700|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":116,"numColors":5,"worldId":23,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":561,"title":"Golden Portal","objectiveType":"jelly","moves":24,"targetScore":107345,"starThresholds":[107345,155650,209323],"blueprint":["22.22..2",".LG22GL.","#......#","##....##","##....##","#2.CC.2#","1..GG..1","..12211."],"signature":"22.22..2/.LG22GL./#......#/##....##/##....##/#2.CC.2#/1..GG..1/..12211.|jelly|0|24|107345|tp1|cv0","gemReward":53,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":562,"title":"Neon Plaza","objectiveType":"blockers","moves":25,"targetScore":107490,"starThresholds":[107490,155861,209606],"blueprint":["........","C.#.I#..","..#..#I.","GS....G.","........","..#.S#..","..#..#..","........"],"signature":"......../C.#.I#../..#..#I./GS....G./......../..#.S#../..#..#../........|blockers|0|25|107490|tp0|cv1","gemReward":53,"numColors":6,"worldId":23,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":563,"title":"Rainbow Courtyard","objectiveType":"ingredients","moves":26,"targetScore":107635,"starThresholds":[107635,156071,209888],"ingredientCount":5,"blueprint":["#..##..#","........","HI....IH","HJ#..#JH","LI....IL","L......L","#......#","##....##"],"signature":"#..##..#/......../HI....IH/HJ#..#JH/LI....IL/L......L/#......#/##....##|ingredients|5|26|107635|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":564,"title":"Ruby Spire","objectiveType":"score","moves":27,"targetScore":107780,"starThresholds":[107780,156281,210171],"blueprint":["##....##","#.L....#","........","..L.....",".S......","...B...S","#..L...#","##....##"],"signature":"##....##/#.L....#/......../..L...../.S....../...B...S/#..L...#/##....##|score|0|27|107780|tp1|cv0","gemReward":53,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":565,"title":"Truffle Boss 565","objectiveType":"jelly","moves":30,"targetScore":111425,"starThresholds":[111425,161566,217279],"blueprint":["...22...",".2....2.",".222222.","GG.##.GG",".2.##.2.","11....11",".J2..2J.","1..11..1"],"signature":"...22.../.2....2./.222222./GG.##.GG/.2.##.2./11....11/.J2..2J./1..11..1|jelly|0|30|111425|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":116,"numColors":6,"worldId":23,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":566,"title":"Velvet Vault","objectiveType":"blockers","moves":29,"targetScore":108070,"starThresholds":[108070,156702,210737],"blueprint":["##....##","#...G..#","S.C.J...","...##...","...##S.I","........","#..C...#","##....##"],"signature":"##....##/#...G..#/S.C.J.../...##.../...##S.I/......../#..C...#/##....##|blockers|0|29|108070|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":567,"title":"Glazed Summit","objectiveType":"ingredients","moves":30,"targetScore":108215,"starThresholds":[108215,156912,211019],"ingredientCount":5,"blueprint":["###.....","##......","#......H",".L....L.","L......L","G......#","......##",".....###"],"signature":"###...../##....../#......H/.L....L./L......L/G......#/......##/.....###|ingredients|5|30|108215|tp1|cv0","gemReward":53,"numColors":5,"worldId":23,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":568,"title":"Cosmic Lagoon","objectiveType":"score","moves":31,"targetScore":108360,"starThresholds":[108360,157122,211302],"blueprint":["....####","......S.","......LL","B..##...","...##...","B.......","........","####...."],"signature":"....####/......S./......LL/B..##.../...##.../B......./......../####....|score|0|31|108360|tp0|cv1","gemReward":53,"numColors":6,"worldId":23,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":569,"title":"Royal Garden","objectiveType":"jelly","moves":24,"targetScore":108505,"starThresholds":[108505,157332,211585],"blueprint":["..2##2..","H1.##.1H",".L....L.","S.####.S","1.####.1","2..22..2","1.2##2.1","...##..."],"signature":"..2##2../H1.##.1H/.L....L./S.####.S/1.####.1/2..22..2/1.2##2.1/...##...|jelly|0|24|108505|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":570,"title":"Crystal Boss 570","objectiveType":"blockers","moves":30,"targetScore":112150,"starThresholds":[112150,162618,218693],"blueprint":["#......#","...S.SS.","..S.....",".....S..","....SS..",".H.....S","...JS.H.","#......#"],"signature":"#......#/...S.SS./..S...../.....S../....SS../.H.....S/...JS.H./#......#|blockers|0|30|112150|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":116,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":571,"title":"Mint Oasis","objectiveType":"ingredients","moves":26,"targetScore":108795,"starThresholds":[108795,157753,212150],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#G....G#","........","........"],"signature":"......../......../#......#/##....##/##....##/#G....G#/......../........|ingredients|5|26|108795|tp0|cv1","gemReward":53,"numColors":6,"worldId":23,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":572,"title":"Swirl Conveyor","objectiveType":"score","moves":27,"targetScore":108940,"starThresholds":[108940,157963,212433],"blueprint":["##....##","##..S.##",".......B","........","........","........","##....##","##....##"],"signature":"##....##/##..S.##/.......B/......../......../......../##....##/##....##|score|0|27|108940|tp0|cv0","gemReward":53,"numColors":6,"worldId":23},
+  {"id":573,"title":"Sapphire Pagoda","objectiveType":"jelly","moves":28,"targetScore":109085,"starThresholds":[109085,158173,212716],"blueprint":["...##...","LL2112LL",".2.22.2.","#......#","#1.11.1#","G2.22.2G","2..GG..2","..2##2.."],"signature":"...##.../LL2112LL/.2.22.2./#......#/#1.11.1#/G2.22.2G/2..GG..2/..2##2..|jelly|0|28|109085|tp1|cv0","gemReward":53,"numColors":6,"worldId":23,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":574,"title":"Toffee Crown","objectiveType":"blockers","moves":29,"targetScore":109230,"starThresholds":[109230,158384,212999],"blueprint":["........","..I.S...","........","########","........","........","S......J","........"],"signature":"......../..I.S.../......../########/......../......../S......J/........|blockers|0|29|109230|tp2|cv1","gemReward":53,"numColors":5,"worldId":23,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":575,"title":"Aurora Boss 575","objectiveType":"jelly","moves":30,"targetScore":112875,"starThresholds":[112875,163669,220106],"blueprint":["12....21",".2....2.",".H1..1H.","12.22.21","S.2222.S","2.2CC2.2",".1.11.1.","12222221"],"signature":"12....21/.2....2./.H1..1H./12.22.21/S.2222.S/2.2CC2.2/.1.11.1./12222221|jelly|0|30|112875|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":119,"numColors":6,"worldId":23},
+  {"id":576,"title":"Prism Portal","objectiveType":"jelly","moves":24,"targetScore":109520,"starThresholds":[109520,158804,213564],"blueprint":["###..2..","##1.11.1","#.12.G..",".2.122..",".2..S.2.","...2...#","2...1.##","..12.###"],"signature":"###..2../##1.11.1/#.12.G../.2.122../.2..S.2./...2...#/2...1.##/..12.###|jelly|0|24|109520|tp1|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":577,"title":"Frost Plaza","objectiveType":"blockers","moves":25,"targetScore":109665,"starThresholds":[109665,159014,213847],"blueprint":["....####","........",".C.II.C.","S.C##C.S",".CI##IC.","........","I......I","####...."],"signature":"....####/......../.C.II.C./S.C##C.S/.CI##IC./......../I......I/####....|blockers|0|25|109665|tp0|cv1","gemReward":53,"numColors":6,"worldId":24,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":578,"title":"Golden Courtyard","objectiveType":"ingredients","moves":26,"targetScore":109810,"starThresholds":[109810,159225,214130],"ingredientCount":5,"blueprint":["...##...","...##...","........","..####L.","L.####.L",".......L","...##...","...##..."],"signature":"...##.../...##.../......../..####L./L.####.L/.......L/...##.../...##...|ingredients|5|26|109810|tp0|cv0","gemReward":53,"numColors":6,"worldId":24},
+  {"id":579,"title":"Neon Spire","objectiveType":"score","moves":27,"targetScore":109955,"starThresholds":[109955,159435,214412],"blueprint":["#......#","..S..S..","LBS..SBL","........","........","..L..L..","B......B","#......#"],"signature":"#......#/..S..S../LBS..SBL/......../......../..L..L../B......B/#......#|score|0|27|109955|tp1|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":580,"title":"Rainbow Boss 580","objectiveType":"blockers","moves":30,"targetScore":113600,"starThresholds":[113600,164720,221520],"blueprint":["........","...SHJ..",".S......",".######.","I######J","...G....","........","........"],"signature":"......../...SHJ../.S....../.######./I######J/...G..../......../........|blockers|0|30|113600|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":119,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":581,"title":"Ruby Vault","objectiveType":"blockers","moves":29,"targetScore":110245,"starThresholds":[110245,159855,214978],"blueprint":["##....##","##S..S##",".C....C.","..HHHH..","G......G","........","##....##","##....##"],"signature":"##....##/##S..S##/.C....C./..HHHH../G......G/......../##....##/##....##|blockers|0|29|110245|tp0|cv0","gemReward":53,"numColors":5,"worldId":24},
+  {"id":582,"title":"Truffle Summit","objectiveType":"ingredients","moves":30,"targetScore":110390,"starThresholds":[110390,160066,215261],"ingredientCount":5,"blueprint":["...##...","........","I.......","#.....L#","#.....I#",".......L","........","...##..."],"signature":"...##.../......../I......./#.....L#/#.....I#/.......L/......../...##...|ingredients|5|30|110390|tp1|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":583,"title":"Velvet Lagoon","objectiveType":"score","moves":31,"targetScore":110535,"starThresholds":[110535,160276,215543],"blueprint":["........","........","........","########",".S....S.","........","........","........"],"signature":"......../......../......../########/.S....S./......../......../........|score|0|31|110535|tp2|cv1","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":584,"title":"Glazed Garden","objectiveType":"jelly","moves":24,"targetScore":110680,"starThresholds":[110680,160486,215826],"blueprint":[".2......","S1.21.1.","22C2....","..2...1.",".1.....2","..S1SG1.","2...J2..",".1.2.2.."],"signature":".2....../S1.21.1./22C2..../..2...1./.1.....2/..S1SG1./2...J2../.1.2.2..|jelly|0|24|110680|tp0|cv0","gemReward":53,"numColors":6,"worldId":24},
+  {"id":585,"title":"Cosmic Boss 585","objectiveType":"jelly","moves":30,"targetScore":114325,"starThresholds":[114325,165771,222934],"blueprint":["1.1##..1","L2.##.2L","S.I##I.S",".21##12.",".11##11.","...##...","..2##2..","...##2.."],"signature":"1.1##..1/L2.##.2L/S.I##I.S/.21##12./.11##11./...##.../..2##2../...##2..|jelly|0|30|114325|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":119,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":586,"title":"Royal Oasis","objectiveType":"ingredients","moves":26,"targetScore":110970,"starThresholds":[110970,160907,216392],"ingredientCount":5,"blueprint":["........","........","#J.....#","##....##","##....##","#G.....#","........","........"],"signature":"......../......../#J.....#/##....##/##....##/#G.....#/......../........|ingredients|5|26|110970|tp0|cv1","gemReward":53,"numColors":6,"worldId":24,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":587,"title":"Crystal Conveyor","objectiveType":"score","moves":27,"targetScore":111115,"starThresholds":[111115,161117,216674],"blueprint":["........","..#LL#..","..#..#..","........","........","LB#..#BL","..#..#..","........"],"signature":"......../..#LL#../..#..#../......../......../LB#..#BL/..#..#../........|score|0|27|111115|tp0|cv0","gemReward":53,"numColors":6,"worldId":24},
+  {"id":588,"title":"Mint Pagoda","objectiveType":"jelly","moves":28,"targetScore":111260,"starThresholds":[111260,161327,216957],"blueprint":["#..##..#",".2...2.1","JL.22G..","2.#..#..","L..2S...","..1H2222","#22...C#","##..2.##"],"signature":"#..##..#/.2...2.1/JL.22G../2.#..#../L..2S.../..1H2222/#22...C#/##..2.##|jelly|0|28|111260|tp1|cv0","gemReward":53,"numColors":5,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":589,"title":"Swirl Crown","objectiveType":"blockers","moves":29,"targetScore":111405,"starThresholds":[111405,161537,217240],"blueprint":["##....##","#J....J#","C......C","SJ....JS",".H....H.",".G....G.","#J....J#","##....##"],"signature":"##....##/#J....J#/C......C/SJ....JS/.H....H./.G....G./#J....J#/##....##|blockers|0|29|111405|tp0|cv1","gemReward":53,"numColors":6,"worldId":24,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":590,"title":"Sapphire Boss 590","objectiveType":"blockers","moves":30,"targetScore":115050,"starThresholds":[115050,166823,224348],"blueprint":["........","G..G...H","G.......","...##.IH",".I.##I..","..C.S...","........","........"],"signature":"......../G..G...H/G......./...##.IH/.I.##I../..C.S.../......../........|blockers|0|30|115050|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":119,"numColors":6,"worldId":24},
+  {"id":591,"title":"Toffee Gallery","objectiveType":"score","moves":31,"targetScore":111695,"starThresholds":[111695,161958,217805],"blueprint":["##....##","#B....B#","........","BB.##.BB",".L.##.L.","........","#B....B#","##....##"],"signature":"##....##/#B....B#/......../BB.##.BB/.L.##.L./......../#B....B#/##....##|score|0|31|111695|tp1|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":592,"title":"Aurora Arch","objectiveType":"jelly","moves":24,"targetScore":111840,"starThresholds":[111840,162168,218088],"blueprint":["###.....","##....1.","#..22...","22.2....","...H.22S","....12.#","...12C##",".1...###"],"signature":"###...../##....1./#..22.../22.2..../...H.22S/....12.#/...12C##/.1...###|jelly|0|24|111840|tp0|cv1","gemReward":53,"numColors":6,"worldId":24,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":593,"title":"Diamond Crossing","objectiveType":"blockers","moves":25,"targetScore":111985,"starThresholds":[111985,162378,218371],"blueprint":["....####","...HH...",".I....I.","...##...","I.S##S.I","H......H","..I..I..","####...."],"signature":"....####/...HH.../.I....I./...##.../I.S##S.I/H......H/..I..I../####....|blockers|0|25|111985|tp0|cv0","gemReward":53,"numColors":6,"worldId":24},
+  {"id":594,"title":"Starlight Sanctum","objectiveType":"ingredients","moves":26,"targetScore":112130,"starThresholds":[112130,162589,218654],"ingredientCount":5,"blueprint":["...##...","...##...","........","..####.H","I.####.L",".L......","...##...","...##..."],"signature":"...##.../...##.../......../..####.H/I.####.L/.L....../...##.../...##...|ingredients|5|26|112130|tp1|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":595,"title":"Bubblegum Boss 595","objectiveType":"jelly","moves":30,"targetScore":115775,"starThresholds":[115775,167874,225761],"blueprint":["#.1..1.#","1L1..1L1","11.II.11","..2222..","...11...","1J2..2J1","........","#22..22#"],"signature":"#.1..1.#/1L1..1L1/11.II.11/..2222../...11.../1J2..2J1/......../#22..22#|jelly|0|30|115775|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":119,"numColors":5,"worldId":24,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":596,"title":"Sugar Terrace","objectiveType":"jelly","moves":28,"targetScore":112420,"starThresholds":[112420,163009,219219],"blueprint":["........",".......2","......21",".######.",".######1",".1..2.2.",".2.HL...","22..2.2."],"signature":"......../.......2/......21/.######./.######1/.1..2.2./.2.HL.../22..2.2.|jelly|0|28|112420|tp2|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":597,"title":"Caramel Harbor","objectiveType":"blockers","moves":29,"targetScore":112565,"starThresholds":[112565,163219,219502],"blueprint":["##....##","##....##",".J....J.","I......I","CC....CC","........","##G..G##","##....##"],"signature":"##....##/##....##/.J....J./I......I/CC....CC/......../##G..G##/##....##|blockers|0|29|112565|tp2|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":598,"title":"Honey Citadel","objectiveType":"ingredients","moves":30,"targetScore":112710,"starThresholds":[112710,163430,219785],"ingredientCount":5,"blueprint":["...##...","........",".......I","#......#","#I.....#","........","........","...##..."],"signature":"...##.../......../.......I/#......#/#I.....#/......../......../...##...|ingredients|5|30|112710|tp0|cv1","gemReward":53,"numColors":6,"worldId":24,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":599,"title":"Glacier Bastion","objectiveType":"score","moves":31,"targetScore":112855,"starThresholds":[112855,163640,220067],"blueprint":["........","...LL...","B......B","########",".L....L.",".B....B.","B.B..B.B","........"],"signature":"......../...LL.../B......B/########/.L....L./.B....B./B.B..B.B/........|score|0|31|112855|tp2|cv0","gemReward":53,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":600,"title":"Prism Boss 600","objectiveType":"blockers","moves":30,"targetScore":116500,"starThresholds":[116500,168925,227175],"blueprint":["........","........","........","...G....","........","..G....J",".C..G..I","........"],"signature":"......../......../......../...G..../......../..G....J/.C..G..I/........|blockers|0|30|116500|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":122,"numColors":6,"worldId":24,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":601,"title":"Glazed Oasis","objectiveType":"ingredients","moves":26,"targetScore":113145,"starThresholds":[113145,164060,220633],"ingredientCount":5,"blueprint":["###.....","##......","#G....G.","H......H","HH....HH","L......#","......##",".....###"],"signature":"###...../##....../#G....G./H......H/HH....HH/L......#/......##/.....###|ingredients|5|26|113145|tp0|cv1","gemReward":56,"numColors":6,"worldId":25,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":602,"title":"Cosmic Conveyor","objectiveType":"score","moves":27,"targetScore":113290,"starThresholds":[113290,164271,220916],"blueprint":["....####","........","........","BS.##S..","...##...","S.......","........","####...."],"signature":"....####/......../......../BS.##S../...##.../S......./......../####....|score|0|27|113290|tp0|cv0","gemReward":56,"numColors":5,"worldId":25},
+  {"id":603,"title":"Royal Pagoda","objectiveType":"jelly","moves":28,"targetScore":113435,"starThresholds":[113435,164481,221198],"blueprint":["..2##2..","12J##J21",".212212.","G1####1G",".1####1.","...22...","G2S##S2G","2.1##1.2"],"signature":"..2##2../12J##J21/.212212./G1####1G/.1####1./...22.../G2S##S2G/2.1##1.2|jelly|0|28|113435|tp1|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":604,"title":"Crystal Crown","objectiveType":"blockers","moves":29,"targetScore":113580,"starThresholds":[113580,164691,221481],"blueprint":["#......#","..C..C..",".......S","......IG","H..SJ...","........","S.....J.","#......#"],"signature":"#......#/..C..C../.......S/......IG/H..SJ.../......../S.....J./#......#|blockers|0|29|113580|tp0|cv1","gemReward":56,"numColors":6,"worldId":25,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":605,"title":"Mint Boss 605","objectiveType":"jelly","moves":30,"targetScore":117225,"starThresholds":[117225,169976,228589],"blueprint":["1......1",".222222.","...11...",".######.",".######.",".2....2.","..2LL2..","1.2222.1"],"signature":"1......1/.222222./...11.../.######./.######./.2....2./..2LL2../1.2222.1|jelly|0|30|117225|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":122,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":606,"title":"Swirl Gallery","objectiveType":"score","moves":31,"targetScore":113870,"starThresholds":[113870,165112,222047],"blueprint":["##....##","##L...##","......B.","B.......","......S.","B......S","##....##","##....##"],"signature":"##....##/##L...##/......B./B......./......S./B......S/##....##/##....##|score|0|31|113870|tp2|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":607,"title":"Sapphire Arch","objectiveType":"jelly","moves":24,"targetScore":114015,"starThresholds":[114015,165322,222329],"blueprint":["..1##1..",".L2..2L.","2.2222.2","#S.GG.S#","#..22..#","G1....1G","...11...","2..##..2"],"signature":"..1##1../.L2..2L./2.2222.2/#S.GG.S#/#..22..#/G1....1G/...11.../2..##..2|jelly|0|24|114015|tp0|cv1","gemReward":56,"numColors":6,"worldId":25,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":608,"title":"Toffee Crossing","objectiveType":"blockers","moves":25,"targetScore":114160,"starThresholds":[114160,165532,222612],"blueprint":["........",".JH.G..C","....H..S","########","........","........","........","........"],"signature":"......../.JH.G..C/....H..S/########/......../......../......../........|blockers|0|25|114160|tp2|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":609,"title":"Aurora Sanctum","objectiveType":"ingredients","moves":26,"targetScore":114305,"starThresholds":[114305,165742,222895],"ingredientCount":5,"blueprint":["........","........","HL....LH",".J....J.","........",".I....I.","........","........"],"signature":"......../......../HL....LH/.J....J./......../.I....I./......../........|ingredients|5|26|114305|tp1|cv0","gemReward":56,"numColors":5,"worldId":25,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":610,"title":"Diamond Boss 610","objectiveType":"blockers","moves":30,"targetScore":117950,"starThresholds":[117950,171028,230003],"blueprint":["...##...","..C##...","...##CS.","J..##...","...##...","...##...","...##.J.","...##..."],"signature":"...##.../..C##.../...##CS./J..##.../...##.../...##.../...##.J./...##...|blockers|0|30|117950|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":122,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":611,"title":"Starlight Terrace","objectiveType":"jelly","moves":28,"targetScore":114595,"starThresholds":[114595,166163,223460],"blueprint":["21122112","..1SS1..","#.1SS1.#","##GGGG##","##1221##","#......#",".12LL21.","...11..."],"signature":"21122112/..1SS1../#.1SS1.#/##GGGG##/##1221##/#......#/.12LL21./...11...|jelly|0|28|114595|tp0|cv0","gemReward":56,"numColors":6,"worldId":25},
+  {"id":612,"title":"Bubblegum Harbor","objectiveType":"blockers","moves":29,"targetScore":114740,"starThresholds":[114740,166373,223743],"blueprint":["........","..#..#.C",".S#..#..","..J....H","........","..#J.#..","..#..#..","........"],"signature":"......../..#..#.C/.S#..#../..J....H/......../..#J.#../..#..#../........|blockers|0|29|114740|tp1|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":613,"title":"Sugar Citadel","objectiveType":"ingredients","moves":30,"targetScore":114885,"starThresholds":[114885,166583,224026],"ingredientCount":5,"blueprint":["#..##..#","........",".L....L.","LL#..#LL","I......I",".L....L.","#......#","##....##"],"signature":"#..##..#/......../.L....L./LL#..#LL/I......I/.L....L./#......#/##....##|ingredients|5|30|114885|tp0|cv1","gemReward":56,"numColors":6,"worldId":25,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":614,"title":"Caramel Bastion","objectiveType":"score","moves":31,"targetScore":115030,"starThresholds":[115030,166794,224309],"blueprint":["##....##","#...B..#","........","........","..L...L.","........","#......#","##....##"],"signature":"##....##/#...B..#/......../......../..L...L./......../#......#/##....##|score|0|31|115030|tp0|cv0","gemReward":56,"numColors":6,"worldId":25},
+  {"id":615,"title":"Honey Boss 615","objectiveType":"jelly","moves":30,"targetScore":118675,"starThresholds":[118675,172079,231416],"blueprint":["..2..2..","...11...",".1.22.1.","L22##22L","1.1##1.1","S.SJJS.S","..1HH1..","........"],"signature":"..2..2../...11.../.1.22.1./L22##22L/1.1##1.1/S.SJJS.S/..1HH1../........|jelly|0|30|118675|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":122,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":616,"title":"Glacier Plaza","objectiveType":"blockers","moves":25,"targetScore":115320,"starThresholds":[115320,167214,224874],"blueprint":["##....##","#......#","........","...##...","...##...","C.......","#SS...C#","##....##"],"signature":"##....##/#......#/......../...##.../...##.../C......./#SS...C#/##....##|blockers|0|25|115320|tp0|cv1","gemReward":56,"numColors":5,"worldId":25,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":617,"title":"Prism Courtyard","objectiveType":"ingredients","moves":26,"targetScore":115465,"starThresholds":[115465,167424,225157],"ingredientCount":5,"blueprint":["###.....","##......","#L....LL","........","I......I",".L....L#","......##",".....###"],"signature":"###...../##....../#L....LL/......../I......I/.L....L#/......##/.....###|ingredients|5|26|115465|tp0|cv0","gemReward":56,"numColors":6,"worldId":25},
+  {"id":618,"title":"Frost Spire","objectiveType":"score","moves":27,"targetScore":115610,"starThresholds":[115610,167635,225440],"blueprint":["....####",".......B","....B.B.","..S##..S","...##SB.","........","........","####...."],"signature":"....####/.......B/....B.B./..S##..S/...##SB./......../......../####....|score|0|27|115610|tp1|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":619,"title":"Golden Observatory","objectiveType":"jelly","moves":28,"targetScore":115755,"starThresholds":[115755,167845,225722],"blueprint":[".1.##.1.","1.L##L.1",".1.11.1.","2.####.2","1.####.1","JL....LJ","22.##.22","...##..."],"signature":".1.##.1./1.L##L.1/.1.11.1./2.####.2/1.####.1/JL....LJ/22.##.22/...##...|jelly|0|28|115755|tp0|cv0","gemReward":56,"numColors":6,"worldId":25},
+  {"id":620,"title":"Neon Boss 620","objectiveType":"blockers","moves":30,"targetScore":119400,"starThresholds":[119400,173130,232830],"blueprint":["#......#","IJ.S....","G.......","........","G.....C.","....C...",".....CH.","#......#"],"signature":"#......#/IJ.S..../G......./......../G.....C./....C.../.....CH./#......#|blockers|0|30|119400|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":122,"numColors":6,"worldId":25},
+  {"id":621,"title":"Rainbow Summit","objectiveType":"ingredients","moves":30,"targetScore":116045,"starThresholds":[116045,168265,226288],"ingredientCount":5,"blueprint":["##....##","##....##",".I....I.","L......L",".L....L.","HJ....JH","##....##","##....##"],"signature":"##....##/##....##/.I....I./L......L/.L....L./HJ....JH/##....##/##....##|ingredients|5|30|116045|tp2|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":622,"title":"Ruby Lagoon","objectiveType":"score","moves":31,"targetScore":116190,"starThresholds":[116190,168476,226571],"blueprint":["##....##","##....##","........","...L....","........","........","##....##","##....##"],"signature":"##....##/##....##/......../...L..../......../......../##....##/##....##|score|0|31|116190|tp0|cv1","gemReward":56,"numColors":6,"worldId":25,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":623,"title":"Truffle Garden","objectiveType":"jelly","moves":24,"targetScore":116335,"starThresholds":[116335,168686,226853],"blueprint":["..1##1..","1.ILLI.1",".S.11.S.","#.2..2.#","#.2..2.#","..2..2..","1..HH..1",".2.##.2."],"signature":"..1##1../1.ILLI.1/.S.11.S./#.2..2.#/#.2..2.#/..2..2../1..HH..1/.2.##.2.|jelly|0|24|116335|tp0|cv0","gemReward":56,"numColors":5,"worldId":25},
+  {"id":624,"title":"Velvet Bridge","objectiveType":"blockers","moves":25,"targetScore":116480,"starThresholds":[116480,168896,227136],"blueprint":["........","..J.H..G","........","########","...C....","G.I..C..","...I...H","........"],"signature":"......../..J.H..G/......../########/...C..../G.I..C../...I...H/........|blockers|0|25|116480|tp2|cv0","gemReward":56,"numColors":6,"worldId":25,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":625,"title":"Glazed Boss 625","objectiveType":"jelly","moves":30,"targetScore":120125,"starThresholds":[120125,174181,234244],"blueprint":[".1....1.","J..11..J","L2.LL.2L","1.1..1.1","CG2222GC","..2222..",".L....L.","1......1"],"signature":".1....1./J..11..J/L2.LL.2L/1.1..1.1/CG2222GC/..2222../.L....L./1......1|jelly|0|30|120125|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":125,"numColors":6,"worldId":25,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":626,"title":"Aurora Terrace","objectiveType":"jelly","moves":28,"targetScore":116770,"starThresholds":[116770,169317,227702],"blueprint":["###2....","##....1.","#....2..","2..22..L","..I.1..G","2......#","G.....##","....2###"],"signature":"###2..../##....1./#....2../2..22..L/..I.1..G/2......#/G.....##/....2###|jelly|0|28|116770|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":627,"title":"Diamond Harbor","objectiveType":"blockers","moves":29,"targetScore":116915,"starThresholds":[116915,169527,227984],"blueprint":["....####","........","G.H..H.G","C.H##H.C","...##...",".J.HH.J.",".S...GS.","####...."],"signature":"....####/......../G.H..H.G/C.H##H.C/...##.../.J.HH.J./.S...GS./####....|blockers|0|29|116915|tp1|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":628,"title":"Starlight Citadel","objectiveType":"ingredients","moves":30,"targetScore":117060,"starThresholds":[117060,169737,228267],"ingredientCount":5,"blueprint":["...##...","...##...","......J.","..####.J","..####H.","J.......","...##...","...##..."],"signature":"...##.../...##.../......J./..####.J/..####H./J......./...##.../...##...|ingredients|5|30|117060|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":629,"title":"Bubblegum Bastion","objectiveType":"score","moves":31,"targetScore":117205,"starThresholds":[117205,169947,228550],"blueprint":["#......#",".LS..SL.","S......S","L......L","........","........","........","#......#"],"signature":"#......#/.LS..SL./S......S/L......L/......../......../......../#......#|score|0|31|117205|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":630,"title":"Sugar Boss 630","objectiveType":"blockers","moves":30,"targetScore":120850,"starThresholds":[120850,175233,235658],"blueprint":["........","S.......","........","S######S",".######.",".C......","...I.SC.","........"],"signature":"......../S......./......../S######S/.######./.C....../...I.SC./........|blockers|0|30|120850|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":125,"numColors":5,"worldId":26,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":631,"title":"Caramel Plaza","objectiveType":"blockers","moves":25,"targetScore":117495,"starThresholds":[117495,170368,229115],"blueprint":["##....##","##J..J##","..G..G..",".CG..GC.","..S..S..","........","##....##","##....##"],"signature":"##....##/##J..J##/..G..G../.CG..GC./..S..S../......../##....##/##....##|blockers|0|25|117495|tp0|cv1","gemReward":56,"numColors":6,"worldId":26,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":632,"title":"Honey Courtyard","objectiveType":"ingredients","moves":26,"targetScore":117640,"starThresholds":[117640,170578,229398],"ingredientCount":5,"blueprint":["...##...","........","......I.","#L.....#","#......#",".L......","........","...##..."],"signature":"...##.../......../......I./#L.....#/#......#/.L....../......../...##...|ingredients|5|26|117640|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":633,"title":"Glacier Spire","objectiveType":"score","moves":27,"targetScore":117785,"starThresholds":[117785,170788,229681],"blueprint":["........",".SL..LS.","........","########",".B....B.","........","...BB...","........"],"signature":"......../.SL..LS./......../########/.B....B./......../...BB.../........|score|0|27|117785|tp2|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":634,"title":"Prism Observatory","objectiveType":"jelly","moves":28,"targetScore":117930,"starThresholds":[117930,170999,229964],"blueprint":["....1..1",".1.2.G..","....112.",".......1",".2......","....2.22","2..1..2.","....2..."],"signature":"....1..1/.1.2.G../....112./.......1/.2....../....2.22/2..1..2./....2...|jelly|0|28|117930|tp0|cv1","gemReward":56,"numColors":6,"worldId":26,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":635,"title":"Frost Boss 635","objectiveType":"jelly","moves":30,"targetScore":121575,"starThresholds":[121575,176284,237071],"blueprint":[".22##...","12J##J21",".2.##.2.","211##112","112##211",".L.##.L.","1.2##2.1","...##22."],"signature":".22##.../12J##J21/.2.##.2./211##112/112##211/.L.##.L./1.2##2.1/...##22.|jelly|0|30|121575|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":125,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":636,"title":"Golden Summit","objectiveType":"ingredients","moves":30,"targetScore":118220,"starThresholds":[118220,171419,230529],"ingredientCount":5,"blueprint":["........","........","#H....H#","##....##","##....##","#H.....#","........","........"],"signature":"......../......../#H....H#/##....##/##....##/#H.....#/......../........|ingredients|5|30|118220|tp1|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":637,"title":"Neon Lagoon","objectiveType":"score","moves":31,"targetScore":118365,"starThresholds":[118365,171629,230812],"blueprint":["........","..#..#..","..#..#..","........","S......S","..#..#..","BS#..#SB","........"],"signature":"......../..#..#../..#..#../......../S......S/..#..#../BS#..#SB/........|score|0|31|118365|tp0|cv1","gemReward":56,"numColors":5,"worldId":26,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":638,"title":"Rainbow Garden","objectiveType":"jelly","moves":24,"targetScore":118510,"starThresholds":[118510,171840,231095],"blueprint":["#..##..#","........","2...1...","..#21#.2",".2....1S","L..L...1","#...22.#","##....##"],"signature":"#..##..#/......../2...1.../..#21#.2/.2....1S/L..L...1/#...22.#/##....##|jelly|0|24|118510|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":639,"title":"Ruby Bridge","objectiveType":"blockers","moves":25,"targetScore":118655,"starThresholds":[118655,172050,231377],"blueprint":["##....##","#......#","G......G","J.S..S.J","........","..CSSC..","#..GG..#","##....##"],"signature":"##....##/#......#/G......G/J.S..S.J/......../..CSSC../#..GG..#/##....##|blockers|0|25|118655|tp1|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":640,"title":"Truffle Boss 640","objectiveType":"blockers","moves":30,"targetScore":122300,"starThresholds":[122300,177335,238485],"blueprint":["........","....C...","........","...##..G",".H.##...","S.....H.",".......C","........"],"signature":"......../....C.../......../...##..G/.H.##.../S.....H./.......C/........|blockers|0|30|122300|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":125,"numColors":6,"worldId":26,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":641,"title":"Velvet Conveyor","objectiveType":"score","moves":27,"targetScore":118945,"starThresholds":[118945,172470,231943],"blueprint":["##....##","#......#","L......L","...##...","...##...","........","#S....S#","##....##"],"signature":"##....##/#......#/L......L/...##.../...##.../......../#S....S#/##....##|score|0|27|118945|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":642,"title":"Glazed Pagoda","objectiveType":"jelly","moves":28,"targetScore":119090,"starThresholds":[119090,172681,232226],"blueprint":["###1.2.1","##1L...1","#2..2.S.","....2..2","1.......","1.J....#","2.C..2##",".2.2.###"],"signature":"###1.2.1/##1L...1/#2..2.S./....2..2/1......./1.J....#/2.C..2##/.2.2.###|jelly|0|28|119090|tp1|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":643,"title":"Cosmic Crown","objectiveType":"blockers","moves":29,"targetScore":119235,"starThresholds":[119235,172891,232508],"blueprint":["....####","........","J......J",".JI##IJ.","S..##..S","H......H","HI....IH","####...."],"signature":"....####/......../J......J/.JI##IJ./S..##..S/H......H/HI....IH/####....|blockers|0|29|119235|tp0|cv1","gemReward":56,"numColors":6,"worldId":26,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":644,"title":"Royal Cascade","objectiveType":"ingredients","moves":30,"targetScore":119380,"starThresholds":[119380,173101,232791],"ingredientCount":5,"blueprint":["...##...","...##...","LG....G.","..####.L","L.####..","........","...##...","...##..."],"signature":"...##.../...##.../LG....G./..####.L/L.####../......../...##.../...##...|ingredients|5|30|119380|tp0|cv0","gemReward":56,"numColors":5,"worldId":26},
+  {"id":645,"title":"Crystal Boss 645","objectiveType":"jelly","moves":30,"targetScore":123025,"starThresholds":[123025,178386,239899],"blueprint":["#......#","2..11..2","..C22C..","LL2222LL",".21..12.",".G.22.G.","1.2..2.1","#.2..2.#"],"signature":"#......#/2..11..2/..C22C../LL2222LL/.21..12./.G.22.G./1.2..2.1/#.2..2.#|jelly|0|30|123025|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":125,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":646,"title":"Mint Arch","objectiveType":"jelly","moves":24,"targetScore":119670,"starThresholds":[119670,173522,233357],"blueprint":["....2.1.",".S1I....",".......1",".######.",".######.","...1....","G...1C.G",".2...2.."],"signature":"....2.1./.S1I..../.......1/.######./.######./...1..../G...1C.G/.2...2..|jelly|0|24|119670|tp2|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":647,"title":"Swirl Crossing","objectiveType":"blockers","moves":25,"targetScore":119815,"starThresholds":[119815,173732,233639],"blueprint":["##....##","##.GG.##","..H..H..","SC....CS","........",".H....H.","##JSSJ##","##....##"],"signature":"##....##/##.GG.##/..H..H../SC....CS/......../.H....H./##JSSJ##/##....##|blockers|0|25|119815|tp0|cv0","gemReward":56,"numColors":6,"worldId":26},
+  {"id":648,"title":"Sapphire Sanctum","objectiveType":"ingredients","moves":26,"targetScore":119960,"starThresholds":[119960,173942,233922],"ingredientCount":5,"blueprint":["...##...","........","........","#......#","#L.....#","......LI","........","...##..."],"signature":"...##.../......../......../#......#/#L.....#/......LI/......../...##...|ingredients|5|26|119960|tp1|cv0","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":649,"title":"Toffee Grotto","objectiveType":"score","moves":27,"targetScore":120105,"starThresholds":[120105,174152,234205],"blueprint":["........","...BB...","B......B","########","...SS...","........","........","........"],"signature":"......../...BB.../B......B/########/...SS.../......../......../........|score|0|27|120105|tp2|cv1","gemReward":56,"numColors":6,"worldId":26,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":650,"title":"Aurora Boss 650","objectiveType":"blockers","moves":30,"targetScore":123750,"starThresholds":[123750,179438,241313],"blueprint":["........","........",".......I","....S...","S...HHS.","..S.....","........","........"],"signature":"......../......../.......I/....S.../S...HHS./..S...../......../........|blockers|0|30|123750|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":128,"numColors":6,"worldId":26},
+  {"id":651,"title":"Prism Summit","objectiveType":"ingredients","moves":30,"targetScore":120395,"starThresholds":[120395,174573,234770],"ingredientCount":5,"blueprint":["###.....","##......","#J....J.",".L....L.",".J....J.",".L....L#","......##",".....###"],"signature":"###...../##....../#J....J./.L....L./.J....J./.L....L#/......##/.....###|ingredients|5|30|120395|tp1|cv0","gemReward":59,"numColors":5,"worldId":27,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":652,"title":"Frost Lagoon","objectiveType":"score","moves":31,"targetScore":120540,"starThresholds":[120540,174783,235053],"blueprint":["....####","...L...L","........","...##...","S..##...",".......S","..L.....","####...."],"signature":"....####/...L...L/......../...##.../S..##.../.......S/..L...../####....|score|0|31|120540|tp0|cv1","gemReward":59,"numColors":6,"worldId":27,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":653,"title":"Golden Garden","objectiveType":"jelly","moves":24,"targetScore":120685,"starThresholds":[120685,174993,235336],"blueprint":["12.##.21","1.2##2.1","1S1..1S1","G1####1G","11####11","S.1221.S","...##...",".1.##.1."],"signature":"12.##.21/1.2##2.1/1S1..1S1/G1####1G/11####11/S.1221.S/...##.../.1.##.1.|jelly|0|24|120685|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":654,"title":"Neon Bridge","objectiveType":"blockers","moves":25,"targetScore":120830,"starThresholds":[120830,175204,235619],"blueprint":["#......#","....J..S","....S...",".C.....J","........","G.....I.","...I.SC.","#......#"],"signature":"#......#/....J..S/....S.../.C.....J/......../G.....I./...I.SC./#......#|blockers|0|25|120830|tp1|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":655,"title":"Rainbow Boss 655","objectiveType":"jelly","moves":30,"targetScore":124475,"starThresholds":[124475,180489,242726],"blueprint":["2......2",".J....J.",".L.22.L.","2######2",".######.","........","HS1111SH","1......1"],"signature":"2......2/.J....J./.L.22.L./2######2/.######./......../HS1111SH/1......1|jelly|0|30|124475|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":128,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":656,"title":"Ruby Conveyor","objectiveType":"score","moves":27,"targetScore":121120,"starThresholds":[121120,175624,236184],"blueprint":["##....##","##....##","........","....B...",".SS.L...","...B....","##....##","##....##"],"signature":"##....##/##....##/......../....B.../.SS.L.../...B..../##....##/##....##|score|0|27|121120|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":657,"title":"Truffle Pagoda","objectiveType":"jelly","moves":28,"targetScore":121265,"starThresholds":[121265,175834,236467],"blueprint":["...##...","212GG212","2......2","#11..11#","#112211#","112JJ211","L1.JJ.1L","1.2##2.1"],"signature":"...##.../212GG212/2......2/#11..11#/#112211#/112JJ211/L1.JJ.1L/1.2##2.1|jelly|0|28|121265|tp1|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":658,"title":"Velvet Crown","objectiveType":"blockers","moves":29,"targetScore":121410,"starThresholds":[121410,176045,236750],"blueprint":["........","...C.G..","........","########",".J.....S","C.......",".......S","........"],"signature":"......../...C.G../......../########/.J.....S/C......./.......S/........|blockers|0|29|121410|tp2|cv1","gemReward":59,"numColors":5,"worldId":27,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":659,"title":"Glazed Cascade","objectiveType":"ingredients","moves":30,"targetScore":121555,"starThresholds":[121555,176255,237032],"ingredientCount":5,"blueprint":["........","........","H......H","LL....LL","L......L","H......H","........","........"],"signature":"......../......../H......H/LL....LL/L......L/H......H/......../........|ingredients|5|30|121555|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":660,"title":"Cosmic Boss 660","objectiveType":"blockers","moves":30,"targetScore":125200,"starThresholds":[125200,181540,244140],"blueprint":["...##...","...##...","..S##..J","...##...","...##..J","..J##...","...##..I","...##..."],"signature":"...##.../...##.../..S##..J/...##.../...##..J/..J##.../...##..I/...##...|blockers|0|30|125200|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":128,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":661,"title":"Royal Arch","objectiveType":"jelly","moves":24,"targetScore":121845,"starThresholds":[121845,176675,237598],"blueprint":["12222221","J..22..J","#..22..#","##.11.##","##S11S##","#......#","12122121","21.22.12"],"signature":"12222221/J..22..J/#..22..#/##.11.##/##S11S##/#......#/12122121/21.22.12|jelly|0|24|121845|tp0|cv1","gemReward":59,"numColors":6,"worldId":27,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":662,"title":"Crystal Crossing","objectiveType":"blockers","moves":25,"targetScore":121990,"starThresholds":[121990,176886,237881],"blueprint":["........","JG#G.#.C","..#C.#..",".I......","......S.","..#..#..","..#..#..","........"],"signature":"......../JG#G.#.C/..#C.#../.I....../......S./..#..#../..#..#../........|blockers|0|25|121990|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":663,"title":"Mint Sanctum","objectiveType":"ingredients","moves":26,"targetScore":122135,"starThresholds":[122135,177096,238163],"ingredientCount":5,"blueprint":["#..##..#","........",".L....L.","LL#..#LL",".L....L.","........","#......#","##....##"],"signature":"#..##..#/......../.L....L./LL#..#LL/.L....L./......../#......#/##....##|ingredients|5|26|122135|tp1|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":664,"title":"Swirl Grotto","objectiveType":"score","moves":27,"targetScore":122280,"starThresholds":[122280,177306,238446],"blueprint":["##....##","#...BS.#",".......S",".......B","........","........","#......#","##....##"],"signature":"##....##/#...BS.#/.......S/.......B/......../......../#......#/##....##|score|0|27|122280|tp0|cv1","gemReward":59,"numColors":6,"worldId":27,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":665,"title":"Sapphire Boss 665","objectiveType":"jelly","moves":30,"targetScore":125925,"starThresholds":[125925,182591,245554],"blueprint":["1......1",".H.22.H.","1G1HH1G1","..1##1..","J21##12J",".122221.","21122112","........"],"signature":"1......1/.H.22.H./1G1HH1G1/..1##1../J21##12J/.122221./21122112/........|jelly|0|30|125925|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":128,"numColors":5,"worldId":27},
+  {"id":666,"title":"Toffee Harbor","objectiveType":"blockers","moves":29,"targetScore":122570,"starThresholds":[122570,177727,239012],"blueprint":["##....##","#....C.#","C.......","S..##C.G","...##...","H.......","#..S...#","##....##"],"signature":"##....##/#....C.#/C......./S..##C.G/...##.../H......./#..S...#/##....##|blockers|0|29|122570|tp1|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":667,"title":"Aurora Citadel","objectiveType":"ingredients","moves":30,"targetScore":122715,"starThresholds":[122715,177937,239294],"ingredientCount":5,"blueprint":["###.....","##......","#I....IJ","IL....LI","........",".G....G#","......##",".....###"],"signature":"###...../##....../#I....IJ/IL....LI/......../.G....G#/......##/.....###|ingredients|5|30|122715|tp0|cv1","gemReward":59,"numColors":6,"worldId":27,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":668,"title":"Diamond Bastion","objectiveType":"score","moves":31,"targetScore":122860,"starThresholds":[122860,178147,239577],"blueprint":["....####",".LB.....","........","..S##.S.","...##...","..B...S.","........","####...."],"signature":"....####/.LB...../......../..S##.S./...##.../..B...S./......../####....|score|0|31|122860|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":669,"title":"Starlight Portal","objectiveType":"jelly","moves":24,"targetScore":123005,"starThresholds":[123005,178357,239860],"blueprint":["...##...","22L##L22","..2..2..",".2####2.","I.####.I","2......2","H.1##1.H","...##.2."],"signature":"...##.../22L##L22/..2..2../.2####2./I.####.I/2......2/H.1##1.H/...##.2.|jelly|0|24|123005|tp1|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":670,"title":"Bubblegum Boss 670","objectiveType":"blockers","moves":30,"targetScore":126650,"starThresholds":[126650,183643,246968],"blueprint":["#......#","...S....","........","...HS...","......C.",".......G","..C.....","#......#"],"signature":"#......#/...S..../......../...HS.../......C./.......G/..C...../#......#|blockers|0|30|126650|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":128,"numColors":6,"worldId":27,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":671,"title":"Sugar Courtyard","objectiveType":"ingredients","moves":26,"targetScore":123295,"starThresholds":[123295,178778,240425],"ingredientCount":5,"blueprint":["........","........","#J....J#","##....##","##....##","#......#","........","........"],"signature":"......../......../#J....J#/##....##/##....##/#......#/......../........|ingredients|5|26|123295|tp0|cv0","gemReward":59,"numColors":6,"worldId":27},
+  {"id":672,"title":"Caramel Spire","objectiveType":"score","moves":27,"targetScore":123440,"starThresholds":[123440,178988,240708],"blueprint":["##....##","##B...##","........","....L...","..L.....","..B.S..S","##....##","##....##"],"signature":"##....##/##B...##/......../....L.../..L...../..B.S..S/##....##/##....##|score|0|27|123440|tp2|cv0","gemReward":59,"numColors":5,"worldId":27,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":673,"title":"Honey Observatory","objectiveType":"jelly","moves":28,"targetScore":123585,"starThresholds":[123585,179198,240991],"blueprint":["2..##..2","...22...","2GJ..JG2","#.1SS1.#","#1....1#","1......1",".21..12.","..2##2.."],"signature":"2..##..2/...22.../2GJ..JG2/#.1SS1.#/#1....1#/1......1/.21..12./..2##2..|jelly|0|28|123585|tp0|cv1","gemReward":59,"numColors":6,"worldId":27,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":674,"title":"Glacier Vault","objectiveType":"blockers","moves":29,"targetScore":123730,"starThresholds":[123730,179409,241274],"blueprint":["........","........","........","########","J...G...","........","..C.....","........"],"signature":"......../......../......../########/J...G.../......../..C...../........|blockers|0|29|123730|tp2|cv0","gemReward":59,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":675,"title":"Prism Boss 675","objectiveType":"jelly","moves":30,"targetScore":127375,"starThresholds":[127375,184694,248381],"blueprint":["1......1","...11...","..S22S..","2.1..1.2","..L22L..","1C1221C1","..1111..","..2222.."],"signature":"1......1/...11.../..S22S../2.1..1.2/..L22L../1C1221C1/..1111../..2222..|jelly|0|30|127375|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":131,"numColors":6,"worldId":27,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":676,"title":"Glazed Arch","objectiveType":"jelly","moves":24,"targetScore":124020,"starThresholds":[124020,179829,241839],"blueprint":["###.....","##L...2.","#.12..L.","1C.21..S",".2..H.2.","2..12..#","...C.J##","..1..###"],"signature":"###...../##L...2./#.12..L./1C.21..S/.2..H.2./2..12..#/...C.J##/..1..###|jelly|0|24|124020|tp0|cv1","gemReward":59,"numColors":6,"worldId":28,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":677,"title":"Cosmic Crossing","objectiveType":"blockers","moves":25,"targetScore":124165,"starThresholds":[124165,180039,242122],"blueprint":["....####",".C.II.C.","..CIIC..","...##...","S.C##C.S","........","..SGGS..","####...."],"signature":"....####/.C.II.C./..CIIC../...##.../S.C##C.S/......../..SGGS../####....|blockers|0|25|124165|tp0|cv0","gemReward":59,"numColors":6,"worldId":28},
+  {"id":678,"title":"Royal Sanctum","objectiveType":"ingredients","moves":26,"targetScore":124310,"starThresholds":[124310,180250,242405],"ingredientCount":5,"blueprint":["...##...","...##...","........","..####.L",".I####IJ","......HJ","...##...","...##..."],"signature":"...##.../...##.../......../..####.L/.I####IJ/......HJ/...##.../...##...|ingredients|5|26|124310|tp1|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":679,"title":"Crystal Grotto","objectiveType":"score","moves":27,"targetScore":124455,"starThresholds":[124455,180460,242687],"blueprint":["#......#","B......B","...LL...",".S....S.","B......B","........",".S....S.","#......#"],"signature":"#......#/B......B/...LL.../.S....S./B......B/......../.S....S./#......#|score|0|27|124455|tp0|cv1","gemReward":59,"numColors":5,"worldId":28,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":680,"title":"Mint Boss 680","objectiveType":"blockers","moves":30,"targetScore":128100,"starThresholds":[128100,185745,249795],"blueprint":["........","..I.G...","S..I....",".######.",".######.",".......S","....H...","........"],"signature":"......../..I.G.../S..I..../.######./.######./.......S/....H.../........|blockers|0|30|128100|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":131,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":681,"title":"Swirl Harbor","objectiveType":"blockers","moves":29,"targetScore":124745,"starThresholds":[124745,180880,243253],"blueprint":["##....##","##....##","...SS...",".S....S.","S......S","..I..I..","##.II.##","##....##"],"signature":"##....##/##....##/...SS.../.S....S./S......S/..I..I../##.II.##/##....##|blockers|0|29|124745|tp2|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":682,"title":"Sapphire Citadel","objectiveType":"ingredients","moves":30,"targetScore":124890,"starThresholds":[124890,181091,243536],"ingredientCount":5,"blueprint":["...##...","........",".......L","#......#","#......#","......LL","........","...##..."],"signature":"...##.../......../.......L/#......#/#......#/......LL/......../...##...|ingredients|5|30|124890|tp0|cv1","gemReward":59,"numColors":6,"worldId":28,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":683,"title":"Toffee Bastion","objectiveType":"score","moves":31,"targetScore":125035,"starThresholds":[125035,181301,243818],"blueprint":["........","........","........","########","B......B","S..LL..S","..SLLS..","........"],"signature":"......../......../......../########/B......B/S..LL..S/..SLLS../........|score|0|31|125035|tp2|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":684,"title":"Aurora Portal","objectiveType":"jelly","moves":24,"targetScore":125180,"starThresholds":[125180,181511,244101],"blueprint":["..2.....","....2S.2","......22",".....22.","...1SLGC","1S.2.1..","..2L.2J.",".....11."],"signature":"..2...../....2S.2/......22/.....22./...1SLGC/1S.2.1../..2L.2J./.....11.|jelly|0|24|125180|tp1|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":685,"title":"Diamond Boss 685","objectiveType":"jelly","moves":30,"targetScore":128825,"starThresholds":[128825,186796,251209],"blueprint":[".21##...",".11##11.","22.##.22","111##111","1.1##1L1","...##L..","1S.##.S1","1..##2.1"],"signature":".21##.../.11##11./22.##.22/111##111/1.1##1L1/...##L../1S.##.S1/1..##2.1|jelly|0|30|128825|tp2|cv1","isBoss":true,"keyReward":1,"gemReward":131,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}],"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":686,"title":"Starlight Courtyard","objectiveType":"ingredients","moves":26,"targetScore":125470,"starThresholds":[125470,181932,244667],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#......#","........","........"],"signature":"......../......../#......#/##....##/##....##/#......#/......../........|ingredients|5|26|125470|tp0|cv0","gemReward":59,"numColors":5,"worldId":28},
+  {"id":687,"title":"Bubblegum Spire","objectiveType":"score","moves":27,"targetScore":125615,"starThresholds":[125615,182142,244949],"blueprint":["........","..#..#..","..#..#..","L.B..B.L","........","LB#..#BL","L.#..#.L","........"],"signature":"......../..#..#../..#..#../L.B..B.L/......../LB#..#BL/L.#..#.L/........|score|0|27|125615|tp1|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":688,"title":"Sugar Observatory","objectiveType":"jelly","moves":28,"targetScore":125760,"starThresholds":[125760,182352,245232],"blueprint":["#..##..#",".2...2..","2....2..","S.#2.#.G","2.S.1.1.","22......","#......#","##22..##"],"signature":"#..##..#/.2...2../2....2../S.#2.#.G/2.S.1.1./22....../#......#/##22..##|jelly|0|28|125760|tp0|cv1","gemReward":59,"numColors":6,"worldId":28,"conveyors":[[{"row":1,"col":2},{"row":1,"col":3},{"row":1,"col":4},{"row":1,"col":5},{"row":2,"col":5},{"row":2,"col":4},{"row":2,"col":3},{"row":2,"col":2}]]},
+  {"id":689,"title":"Caramel Vault","objectiveType":"blockers","moves":29,"targetScore":125905,"starThresholds":[125905,182562,245515],"blueprint":["##....##","#S.SS.S#",".H....H.","J.G..G.J",".G....G.","J.H..H.J","#..II..#","##....##"],"signature":"##....##/#S.SS.S#/.H....H./J.G..G.J/.G....G./J.H..H.J/#..II..#/##....##|blockers|0|29|125905|tp0|cv0","gemReward":59,"numColors":6,"worldId":28},
+  {"id":690,"title":"Honey Boss 690","objectiveType":"blockers","moves":30,"targetScore":129550,"starThresholds":[129550,187848,252623],"blueprint":["........","........","........",".C.##I..","...##.C.","J.I.....","...S....","........"],"signature":"......../......../......../.C.##I../...##.C./J.I...../...S..../........|blockers|0|30|129550|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":131,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":691,"title":"Glacier Lagoon","objectiveType":"score","moves":31,"targetScore":126195,"starThresholds":[126195,182983,246080],"blueprint":["##....##","#......#","..S..S..","...##...","..S##S..","L......L","#......#","##....##"],"signature":"##....##/#......#/..S..S../...##.../..S##S../L......L/#......#/##....##|score|0|31|126195|tp0|cv1","gemReward":59,"numColors":6,"worldId":28,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":692,"title":"Prism Garden","objectiveType":"jelly","moves":24,"targetScore":126340,"starThresholds":[126340,183193,246363],"blueprint":["###....1","##2221..","#..22..2","J..2I...","1.L.G1..","2...112#","..1.S1##","..2.2###"],"signature":"###....1/##2221../#..22..2/J..2I.../1.L.G1../2...112#/..1.S1##/..2.2###|jelly|0|24|126340|tp0|cv0","gemReward":59,"numColors":6,"worldId":28},
+  {"id":693,"title":"Frost Bridge","objectiveType":"blockers","moves":25,"targetScore":126485,"starThresholds":[126485,183403,246646],"blueprint":["....####",".S....S.","S......S",".C.##.C.",".J.##.J.",".I.SS.I.","JI.JJ.IJ","####...."],"signature":"....####/.S....S./S......S/.C.##.C./.J.##.J./.I.SS.I./JI.JJ.IJ/####....|blockers|0|25|126485|tp1|cv0","gemReward":59,"numColors":5,"worldId":28,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":694,"title":"Golden Oasis","objectiveType":"ingredients","moves":26,"targetScore":126630,"starThresholds":[126630,183614,246929],"ingredientCount":5,"blueprint":["...##...","...##...","........","..####.H","JL####..","I.....I.","...##...","...##..."],"signature":"...##.../...##.../......../..####.H/JL####../I.....I./...##.../...##...|ingredients|5|26|126630|tp0|cv0","gemReward":59,"numColors":6,"worldId":28},
+  {"id":695,"title":"Neon Boss 695","objectiveType":"jelly","moves":30,"targetScore":130275,"starThresholds":[130275,188899,254036],"blueprint":["#21..12#","L2....2L","1.GLLG.1","1..SS..1","J.ILLI.J","2.2..2.2",".221122.","#2.11.2#"],"signature":"#21..12#/L2....2L/1.GLLG.1/1..SS..1/J.ILLI.J/2.2..2.2/.221122./#2.11.2#|jelly|0|30|130275|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":131,"numColors":6,"worldId":28},
+  {"id":696,"title":"Rainbow Pagoda","objectiveType":"jelly","moves":28,"targetScore":126920,"starThresholds":[126920,184034,247494],"blueprint":["....2...","2.....H.","2...1.L.","I######.",".######1","L1.12.G2","2.1111G.","2...2..."],"signature":"....2.../2.....H./2...1.L./I######./.######1/L1.12.G2/2.1111G./2...2...|jelly|0|28|126920|tp2|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":697,"title":"Ruby Crown","objectiveType":"blockers","moves":29,"targetScore":127065,"starThresholds":[127065,184244,247777],"blueprint":["##....##","##G..G##",".II..II.","S......S","HG.SS.GH",".C....C.","##....##","##....##"],"signature":"##....##/##G..G##/.II..II./S......S/HG.SS.GH/.C....C./##....##/##....##|blockers|0|29|127065|tp0|cv1","gemReward":59,"numColors":6,"worldId":28,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":698,"title":"Truffle Cascade","objectiveType":"ingredients","moves":30,"targetScore":127210,"starThresholds":[127210,184455,248060],"ingredientCount":5,"blueprint":["...##...","........",".L....J.","#......#","#G....L#","H......I","........","...##..."],"signature":"...##.../......../.L....J./#......#/#G....L#/H......I/......../...##...|ingredients|5|30|127210|tp0|cv0","gemReward":59,"numColors":6,"worldId":28},
+  {"id":699,"title":"Velvet Gallery","objectiveType":"score","moves":31,"targetScore":127355,"starThresholds":[127355,184665,248342],"blueprint":["........","........","S..LL..S","########",".B....B.","...SS...","S..SS..S","........"],"signature":"......../......../S..LL..S/########/.B....B./...SS.../S..SS..S/........|score|0|31|127355|tp2|cv0","gemReward":59,"numColors":6,"worldId":28,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":700,"title":"Glazed Boss 700","objectiveType":"blockers","moves":30,"targetScore":131000,"starThresholds":[131000,189950,255450],"blueprint":["........","GC....I.",".......G","........","...I....","........","S...JG..","........"],"signature":"......../GC....I./.......G/......../...I..../......../S...JG../........|blockers|0|30|131000|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":134,"numColors":5,"worldId":28,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":701,"title":"Aurora Courtyard","objectiveType":"ingredients","moves":26,"targetScore":127645,"starThresholds":[127645,185085,248908],"ingredientCount":5,"blueprint":["###.....","##......","#J....J.",".L....L.",".L....L.","LI....I#","......##",".....###"],"signature":"###...../##....../#J....J./.L....L./.L....L./LI....I#/......##/.....###|ingredients|5|26|127645|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":702,"title":"Diamond Spire","objectiveType":"score","moves":27,"targetScore":127790,"starThresholds":[127790,185296,249191],"blueprint":["....####","........",".L...L..","...##...","...##...",".....S..","...B....","####...."],"signature":"....####/......../.L...L../...##.../...##.../.....S../...B..../####....|score|0|27|127790|tp1|cv0","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":6,"col":2},"to":{"row":1,"col":2},"pairId":1}]},
+  {"id":703,"title":"Starlight Observatory","objectiveType":"jelly","moves":28,"targetScore":127935,"starThresholds":[127935,185506,249473],"blueprint":["2.2##2.2","..2##2..","S..LL..S","2.####.2","2.####.2",".11..11.","L.L##L.L","2..##..2"],"signature":"2.2##2.2/..2##2../S..LL..S/2.####.2/2.####.2/.11..11./L.L##L.L/2..##..2|jelly|0|28|127935|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":704,"title":"Bubblegum Vault","objectiveType":"blockers","moves":29,"targetScore":128080,"starThresholds":[128080,185716,249756],"blueprint":["#......#","......I.","........","S.....I.",".ISS..C.","S.J.C...","......S.","#......#"],"signature":"#......#/......I./......../S.....I./.ISS..C./S.J.C.../......S./#......#|blockers|0|29|128080|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":705,"title":"Sugar Boss 705","objectiveType":"jelly","moves":30,"targetScore":131725,"starThresholds":[131725,191001,256864],"blueprint":["11122111","1.1..1.1","1..II..1","C######C","2######2",".S.SS.S.",".1.11.1.","122..221"],"signature":"11122111/1.1..1.1/1..II..1/C######C/2######2/.S.SS.S./.1.11.1./122..221|jelly|0|30|131725|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":134,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":706,"title":"Caramel Lagoon","objectiveType":"score","moves":31,"targetScore":128370,"starThresholds":[128370,186137,250322],"blueprint":["##....##","##....##","........","........","B.....B.","........","##....##","##....##"],"signature":"##....##/##....##/......../......../B.....B./......../##....##/##....##|score|0|31|128370|tp0|cv1","gemReward":62,"numColors":6,"worldId":29,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":707,"title":"Honey Garden","objectiveType":"jelly","moves":24,"targetScore":128515,"starThresholds":[128515,186347,250604],"blueprint":["...##...","..JLLJ..","21J..J12","#2C..C2#","#.2112.#",".G....G.",".1H..H1.",".21##12."],"signature":"...##.../..JLLJ../21J..J12/#2C..C2#/#.2112.#/.G....G./.1H..H1./.21##12.|jelly|0|24|128515|tp0|cv0","gemReward":62,"numColors":5,"worldId":29},
+  {"id":708,"title":"Glacier Bridge","objectiveType":"blockers","moves":25,"targetScore":128660,"starThresholds":[128660,186557,250887],"blueprint":["........","........","........","########","........",".S..JC..",".......G","........"],"signature":"......../......../......../########/......../.S..JC../.......G/........|blockers|0|25|128660|tp2|cv0","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":709,"title":"Prism Oasis","objectiveType":"ingredients","moves":26,"targetScore":128805,"starThresholds":[128805,186767,251170],"ingredientCount":5,"blueprint":["........","........",".L....L.",".H....H.",".G....G.",".L....L.","........","........"],"signature":"......../......../.L....L./.H....H./.G....G./.L....L./......../........|ingredients|5|26|128805|tp0|cv1","gemReward":62,"numColors":6,"worldId":29,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":710,"title":"Frost Boss 710","objectiveType":"blockers","moves":30,"targetScore":132450,"starThresholds":[132450,192053,258278],"blueprint":["...##...","...##..C","G..##...",".S.##..G","...##...","...##...","...##...","...##..."],"signature":"...##.../...##..C/G..##.../.S.##..G/...##.../...##.../...##.../...##...|blockers|0|30|132450|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":134,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":711,"title":"Golden Pagoda","objectiveType":"jelly","moves":28,"targetScore":129095,"starThresholds":[129095,187188,251735],"blueprint":[".2.22...","2......2","#......#","##....##","##.11.##","#L2..2L#",".221122.","..21122."],"signature":".2.22.../2......2/#......#/##....##/##.11.##/#L2..2L#/.221122./..21122.|jelly|0|28|129095|tp1|cv0","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":712,"title":"Neon Crown","objectiveType":"blockers","moves":29,"targetScore":129240,"starThresholds":[129240,187398,252018],"blueprint":["........",".I#..#..","S.#..#..",".H......","S.....SC","..#..#.C","..#S.#.C","........"],"signature":"......../.I#..#../S.#..#../.H....../S.....SC/..#..#.C/..#S.#.C/........|blockers|0|29|129240|tp0|cv1","gemReward":62,"numColors":6,"worldId":29,"conveyors":[[{"row":3,"col":2},{"row":3,"col":3},{"row":3,"col":4},{"row":3,"col":5},{"row":4,"col":5},{"row":4,"col":4},{"row":4,"col":3},{"row":4,"col":2}]]},
+  {"id":713,"title":"Rainbow Cascade","objectiveType":"ingredients","moves":30,"targetScore":129385,"starThresholds":[129385,187608,252301],"ingredientCount":5,"blueprint":["#..##..#","........","HL....LH","HL#..#LH","........","........","#......#","##....##"],"signature":"#..##..#/......../HL....LH/HL#..#LH/......../......../#......#/##....##|ingredients|5|30|129385|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":714,"title":"Ruby Gallery","objectiveType":"score","moves":31,"targetScore":129530,"starThresholds":[129530,187819,252584],"blueprint":["##....##","#.....B#","........",".L....B.","...L....","..B.S...","#..S...#","##....##"],"signature":"##....##/#.....B#/......../.L....B./...L..../..B.S.../#..S...#/##....##|score|0|31|129530|tp1|cv0","gemReward":62,"numColors":5,"worldId":29,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":715,"title":"Truffle Boss 715","objectiveType":"jelly","moves":30,"targetScore":133175,"starThresholds":[133175,193104,259691],"blueprint":[".112211.","..S11S..","11....11",".C2##2C.","L..##..L","........","H......H","121..121"],"signature":".112211./..S11S../11....11/.C2##2C./L..##..L/......../H......H/121..121|jelly|0|30|133175|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":134,"numColors":6,"worldId":29,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":716,"title":"Velvet Crossing","objectiveType":"blockers","moves":25,"targetScore":129820,"starThresholds":[129820,188239,253149],"blueprint":["##....##","#.....C#",".S......","...##...",".G.##...",".....C..","#......#","##....##"],"signature":"##....##/#.....C#/.S....../...##.../.G.##.../.....C../#......#/##....##|blockers|0|25|129820|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":717,"title":"Glazed Sanctum","objectiveType":"ingredients","moves":26,"targetScore":129965,"starThresholds":[129965,188449,253432],"ingredientCount":5,"blueprint":["###.....","##......","#......L","LL....LL","HL....LH",".L....L#","......##",".....###"],"signature":"###...../##....../#......L/LL....LL/HL....LH/.L....L#/......##/.....###|ingredients|5|26|129965|tp1|cv0","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":718,"title":"Cosmic Grotto","objectiveType":"score","moves":27,"targetScore":130110,"starThresholds":[130110,188660,253715],"blueprint":["....####","........","........","...##...","...##...",".B.....L",".......B","####...."],"signature":"....####/......../......../...##.../...##.../.B.....L/.......B/####....|score|0|27|130110|tp0|cv1","gemReward":62,"numColors":6,"worldId":29,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":719,"title":"Royal Terrace","objectiveType":"jelly","moves":28,"targetScore":130255,"starThresholds":[130255,188870,253997],"blueprint":["...##...","HH1##1HH","..G..G..","2S####S2",".2####2.","J..22..J","2L1##1L2","21.##.12"],"signature":"...##.../HH1##1HH/..G..G../2S####S2/.2####2./J..22..J/2L1##1L2/21.##.12|jelly|0|28|130255|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":720,"title":"Crystal Boss 720","objectiveType":"blockers","moves":30,"targetScore":133900,"starThresholds":[133900,194155,261105],"blueprint":["#......#","..C..H..",".J.....S","..C.I.C.","..GC...S","........",".C.....C","#......#"],"signature":"#......#/..C..H../.J.....S/..C.I.C./..GC...S/......../.C.....C/#......#|blockers|0|30|133900|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":134,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":721,"title":"Mint Citadel","objectiveType":"ingredients","moves":30,"targetScore":130545,"starThresholds":[130545,189290,254563],"ingredientCount":5,"blueprint":["###.....","##......","#.......","......I.",".......H",".......#","......##",".....###"],"signature":"###...../##....../#......./......I./.......H/.......#/......##/.....###|ingredients|5|30|130545|tp0|cv1","gemReward":62,"numColors":5,"worldId":29,"conveyors":[[{"row":2,"col":1},{"row":2,"col":2},{"row":3,"col":2},{"row":4,"col":2},{"row":5,"col":2},{"row":5,"col":1},{"row":4,"col":1},{"row":3,"col":1}]]},
+  {"id":722,"title":"Swirl Bastion","objectiveType":"score","moves":31,"targetScore":130690,"starThresholds":[130690,189501,254846],"blueprint":["##....##","##....##","........","......L.",".......L","L.L..B..","##....##","##....##"],"signature":"##....##/##....##/......../......L./.......L/L.L..B../##....##/##....##|score|0|31|130690|tp0|cv0","gemReward":62,"numColors":6,"worldId":29},
+  {"id":723,"title":"Sapphire Portal","objectiveType":"jelly","moves":24,"targetScore":130835,"starThresholds":[130835,189711,255128],"blueprint":["..2##2..","22.22.22",".LG..GL.","#2.LL.2#","#L....L#","C212212C","122..221","..1##12."],"signature":"..2##2../22.22.22/.LG..GL./#2.LL.2#/#L....L#/C212212C/122..221/..1##12.|jelly|0|24|130835|tp1|cv0","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":724,"title":"Toffee Plaza","objectiveType":"blockers","moves":25,"targetScore":130980,"starThresholds":[130980,189921,255411],"blueprint":["........","........",".G......","########","...J....",".......C",".......I","........"],"signature":"......../......../.G....../########/...J..../.......C/.......I/........|blockers|0|25|130980|tp2|cv1","gemReward":62,"numColors":6,"worldId":29,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":725,"title":"Aurora Boss 725","objectiveType":"jelly","moves":30,"targetScore":134625,"starThresholds":[134625,195206,262519],"blueprint":["21.11.12","..1..1..","2G1..1G2","2..22..2","...22...","C.2..2.C","22I..I22",".111111."],"signature":"21.11.12/..1..1../2G1..1G2/2..22..2/...22.../C.2..2.C/22I..I22/.111111.|jelly|0|30|134625|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":137,"numColors":6,"worldId":29},
+  {"id":726,"title":"Prism Pagoda","objectiveType":"jelly","moves":28,"targetScore":131270,"starThresholds":[131270,190342,255977],"blueprint":["###12...","##2....1","#...L2..","2I..C...","....J...","2L..2C1#","...21.##",".1.1.###"],"signature":"###12.../##2....1/#...L2../2I..C.../....J.../2L..2C1#/...21.##/.1.1.###|jelly|0|28|131270|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":6,"col":1},"to":{"row":1,"col":6},"pairId":1}]},
+  {"id":727,"title":"Frost Crown","objectiveType":"blockers","moves":29,"targetScore":131415,"starThresholds":[131415,190552,256259],"blueprint":["....####","J.SCCS.J","........","H..##..H","...##...",".I....I.","........","####...."],"signature":"....####/J.SCCS.J/......../H..##..H/...##.../.I....I./......../####....|blockers|0|29|131415|tp0|cv1","gemReward":62,"numColors":6,"worldId":30,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":728,"title":"Golden Cascade","objectiveType":"ingredients","moves":30,"targetScore":131560,"starThresholds":[131560,190762,256542],"ingredientCount":5,"blueprint":["...##...","...##...","II......",".L####H.",".I####..",".......L","...##...","...##..."],"signature":"...##.../...##.../II....../.L####H./.I####../.......L/...##.../...##...|ingredients|5|30|131560|tp0|cv0","gemReward":62,"numColors":5,"worldId":30},
+  {"id":729,"title":"Neon Gallery","objectiveType":"score","moves":31,"targetScore":131705,"starThresholds":[131705,190972,256825],"blueprint":["#......#","........","........","........",".L....L.",".LS..SL.","........","#......#"],"signature":"#......#/......../......../......../.L....L./.LS..SL./......../#......#|score|0|31|131705|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":730,"title":"Rainbow Boss 730","objectiveType":"blockers","moves":30,"targetScore":135350,"starThresholds":[135350,196258,263933],"blueprint":["........","........",".......S","S######.",".######.","........","G...S...","........"],"signature":"......../......../.......S/S######./.######./......../G...S.../........|blockers|0|30|135350|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":137,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":731,"title":"Ruby Crossing","objectiveType":"blockers","moves":25,"targetScore":131995,"starThresholds":[131995,191393,257390],"blueprint":["##....##","##....##","C......C","J......J","S......S","I......I","##.JJ.##","##....##"],"signature":"##....##/##....##/C......C/J......J/S......S/I......I/##.JJ.##/##....##|blockers|0|25|131995|tp0|cv0","gemReward":62,"numColors":6,"worldId":30},
+  {"id":732,"title":"Truffle Sanctum","objectiveType":"ingredients","moves":26,"targetScore":132140,"starThresholds":[132140,191603,257673],"ingredientCount":5,"blueprint":["...##...","........",".J....H.","#.....G#","#......#","I.......","........","...##..."],"signature":"...##.../......../.J....H./#.....G#/#......#/I......./......../...##...|ingredients|5|26|132140|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":733,"title":"Velvet Grotto","objectiveType":"score","moves":27,"targetScore":132285,"starThresholds":[132285,191813,257956],"blueprint":["........","........","........","########",".B....B.",".B....B.","S......S","........"],"signature":"......../......../......../########/.B....B./.B....B./S......S/........|score|0|27|132285|tp2|cv1","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}],"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":734,"title":"Glazed Terrace","objectiveType":"jelly","moves":28,"targetScore":132430,"starThresholds":[132430,192024,258239],"blueprint":["..2..112","...2...2","2L.....1","..1..12.","2.11S122","2....L..","..2.12..","..2....."],"signature":"..2..112/...2...2/2L.....1/..1..12./2.11S122/2....L../..2.12../..2.....|jelly|0|28|132430|tp0|cv0","gemReward":62,"numColors":6,"worldId":30},
+  {"id":735,"title":"Cosmic Boss 735","objectiveType":"jelly","moves":30,"targetScore":136075,"starThresholds":[136075,197309,265346],"blueprint":["21.##..2","G.2##2.G","2..##..2","L1.##.1L",".I2##2I.","1..##..1","JH.##.HJ","...##2.."],"signature":"21.##..2/G.2##2.G/2..##..2/L1.##.1L/.I2##2I./1..##..1/JH.##.HJ/...##2..|jelly|0|30|136075|tp2|cv0","isBoss":true,"keyReward":1,"gemReward":137,"numColors":5,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1},{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":2}]},
+  {"id":736,"title":"Royal Citadel","objectiveType":"ingredients","moves":30,"targetScore":132720,"starThresholds":[132720,192444,258804],"ingredientCount":5,"blueprint":["........","........","#......#","##....##","##....##","#.....J#","........","........"],"signature":"......../......../#......#/##....##/##....##/#.....J#/......../........|ingredients|5|30|132720|tp0|cv1","gemReward":62,"numColors":6,"worldId":30,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":737,"title":"Crystal Bastion","objectiveType":"score","moves":31,"targetScore":132865,"starThresholds":[132865,192654,259087],"blueprint":["........","..#..#..",".B#..#B.","..L..L..","..B..B..","..#..#..",".S#..#S.","........"],"signature":"......../..#..#../.B#..#B./..L..L../..B..B../..#..#../.S#..#S./........|score|0|31|132865|tp0|cv0","gemReward":62,"numColors":6,"worldId":30},
+  {"id":738,"title":"Mint Portal","objectiveType":"jelly","moves":24,"targetScore":133010,"starThresholds":[133010,192865,259370],"blueprint":["#..##2.#",".1...211","G....2.2","..#C.#..","..SG2...","....22..","#....1.#","##..11##"],"signature":"#..##2.#/.1...211/G....2.2/..#C.#../..SG2.../....22../#....1.#/##..11##|jelly|0|24|133010|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":739,"title":"Swirl Plaza","objectiveType":"blockers","moves":25,"targetScore":133155,"starThresholds":[133155,193075,259652],"blueprint":["##....##","#S....S#","..J..J..","..G..G..",".CH..HC.","........","#......#","##....##"],"signature":"##....##/#S....S#/..J..J../..G..G../.CH..HC./......../#......#/##....##|blockers|0|25|133155|tp0|cv1","gemReward":62,"numColors":6,"worldId":30,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":740,"title":"Sapphire Boss 740","objectiveType":"blockers","moves":30,"targetScore":136800,"starThresholds":[136800,198360,266760],"blueprint":["........","I....C..","........","...##...",".J.##.H.","......S.","......I.","........"],"signature":"......../I....C../......../...##.../.J.##.H./......S./......I./........|blockers|0|30|136800|tp0|cv0","isBoss":true,"keyReward":1,"gemReward":137,"numColors":6,"worldId":30},
+  {"id":741,"title":"Toffee Spire","objectiveType":"score","moves":27,"targetScore":133445,"starThresholds":[133445,193495,260218],"blueprint":["##....##","#.B..B.#","........","...##...","...##...",".LLSSLL.","#.L..L.#","##....##"],"signature":"##....##/#.B..B.#/......../...##.../...##.../.LLSSLL./#.L..L.#/##....##|score|0|27|133445|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":3},"to":{"row":0,"col":4},"pairId":1}]},
+  {"id":742,"title":"Aurora Observatory","objectiveType":"jelly","moves":28,"targetScore":133590,"starThresholds":[133590,193706,260501],"blueprint":["###1...2","##1....H","#2.....2","22...1..","..1.L..2",".L....1#","L....I##",".....###"],"signature":"###1...2/##1....H/#2.....2/22...1../..1.L..2/.L....1#/L....I##/.....###|jelly|0|28|133590|tp0|cv1","gemReward":62,"numColors":5,"worldId":30,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":743,"title":"Diamond Vault","objectiveType":"blockers","moves":29,"targetScore":133735,"starThresholds":[133735,193916,260783],"blueprint":["....####",".G....G.","........",".HH##HH.","..H##H..","SJS..SJS","..H..H..","####...."],"signature":"....####/.G....G./......../.HH##HH./..H##H../SJS..SJS/..H..H../####....|blockers|0|29|133735|tp0|cv0","gemReward":62,"numColors":6,"worldId":30},
+  {"id":744,"title":"Starlight Summit","objectiveType":"ingredients","moves":30,"targetScore":133880,"starThresholds":[133880,194126,261066],"ingredientCount":5,"blueprint":["...##...","...##...","GG.....H","..####..","..####..",".......I","...##...","...##..."],"signature":"...##.../...##.../GG.....H/..####../..####../.......I/...##.../...##...|ingredients|5|30|133880|tp1|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]},
+  {"id":745,"title":"Bubblegum Boss 745","objectiveType":"jelly","moves":30,"targetScore":137525,"starThresholds":[137525,199411,268174],"blueprint":["#12..21#","2JJ11JJ2","2.HHHH.2","........","........","22211222","2......2","#.2222.#"],"signature":"#12..21#/2JJ11JJ2/2.HHHH.2/......../......../22211222/2......2/#.2222.#|jelly|0|30|137525|tp0|cv1","isBoss":true,"keyReward":1,"gemReward":137,"numColors":6,"worldId":30,"conveyors":[[{"row":5,"col":2},{"row":5,"col":3},{"row":5,"col":4},{"row":5,"col":5},{"row":6,"col":5},{"row":6,"col":4},{"row":6,"col":3},{"row":6,"col":2}]]},
+  {"id":746,"title":"Sugar Garden","objectiveType":"jelly","moves":24,"targetScore":134170,"starThresholds":[134170,194547,261632],"blueprint":["....1..1","2....1..",".L..1.21","G######2",".######2","........",".121..1.","1.....2."],"signature":"....1..1/2....1../.L..1.21/G######2/.######2/......../.121..1./1.....2.|jelly|0|24|134170|tp2|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":5,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":5,"col":5},"pairId":2}]},
+  {"id":747,"title":"Caramel Bridge","objectiveType":"blockers","moves":25,"targetScore":134315,"starThresholds":[134315,194757,261914],"blueprint":["##....##","##.JJ.##","G......G","IC.JJ.CI","........","..CSSC..","##....##","##....##"],"signature":"##....##/##.JJ.##/G......G/IC.JJ.CI/......../..CSSC../##....##/##....##|blockers|0|25|134315|tp2|cv0","gemReward":62,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":2},"to":{"row":0,"col":5},"pairId":1},{"from":{"row":7,"col":5},"to":{"row":0,"col":2},"pairId":2}]},
+  {"id":748,"title":"Honey Oasis","objectiveType":"ingredients","moves":26,"targetScore":134460,"starThresholds":[134460,194967,262197],"ingredientCount":5,"blueprint":["...##...","........","........","#L....G#","#......#","H......L","........","...##..."],"signature":"...##.../......../......../#L....G#/#......#/H......L/......../...##...|ingredients|5|26|134460|tp0|cv1","gemReward":62,"numColors":6,"worldId":30,"conveyors":[[{"row":2,"col":2},{"row":2,"col":3},{"row":2,"col":4},{"row":2,"col":5},{"row":3,"col":5},{"row":4,"col":5},{"row":5,"col":5},{"row":5,"col":4},{"row":5,"col":3},{"row":5,"col":2},{"row":4,"col":2},{"row":3,"col":2}]]},
+  {"id":749,"title":"Glacier Conveyor","objectiveType":"score","moves":27,"targetScore":134605,"starThresholds":[134605,195177,262480],"blueprint":["........","..L..L..","........","########","S......S","........","...BB...","........"],"signature":"......../..L..L../......../########/S......S/......../...BB.../........|score|0|27|134605|tp2|cv0","gemReward":62,"numColors":5,"worldId":30,"teleporters":[{"from":{"row":2,"col":2},"to":{"row":4,"col":2},"pairId":1},{"from":{"row":2,"col":5},"to":{"row":4,"col":5},"pairId":2}]},
+  {"id":750,"title":"Prism Boss 750","objectiveType":"blockers","moves":30,"targetScore":138250,"starThresholds":[138250,200463,269588],"blueprint":["........",".G......","........","G..I..C.","....C...","........","I.I.....","........"],"signature":"......../.G....../......../G..I..C./....C.../......../I.I...../........|blockers|0|30|138250|tp1|cv0","isBoss":true,"keyReward":1,"gemReward":140,"numColors":6,"worldId":30,"teleporters":[{"from":{"row":7,"col":1},"to":{"row":0,"col":6},"pairId":1}]}
+];
+
+export const LEVELS_750: LevelConfig[] = [
+  ...LEVELS_250.map((lvl) => ({ ...lvl, worldId: Math.ceil(lvl.id / 25) })),
+  ...LEVELS_251_TO_750,
+];
+
 export function verifyUniqueLevels250(dataset: LevelConfig[] = LEVELS_250): {
   total: number;
   uniqueCount: number;
@@ -6715,5 +8364,25 @@ export function verifyUniqueLevels250(dataset: LevelConfig[] = LEVELS_250): {
     total: dataset.length,
     uniqueCount: sigs.size,
     isValid: dataset.length === 250 && sigs.size === 250 && boardAndObj.size === 250,
+  };
+}
+
+export function verifyUniqueLevels750(dataset: LevelConfig[] = LEVELS_750): {
+  total: number;
+  uniqueCount: number;
+  uniqueBoardsCount: number;
+  isValid: boolean;
+} {
+  const sigs = new Set<string>();
+  const boardAndObj = new Set<string>();
+  for (const lvl of dataset) {
+    sigs.add(lvl.signature);
+    boardAndObj.add(`${lvl.blueprint.join("/")}-${lvl.objectiveType}`);
+  }
+  return {
+    total: dataset.length,
+    uniqueCount: sigs.size,
+    uniqueBoardsCount: boardAndObj.size,
+    isValid: dataset.length === 750 && sigs.size === 750 && boardAndObj.size === 750,
   };
 }

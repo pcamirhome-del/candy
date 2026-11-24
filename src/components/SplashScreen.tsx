@@ -1,15 +1,27 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Play, Settings } from 'lucide-react';
+import { Heart, Play, Settings } from 'lucide-react';
+import { LEVELS } from '../game/levels';
 import { sound } from '../game/sound';
+import { formatCountdown, MAX_LIVES } from '../game/storage';
+import { PlayerProgress } from '../game/types';
+import {
+  CandyCurrencyPill,
+  GoldenDollarCoinIcon,
+  GoldenKeyIcon,
+  PinkGemIcon,
+} from './CandyCurrencyHUD';
 import { CandyPiece } from './CandyPiece';
 import { CandyPrincess } from './CandyPrincess';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface SplashScreenProps {
-  unlockedLevel: number;
+  progress: PlayerProgress;
+  msUntilNextLife: number;
   skipLoading?: boolean;
   onPlay: () => void;
   onOpenSettings: () => void;
+  onOpenGiftPack: () => void;
+  onOpenLives: () => void;
 }
 
 interface TouchSparkleBurst {
@@ -28,10 +40,13 @@ interface TouchSparkleBurst {
 const BURST_COLORS = ['#FDE047', '#FB7185', '#38BDF8', '#4ADE80', '#F472B6', '#FFFFFF'];
 
 export const SplashScreen: React.FC<SplashScreenProps> = ({
-  unlockedLevel,
+  progress,
+  msUntilNextLife,
   skipLoading = false,
   onPlay,
   onOpenSettings,
+  onOpenGiftPack,
+  onOpenLives,
 }) => {
   const [progressPct, setProgressPct] = useState(skipLoading ? 100 : 0);
   const [spinBoosted, setSpinBoosted] = useState(false);
@@ -73,46 +88,46 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
     };
   }, []);
 
-  const triggerSkyInteraction = useCallback((clientX: number, clientY: number, withBounce: boolean) => {
-    const rect = rootRef.current?.getBoundingClientRect();
-    if (!rect) return;
+  const triggerSkyInteraction = useCallback(
+    (clientX: number, clientY: number, withBounce: boolean) => {
+      const rect = rootRef.current?.getBoundingClientRect();
+      if (!rect) return;
 
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
 
-    // Spin & Bounce Lollipops
-    setSpinBoosted(true);
-    if (withBounce) {
-      setBounceKey((k) => k + 1);
-    }
-    if (spinTimerRef.current) window.clearTimeout(spinTimerRef.current);
-    spinTimerRef.current = window.setTimeout(() => {
-      setSpinBoosted(false);
-    }, 1150);
+      setSpinBoosted(true);
+      if (withBounce) {
+        setBounceKey((k) => k + 1);
+      }
+      if (spinTimerRef.current) window.clearTimeout(spinTimerRef.current);
+      spinTimerRef.current = window.setTimeout(() => {
+        setSpinBoosted(false);
+      }, 1150);
 
-    // Spawn Candy Sparkle Burst at exact touch point
-    const id = burstIdRef.current++;
-    const count = withBounce ? 11 : 7;
-    const particles = Array.from({ length: count }, (_, idx) => {
-      const angle = (idx / count) * Math.PI * 2 + Math.random() * 0.4;
-      const dist = (withBounce ? 34 : 24) + Math.random() * 38;
-      return {
-        tx: `${Math.round(Math.cos(angle) * dist)}px`,
-        ty: `${Math.round(Math.sin(angle) * dist)}px`,
-        color: BURST_COLORS[(id + idx) % BURST_COLORS.length],
-        size: 6 + (idx % 4) * 2,
-        isStar: idx % 2 === 0,
-      };
-    });
+      const id = burstIdRef.current++;
+      const count = withBounce ? 11 : 7;
+      const particles = Array.from({ length: count }, (_, idx) => {
+        const angle = (idx / count) * Math.PI * 2 + Math.random() * 0.4;
+        const dist = (withBounce ? 34 : 24) + Math.random() * 38;
+        return {
+          tx: `${Math.round(Math.cos(angle) * dist)}px`,
+          ty: `${Math.round(Math.sin(angle) * dist)}px`,
+          color: BURST_COLORS[(id + idx) % BURST_COLORS.length],
+          size: 6 + (idx % 4) * 2,
+          isStar: idx % 2 === 0,
+        };
+      });
 
-    setSparkleBursts((prev) => [...prev.slice(-10), { id, x, y, particles }]);
-    window.setTimeout(() => {
-      setSparkleBursts((prev) => prev.filter((b) => b.id !== id));
-    }, 520);
-  }, []);
+      setSparkleBursts((prev) => [...prev.slice(-10), { id, x, y, particles }]);
+      window.setTimeout(() => {
+        setSparkleBursts((prev) => prev.filter((b) => b.id !== id));
+      }, 520);
+    },
+    []
+  );
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    // Skip burst if tapping interactive controls
     if ((e.target as HTMLElement).closest('button')) return;
     isPointerDownRef.current = true;
     lastSwipeBurstAtRef.current = performance.now();
@@ -135,12 +150,11 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
 
   const twinkleStars = useMemo(
     () => [
-      { cx: 52, cy: 68, r: 5.5, dur: '2.4s', delay: '0s' },
-      { cx: 148, cy: 48, r: 4.5, dur: '3.1s', delay: '0.6s' },
-      { cx: 245, cy: 76, r: 6, dur: '2.7s', delay: '1.1s' },
-      { cx: 345, cy: 62, r: 5, dur: '2.2s', delay: '0.3s' },
-      { cx: 92, cy: 175, r: 4, dur: '2.9s', delay: '0.9s' },
-      { cx: 308, cy: 205, r: 4.5, dur: '2.5s', delay: '1.4s' },
+      { cx: 48, cy: 105, r: 5, dur: '2.4s', delay: '0s' },
+      { cx: 185, cy: 84, r: 4.5, dur: '3.0s', delay: '0.5s' },
+      { cx: 295, cy: 108, r: 5.5, dur: '2.6s', delay: '1.0s' },
+      { cx: 78, cy: 235, r: 4.5, dur: '2.8s', delay: '0.8s' },
+      { cx: 342, cy: 268, r: 5, dur: '2.3s', delay: '1.3s' },
     ],
     []
   );
@@ -150,7 +164,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
       Array.from({ length: 14 }, (_, i) => ({
         id: i,
         left: `${6 + ((i * 7) % 88)}%`,
-        top: `${22 + ((i * 13) % 58)}%`,
+        top: `${20 + ((i * 13) % 62)}%`,
         size: 3 + (i % 3) * 2,
         dur: `${4.2 + (i % 5) * 0.7}s`,
         delay: `${(i % 6) * 0.6}s`,
@@ -159,6 +173,11 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
       })),
     []
   );
+
+  const livesTimerText =
+    progress.lives < MAX_LIVES
+      ? `♥ ${progress.lives} · ${formatCountdown(msUntilNextLife)}`
+      : `♥ ${progress.lives}/${MAX_LIVES}`;
 
   const floatingCandies = [
     { id: 'fl_1', row: 0, col: 0, color: 'red' as const, special: 'none' as const },
@@ -347,7 +366,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
         />
       </svg>
 
-      {/* Subtle Floating Sugar Particles Layer */}
+      {/* Floating Sugar Particles Layer */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-[5]">
         {sugarParticles.map((p) => (
           <div
@@ -409,12 +428,54 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
         ))}
       </div>
 
-      {/* Animated Fairytale Candy Princess Character (Right Edge Loop) */}
+      {/* Real Raster Princess Characters Cycling on Right Side */}
       <CandyPrincess />
 
-      {/* Top Corner Controls */}
-      <div className="relative z-30 px-4 pt-4 flex items-center justify-end gap-2">
-        <PWAInstallButton compact />
+      {/* Top HUD Bar matching Reference Image (Gems, Keys + Lives Timer, Cash, Settings Gear) */}
+      <header className="relative z-30 px-2 pt-3 flex items-start justify-between gap-1.5">
+        <div className="flex items-start gap-1.5 flex-wrap min-w-0 flex-1">
+          <CandyCurrencyPill
+            compact
+            icon={<PinkGemIcon className="w-full h-full" />}
+            value={progress.gems.toLocaleString()}
+            onClick={() => {
+              sound.unlock();
+              sound.playButton();
+              onOpenSettings();
+            }}
+            ariaLabel={`Gems: ${progress.gems}. Open Gem Shop`}
+          />
+
+          <CandyCurrencyPill
+            compact
+            icon={<GoldenKeyIcon className="w-full h-full" />}
+            value={progress.keys}
+            subText={livesTimerText}
+            onClick={() => {
+              sound.unlock();
+              sound.playButton();
+              if (progress.lives < MAX_LIVES) {
+                onOpenLives();
+              } else {
+                onPlay();
+              }
+            }}
+            ariaLabel={`Keys: ${progress.keys}, Lives: ${progress.lives}`}
+          />
+
+          <CandyCurrencyPill
+            compact
+            icon={<GoldenDollarCoinIcon className="w-full h-full" />}
+            value={progress.cash.toLocaleString()}
+            onClick={() => {
+              sound.unlock();
+              sound.playButton();
+              onOpenGiftPack();
+            }}
+            ariaLabel={`Cash: ${progress.cash}. Open Gift Pack`}
+          />
+        </div>
+
         <button
           type="button"
           onClick={() => {
@@ -422,14 +483,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
             sound.playButton();
             onOpenSettings();
           }}
-          className="min-h-[44px] min-w-[44px] rounded-xl bg-slate-950/45 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg active:scale-95"
+          className="min-h-[42px] min-w-[42px] rounded-xl bg-gradient-to-b from-pink-400 via-pink-500 to-fuchsia-700 border-2 border-white/85 flex items-center justify-center text-white shadow-[0_4px_12px_rgba(131,24,67,0.5)] active:scale-95 shrink-0"
           aria-label="Settings"
         >
-          <Settings className="w-5 h-5" />
+          <Settings className="w-5 h-5 drop-shadow" />
         </button>
-      </div>
+      </header>
 
-      {/* Center Candy-Cane Framed 3D Embossed Candy Amir Emblem (kept clear of right-side princess) */}
+      {/* Center Candy-Cane Framed 3D Embossed Candy Amir Emblem + 6 Classic Candy Shapes */}
       <div className="relative z-20 px-5 mt-1 mb-auto pt-3 flex flex-col items-center text-center pointer-events-none">
         <div className="relative rounded-[28px] p-1.5 bg-[repeating-linear-gradient(45deg,#F43F5E,#F43F5E_10px,#FFFFFF_10px,#FFFFFF_20px)] shadow-[0_14px_34px_rgba(157,23,77,0.45)]">
           <div className="rounded-[22px] px-6 py-4 sm:px-7 sm:py-5 bg-gradient-to-b from-[#FF5D9E] via-[#E11D48] to-[#9D174D] border-2 border-amber-200 shadow-inner">
@@ -443,12 +504,12 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
               Candy Amir
             </h1>
             <p className="mt-1.5 text-xs font-bold text-pink-100/95">
-              250 Unique Levels · Match-3 Adventure
+              {LEVELS.length} Unique Levels · Level {progress.unlockedLevel}
             </p>
           </div>
         </div>
 
-        {/* Floating Classic 6-Candy Showcase */}
+        {/* Classic 6-Candy Showcase */}
         <div className="grid grid-cols-6 gap-1.5 w-full max-w-[275px] mt-4 bg-slate-950/35 backdrop-blur-md rounded-2xl p-2 border border-white/25 shadow-lg">
           {floatingCandies.map((t) => (
             <div key={t.id} className="aspect-square">
@@ -456,41 +517,69 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Bottom Pink-and-Gold Candy Loading Bar -> Bouncy Green PLAY Button */}
-      <div className="relative z-30 px-6 pb-7 flex flex-col items-center gap-3">
-        {!ready ? (
-          <div className="w-full max-w-[300px]">
-            <div className="flex items-center justify-between text-xs font-extrabold text-white drop-shadow mb-1.5 px-1">
-              <span>Loading Kingdom...</span>
-              <span className="tabular-nums">{progressPct}%</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-950/60 border-2 border-amber-300/80 p-0.5 shadow-lg overflow-hidden">
+        {/* Loading Progress Bar */}
+        {!ready && (
+          <div className="mt-4 w-full max-w-[265px]">
+            <div className="h-5 w-full rounded-full bg-[#4C1D95]/90 border-2 border-white/85 p-0.5 shadow-[0_4px_14px_rgba(76,29,149,0.5)] overflow-hidden">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-pink-400 via-amber-300 to-pink-500 transition-all duration-75"
-                style={{ width: `${progressPct}%` }}
+                className="h-full rounded-full bg-gradient-to-r from-[#38BDF8] via-[#0EA5E9] to-[#22D3EE] shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] transition-all duration-75"
+                style={{ width: `${Math.max(8, progressPct)}%` }}
               />
             </div>
+            <p className="mt-1 text-xs font-extrabold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] tabular-nums">
+              {progressPct}%
+            </p>
           </div>
-        ) : (
-          <button
-            type="button"
-            onClick={() => {
-              sound.unlock();
-              sound.playButton();
-              onPlay();
-            }}
-            className="w-full max-w-[280px] min-h-[58px] rounded-full bg-gradient-to-b from-emerald-300 via-emerald-500 to-emerald-700 border-2 border-white py-3.5 flex items-center justify-center gap-2.5 font-display text-2xl font-extrabold text-white shadow-[0_10px_28px_rgba(5,150,105,0.55)] animate-bounce active:scale-95 transition-transform"
-          >
-            <Play className="w-6 h-6 fill-white" />
-            <span>PLAY</span>
-          </button>
+        )}
+      </div>
+
+      {/* Bottom Glossy Gold-Rimmed Pill Buttons + PWA Install */}
+      <div className="relative z-30 px-6 pb-4 flex flex-col items-center gap-2.5">
+        {ready && (
+          <div className="w-full max-w-[270px] flex flex-col gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                sound.unlock();
+                sound.playButton();
+                onPlay();
+              }}
+              className="w-full min-h-[54px] rounded-full bg-gradient-to-b from-[#4ADE80] via-[#16A34A] to-[#15803D] border-[3px] border-[#FDE047] py-2.5 flex items-center justify-center gap-2 font-display text-2xl font-extrabold text-white shadow-[0_8px_22px_rgba(21,128,61,0.5)] active:scale-95 transition-transform"
+            >
+              <Play className="w-6 h-6 fill-white drop-shadow" />
+              <span className="drop-shadow">PLAY</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                sound.unlock();
+                sound.playButton();
+                onOpenGiftPack();
+              }}
+              className="w-full min-h-[46px] rounded-full bg-gradient-to-b from-[#38BDF8] via-[#0EA5E9] to-[#0284C7] border-[3px] border-[#FDE047] py-2 flex items-center justify-center gap-2 font-display text-base font-extrabold text-white shadow-[0_6px_18px_rgba(2,132,199,0.45)] active:scale-95 transition-transform"
+            >
+              <Heart className="w-4 h-4 fill-pink-300 text-pink-100" />
+              <span className="drop-shadow">حزمة هدية · Gift Pack</span>
+            </button>
+          </div>
         )}
 
-        <p className="text-xs font-bold text-white/90 drop-shadow text-center">
-          Level {unlockedLevel} / 250 · Developed by Amir Lamay • Made In Egypt
-        </p>
+        <div className="flex items-center justify-center gap-2 flex-wrap">
+          <PWAInstallButton compact />
+          <div className="rounded-full bg-[#160A2E]/80 backdrop-blur-md border border-amber-200/45 px-3.5 py-1.5 shadow-lg">
+            <p className="text-xs font-extrabold text-white text-center tracking-wide">
+              <span className="text-amber-300 tabular-nums">
+                Level {progress.unlockedLevel} / {LEVELS.length}
+              </span>
+              <span className="mx-1.5 text-pink-300">·</span>
+              <span>Developed by Amir Lamay</span>
+              <span className="mx-1.5 text-pink-300">•</span>
+              <span className="text-emerald-300">Made In Egypt</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

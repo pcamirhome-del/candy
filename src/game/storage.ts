@@ -17,6 +17,7 @@ export const DEFAULT_PROGRESS: PlayerProgress = {
   gems: 100,
   keys: 0,
   unlockedLevel: 1,
+  purchasedLevels: [],
   unlockedGates: [],
   levelStars: {},
   highScores: {},
@@ -89,6 +90,15 @@ function sanitizeProgress(rawObj: Partial<PlayerProgress>): PlayerProgress {
     },
     levelStars: rawObj.levelStars ?? {},
     highScores: rawObj.highScores ?? {},
+    purchasedLevels: Array.isArray(rawObj.purchasedLevels)
+      ? Array.from(
+          new Set(
+            rawObj.purchasedLevels.filter(
+              (n): n is number => typeof n === 'number' && Number.isInteger(n) && n >= 1
+            )
+          )
+        ).sort((a, b) => a - b)
+      : [],
     unlockedGates: Array.isArray(rawObj.unlockedGates) ? rawObj.unlockedGates : [],
     redeemedCodes: Array.isArray(rawObj.redeemedCodes) ? rawObj.redeemedCodes : [],
   };
@@ -209,9 +219,31 @@ export function resetStoredProgress(): PlayerProgress {
 export function pickRicherProgress(a: PlayerProgress, b: PlayerProgress): PlayerProgress {
   const starsA = Object.keys(a.levelStars).length;
   const starsB = Object.keys(b.levelStars).length;
-  if (b.unlockedLevel > a.unlockedLevel) return b;
-  if (b.unlockedLevel === a.unlockedLevel && starsB > starsA) return b;
-  return a;
+  const purchasedUnion = Array.from(
+    new Set([...(a.purchasedLevels ?? []), ...(b.purchasedLevels ?? [])])
+  ).sort((x, y) => x - y);
+  const gatesUnion = Array.from(
+    new Set([...(a.unlockedGates ?? []), ...(b.unlockedGates ?? [])])
+  ).sort((x, y) => x - y);
+  const redeemedUnion = Array.from(
+    new Set([...(a.redeemedCodes ?? []), ...(b.redeemedCodes ?? [])])
+  );
+
+  const primary =
+    b.unlockedLevel > a.unlockedLevel ||
+    (b.unlockedLevel === a.unlockedLevel && starsB > starsA) ||
+    (b.unlockedLevel === a.unlockedLevel &&
+      starsB === starsA &&
+      (b.purchasedLevels?.length ?? 0) > (a.purchasedLevels?.length ?? 0))
+      ? b
+      : a;
+
+  return {
+    ...primary,
+    purchasedLevels: purchasedUnion,
+    unlockedGates: gatesUnion,
+    redeemedCodes: redeemedUnion,
+  };
 }
 
 export function exportBackupCode(progress: PlayerProgress): string {

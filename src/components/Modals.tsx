@@ -6,10 +6,12 @@ import {
   Copy,
   Crown,
   Gem,
+  Gift,
   Hammer,
   Heart,
   Home,
   KeyRound,
+  Lock,
   Map,
   Pause,
   Play,
@@ -23,6 +25,7 @@ import {
   VolumeX,
   X,
 } from 'lucide-react';
+import { WORLD_CHAPTERS } from '../game/levels';
 import {
   exportBackupCode,
   formatCountdown,
@@ -31,6 +34,10 @@ import {
 } from '../game/storage';
 import { GateRequirement, LevelConfig, PlayerProgress } from '../game/types';
 import { PWAInstallButton } from './PWAInstallButton';
+
+export function getLevelGemUnlockCost(level: LevelConfig): number {
+  return level.isBoss || level.id % 25 === 0 ? 30 : 15;
+}
 
 interface LevelStartModalProps {
   level: LevelConfig;
@@ -872,3 +879,130 @@ export const PauseMenuModal: React.FC<PauseMenuModalProps> = ({
     </div>
   );
 };
+
+interface UnlockLevelModalProps {
+  level: LevelConfig;
+  gems: number;
+  onUnlockAndPlay: (level: LevelConfig, cost: number) => void;
+  onOpenGiftPack: () => void;
+  onOpenGemStore: () => void;
+  onClose: () => void;
+}
+
+export const UnlockLevelModal: React.FC<UnlockLevelModalProps> = ({
+  level,
+  gems,
+  onUnlockAndPlay,
+  onOpenGiftPack,
+  onOpenGemStore,
+  onClose,
+}) => {
+  const cost = getLevelGemUnlockCost(level);
+  const canAfford = gems >= cost;
+  const world =
+    WORLD_CHAPTERS.find((w) => level.id >= w.startLevel && level.id <= w.endLevel) ??
+    WORLD_CHAPTERS[0];
+
+  const objectiveLabel =
+    level.objectiveType === 'score'
+      ? `Score ${level.targetScore.toLocaleString()}`
+      : level.objectiveType === 'jelly'
+      ? 'Clear All Jelly'
+      : level.objectiveType === 'blockers'
+      ? 'Clear All Blockers'
+      : `Collect ${level.ingredientCount ?? 0} Ingredients`;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+      <div className="w-full max-w-[380px] rounded-3xl bg-[#1C1036]/95 border border-white/20 p-5 shadow-2xl text-white">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-b from-cyan-400/30 to-blue-600/30 border border-cyan-300/45 text-cyan-300 flex items-center justify-center shrink-0">
+              <Lock className="w-5 h-5" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-cyan-300 truncate">
+                World {world.id} · {world.name}
+              </p>
+              <h2 className="font-display text-xl font-extrabold leading-tight truncate">
+                Level {level.id} · {level.title}
+              </h2>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-white/10 active:scale-95 shrink-0"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="mt-4 rounded-2xl bg-white/8 border border-white/12 p-3.5">
+          <div className="flex items-center justify-between text-xs text-purple-200/85">
+            <span>{objectiveLabel}</span>
+            <span className="font-bold text-amber-300">
+              {level.isBoss ? 'Boss Stage' : `${level.moves} Moves`}
+            </span>
+          </div>
+
+          <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between">
+            <div>
+              <p className="text-[11px] text-purple-200/75">Unlock Cost</p>
+              <p className="font-display text-xl font-extrabold text-cyan-300 flex items-center gap-1.5 tabular-nums">
+                <Gem className="w-5 h-5" /> {cost} Gems
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-[11px] text-purple-200/75">Your Gems</p>
+              <p
+                className={`font-display text-xl font-extrabold tabular-nums ${
+                  canAfford ? 'text-emerald-300' : 'text-rose-300'
+                }`}
+              >
+                {gems.toLocaleString()}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {canAfford ? (
+          <button
+            type="button"
+            onClick={() => onUnlockAndPlay(level, cost)}
+            className="mt-4 w-full min-h-[52px] rounded-2xl bg-gradient-to-b from-emerald-400 via-emerald-500 to-teal-600 border-2 border-amber-200/75 py-3 flex items-center justify-center gap-2 font-display text-lg font-extrabold text-slate-950 shadow-[0_8px_24px_rgba(16,185,129,0.45)] active:scale-[0.98]"
+          >
+            <Play className="w-5 h-5 fill-slate-950" />
+            <span>Unlock & Play Now</span>
+          </button>
+        ) : (
+          <div className="mt-4 flex flex-col gap-2">
+            <p className="text-center text-xs font-semibold text-rose-300">
+              Need {cost - gems} more Gems to unlock Level {level.id}.
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={onOpenGiftPack}
+                className="min-h-[48px] rounded-2xl bg-gradient-to-r from-pink-500 to-amber-500 px-3 py-2 flex items-center justify-center gap-1.5 font-display text-sm font-extrabold text-white active:scale-[0.98]"
+              >
+                <Gift className="w-4 h-4 shrink-0" />
+                <span>Gift Pack</span>
+              </button>
+              <button
+                type="button"
+                onClick={onOpenGemStore}
+                className="min-h-[48px] rounded-2xl bg-gradient-to-b from-cyan-400 to-blue-600 px-3 py-2 flex items-center justify-center gap-1.5 font-display text-sm font-extrabold text-slate-950 active:scale-[0.98]"
+              >
+                <Gem className="w-4 h-4 shrink-0" />
+                <span>Gem Store</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+

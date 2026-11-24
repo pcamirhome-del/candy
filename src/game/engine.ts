@@ -2,9 +2,12 @@ import {
   CandyColor,
   CandyTile,
   CellMeta,
+  ConveyorCell,
   LevelConfig,
+  LightningArc,
   LineFlash,
   SpecialType,
+  TeleporterLink,
 } from './types';
 
 export const GRID_SIZE = 8;
@@ -302,6 +305,35 @@ export function createInitialBoard(
     })
   );
 
+  if (level.teleporters) {
+    for (const tp of level.teleporters) {
+      if (!meta[tp.from.row]?.[tp.from.col]?.void) {
+        meta[tp.from.row][tp.from.col].teleporterOut = tp.pairId;
+      }
+      if (!meta[tp.to.row]?.[tp.to.col]?.void) {
+        meta[tp.to.row][tp.to.col].teleporterIn = tp.pairId;
+      }
+    }
+  }
+
+  if (level.conveyors) {
+    for (const track of level.conveyors) {
+      for (let i = 0; i < track.length; i++) {
+        const curr = track[i];
+        const next = track[(i + 1) % track.length];
+        if (!meta[curr.row]?.[curr.col] || meta[curr.row][curr.col].void) continue;
+        const dr = next.row - curr.row;
+        const dc = next.col - curr.col;
+        let dir: CellMeta['conveyorDir'] = 'right';
+        if (dc > 0) dir = 'right';
+        else if (dc < 0) dir = 'left';
+        else if (dr > 0) dir = 'down';
+        else if (dr < 0) dir = 'up';
+        meta[curr.row][curr.col].conveyorDir = dir;
+      }
+    }
+  }
+
   if (level.objectiveType === 'ingredients') {
     for (let c = 0; c < GRID_SIZE; c++) {
       const bottomR = getColumnBottomRow(meta, c);
@@ -489,8 +521,10 @@ export interface DestructionPlan {
   frostingHits: Set<string>;
   armedWrapped: Set<string>;
   flashes: LineFlash[];
+  lightningArcs: LightningArc[];
   screenShake: boolean;
   specialSound: 'none' | 'explosion' | 'color_bomb';
+  hasLaser: boolean;
 }
 
 function getMostAbundantColor(board: (CandyTile | null)[][]): CandyColor {
@@ -534,8 +568,10 @@ export function expandChainDestruction(
   const armedWrapped = new Set<string>();
   const triggeredSpecials = new Set<string>();
   const flashes: LineFlash[] = [];
+  const lightningArcs: LightningArc[] = [];
   let screenShake = false;
   let specialSound: 'none' | 'explosion' | 'color_bomb' = 'none';
+  let hasLaser = false;
 
   const queue: Array<{ row: number; col: number }> = [];
 
@@ -604,10 +640,20 @@ export function expandChainDestruction(
     if (triggeredSpecials.has(key)) continue;
     triggeredSpecials.add(key);
 
+    const tileColorHex =
+      tile.color === 'none' ? '#F472B6' : COLOR_HEX[tile.color];
+
     if (tile.special === 'striped_h') {
       screenShake = true;
+      hasLaser = true;
       if (specialSound === 'none') specialSound = 'explosion';
-      flashes.push({ id: nextTileId(), type: 'row', row: curr.row, col: curr.col });
+      flashes.push({
+        id: nextTileId(),
+        type: 'row',
+        row: curr.row,
+        col: curr.col,
+        color: tileColorHex,
+      });
       // Scan left and right; Licorice Swirl absorbs and stops the striped beam
       for (let c = curr.col - 1; c >= 0; c--) {
         if (hitCell(curr.row, c)) break;
@@ -617,8 +663,15 @@ export function expandChainDestruction(
       }
     } else if (tile.special === 'striped_v') {
       screenShake = true;
+      hasLaser = true;
       if (specialSound === 'none') specialSound = 'explosion';
-      flashes.push({ id: nextTileId(), type: 'col', row: curr.row, col: curr.col });
+      flashes.push({
+        id: nextTileId(),
+        type: 'col',
+        row: curr.row,
+        col: curr.col,
+        color: tileColorHex,
+      });
       // Scan up and down; Licorice Swirl absorbs and stops the striped beam
       for (let r = curr.row - 1; r >= 0; r--) {
         if (hitCell(r, curr.col)) break;
@@ -629,7 +682,14 @@ export function expandChainDestruction(
     } else if (tile.special === 'wrapped') {
       screenShake = true;
       if (specialSound === 'none') specialSound = 'explosion';
-      flashes.push({ id: nextTileId(), type: 'area', row: curr.row, col: curr.col, radius: 1 });
+      flashes.push({
+        id: nextTileId(),
+        type: 'area',
+        row: curr.row,
+        col: curr.col,
+        radius: 1,
+        color: tileColorHex,
+      });
       for (let dr = -1; dr <= 1; dr++) {
         for (let dc = -1; dc <= 1; dc++) {
           if (dr === 0 && dc === 0) continue;
@@ -644,10 +704,19 @@ export function expandChainDestruction(
       screenShake = true;
       specialSound = 'color_bomb';
       const targetColor = getMostAbundantColor(board);
+      const zapColor = COLOR_HEX[targetColor];
       for (let r = 0; r < GRID_SIZE; r++) {
         for (let c = 0; c < GRID_SIZE; c++) {
           const target = board[r][c];
           if (target && target.color === targetColor && !target.isIngredient) {
+            lightningArcs.push({
+              id: nextTileId(),
+              fromRow: curr.row,
+              fromCol: curr.col,
+              toRow: r,
+              toCol: c,
+              color: zapColor,
+            });
             hitCell(r, c);
           }
         }
@@ -655,14 +724,25 @@ export function expandChainDestruction(
     }
   }
 
-  return { toDestroy, toUnlock, frostingHits, armedWrapped, flashes, screenShake, specialSound };
+  return {
+    toDestroy,
+    toUnlock,
+    frostingHits,
+    armedWrapped,
+    flashes,
+    lightningArcs,
+    screenShake,
+    specialSound,
+    hasLaser,
+  };
 }
 
 export function applyGravityAndRefill(
   board: (CandyTile | null)[][],
   meta: CellMeta[][],
   numColors: 5 | 6,
-  ingredientsRemainingToSpawn: number
+  ingredientsRemainingToSpawn: number,
+  teleporters: TeleporterLink[] = []
 ): {
   nextBoard: (CandyTile | null)[][];
   collectedIngredients: number;
@@ -696,7 +776,7 @@ export function applyGravityAndRefill(
 
   let changed = true;
   let guard = 0;
-  while (changed && guard < 24) {
+  while (changed && guard < 28) {
     changed = false;
     guard++;
 
@@ -732,6 +812,21 @@ export function applyGravityAndRefill(
           nextBoard[r - 1][c + 1] = null;
           changed = true;
         }
+      }
+    }
+
+    // Teleporter portal warp: tiles at portal `from` drop into linked portal `to`
+    for (const tp of teleporters) {
+      const fromTile = nextBoard[tp.from.row]?.[tp.from.col];
+      if (isMovableTile(fromTile) && isPlayableEmpty(tp.to.row, tp.to.col)) {
+        nextBoard[tp.to.row][tp.to.col] = {
+          ...fromTile!,
+          row: tp.to.row,
+          col: tp.to.col,
+          isNew: false,
+        };
+        nextBoard[tp.from.row][tp.from.col] = null;
+        changed = true;
       }
     }
 
@@ -777,6 +872,71 @@ export function applyGravityAndRefill(
     collectedIngredients,
     ingredientsLeftToSpawn: toSpawn,
   };
+}
+
+export function stepConveyors(
+  board: (CandyTile | null)[][],
+  meta: CellMeta[][],
+  conveyors: ConveyorCell[][] = []
+): { nextBoard: (CandyTile | null)[][]; moved: boolean } {
+  if (!conveyors || conveyors.length === 0) {
+    return { nextBoard: board, moved: false };
+  }
+  const nextBoard = cloneBoard(board);
+  let moved = false;
+
+  for (const track of conveyors) {
+    const movableCells = track.filter(({ row, col }) => {
+      if (meta[row]?.[col]?.void || meta[row]?.[col]?.frosting > 0) return false;
+      const t = board[row][col];
+      if (!t) return true;
+      return !t.isChocolate && !t.locked;
+    });
+    if (movableCells.length < 2) continue;
+
+    const snapshots = movableCells.map(({ row, col }) => board[row][col]);
+    for (let i = 0; i < movableCells.length; i++) {
+      const dest = movableCells[i];
+      const srcTile = snapshots[(i - 1 + movableCells.length) % movableCells.length];
+      nextBoard[dest.row][dest.col] = srcTile
+        ? { ...srcTile, row: dest.row, col: dest.col, isNew: false }
+        : null;
+      moved = true;
+    }
+  }
+
+  return { nextBoard: moved ? nextBoard : board, moved };
+}
+
+export function pickSugarCrushCandidates(
+  board: (CandyTile | null)[][],
+  meta: CellMeta[][],
+  limit: number
+): Array<{ row: number; col: number }> {
+  const candidates: Array<{ row: number; col: number }> = [];
+  for (let r = 0; r < GRID_SIZE; r++) {
+    for (let c = 0; c < GRID_SIZE; c++) {
+      const t = board[r][c];
+      if (
+        !meta[r][c].void &&
+        meta[r][c].frosting === 0 &&
+        t &&
+        t.special === 'none' &&
+        t.color !== 'none' &&
+        !t.isIngredient &&
+        !t.isChocolate &&
+        !t.isLicoriceSwirl &&
+        !t.locked
+      ) {
+        candidates.push({ row: r, col: c });
+      }
+    }
+  }
+  for (let i = candidates.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+  }
+  return candidates.slice(0, Math.max(0, limit));
 }
 
 export function spreadChocolate(

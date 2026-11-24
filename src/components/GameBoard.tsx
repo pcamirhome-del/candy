@@ -18,8 +18,10 @@ import {
   GRID_SIZE,
   isAdjacent,
   nextTileId,
+  pickSugarCrushCandidates,
   shuffleBoard,
   spreadChocolate,
+  stepConveyors,
   tickBombTimers,
 } from '../game/engine';
 import { sound } from '../game/sound';
@@ -30,6 +32,7 @@ import {
   CellMeta,
   FloatingPopup,
   LevelConfig,
+  LightningArc,
   LineFlash,
 } from '../game/types';
 import { CandyPiece } from './CandyPiece';
@@ -86,6 +89,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
   const [popups, setPopups] = useState<FloatingPopup[]>([]);
   const [particles, setParticles] = useState<BurstParticle[]>([]);
   const [flashes, setFlashes] = useState<LineFlash[]>([]);
+  const [lightningArcs, setLightningArcs] = useState<LightningArc[]>([]);
+  const [showSugarCrush, setShowSugarCrush] = useState(false);
 
   const boardRef = useRef(board);
   const metaRef = useRef(meta);
@@ -95,6 +100,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
   const scoreRef = useRef(score);
   const busyRef = useRef(false);
   const finishedRef = useRef(false);
+  const sugarCrushTriggeredRef = useRef(false);
   const runIdRef = useRef(0);
   const chocolateClearedThisTurnRef = useRef(false);
   const pointerStartRef = useRef<{ row: number; col: number; x: number; y: number } | null>(null);
@@ -123,6 +129,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     runIdRef.current += 1;
     busyRef.current = false;
     finishedRef.current = false;
+    sugarCrushTriggeredRef.current = false;
+    setShowSugarCrush(false);
+    setLightningArcs([]);
     const fresh = createInitialBoard(level, startWithColorBomb);
     boardRef.current = fresh.board;
     metaRef.current = fresh.meta;
@@ -204,84 +213,17 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     const ids = new Set(newFlashes.map((f) => f.id));
     window.setTimeout(() => {
       setFlashes((prev) => prev.filter((f) => !ids.has(f.id)));
-    }, 360);
+    }, 450);
   }, []);
 
-  const checkWinOrDeadlock = useCallback(
-    async (consumedPlayerMove: boolean) => {
-      if (finishedRef.current) return;
-      const jellyRemaining = countRemainingJelly(metaRef.current);
-      const blockersRemaining = countRemainingBlockers(boardRef.current, metaRef.current);
-      const ingredientsCollected = collectedRef.current;
-
-      let won = false;
-      if (level.objectiveType === 'score') {
-        won = scoreRef.current >= level.targetScore;
-      } else if (level.objectiveType === 'jelly') {
-        won = jellyRemaining === 0;
-      } else if (level.objectiveType === 'ingredients') {
-        won = ingredientsCollected >= (level.ingredientCount ?? 0);
-      } else if (level.objectiveType === 'blockers') {
-        won = blockersRemaining === 0;
-      }
-
-      if (won) {
-        finishedRef.current = true;
-        onLevelComplete();
-        return;
-      }
-
-      // On player's move end: tick bomb timers and spread chocolate if none cleared
-      if (consumedPlayerMove) {
-        const bombRes = tickBombTimers(boardRef.current);
-        if (bombRes.nextBoard !== boardRef.current) {
-          boardRef.current = bombRes.nextBoard;
-          setBoard(bombRes.nextBoard);
-          if (bombRes.exploded) {
-            sound.playExplosion();
-            triggerShake();
-            onBombExploded();
-            return;
-          }
-        }
-
-        if (!chocolateClearedThisTurnRef.current && countChocolate(boardRef.current) > 0) {
-          const spreadRes = spreadChocolate(boardRef.current, metaRef.current);
-          if (spreadRes.spreadTo) {
-            boardRef.current = spreadRes.nextBoard;
-            setBoard(spreadRes.nextBoard);
-            emitProgress(spreadRes.nextBoard, metaRef.current);
-            addPopup(spreadRes.spreadTo.row, spreadRes.spreadTo.col, 'Chocolate Spread!', 'normal');
-          }
-        }
-      }
-
-      if (movesRef.current <= 0) {
-        onOutOfMoves();
-        return;
-      }
-
-      if (!findValidMove(boardRef.current, metaRef.current)) {
-        setShuffling(true);
-        await sleep(650);
-        const shuffled = shuffleBoard(boardRef.current, metaRef.current, level.numColors);
-        boardRef.current = shuffled;
-        setBoard(shuffled);
-        sound.playSwap();
-        await sleep(220);
-        setShuffling(false);
-      }
-    },
-    [
-      addPopup,
-      emitProgress,
-      level,
-      onBombExploded,
-      onLevelComplete,
-      onOutOfMoves,
-      triggerShake,
-    ]
-  );
+  const addLightningArcs = useCallback((arcs: LightningArc[]) => {
+    if (arcs.length === 0) return;
+    setLightningArcs((prev) => [...prev, ...arcs]);
+    const ids = new Set(arcs.map((a) => a.id));
+    window.setTimeout(() => {
+      setLightningArcs((prev) => prev.filter((a) => !ids.has(a.id)));
+    }, 340);
+  }, []);
 
   const destroyCellsAndUpdate = useCallback(
     (
@@ -295,6 +237,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
       const nextM = cloneMeta(currentMeta);
       const burstList: Array<{ row: number; col: number; color: string }> = [];
       let clearedCount = 0;
+      let jellyHit = false;
+      let frostingHit = false;
 
       for (const key of plan.toDestroy) {
         const [rStr, cStr] = key.split(',');
@@ -316,6 +260,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         }
         if (nextM[r]?.[c] && nextM[r][c].jelly > 0) {
           nextM[r][c].jelly = (nextM[r][c].jelly - 1) as 0 | 1 | 2;
+          jellyHit = true;
         }
       }
 
@@ -334,8 +279,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         const r = Number(rStr);
         const c = Number(cStr);
         if (nextM[r]?.[c] && nextM[r][c].frosting > 0) {
-          nextM[r][c].frosting = (nextM[r][c].frosting - 1) as 0 | 1 | 2 | 3;
+          nextM[r][c].frosting = (nextM[r][c].frosting - 1) as 0 | 1 | 2 | 3 | 4 | 5;
           clearedCount++;
+          frostingHit = true;
           burstList.push({ row: r, col: c, color: '#E0F2FE' });
         }
       }
@@ -349,14 +295,19 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         }
         if (nextM[r]?.[c] && nextM[r][c].jelly > 0) {
           nextM[r][c].jelly = (nextM[r][c].jelly - 1) as 0 | 1 | 2;
+          jellyHit = true;
         }
       }
 
       for (const cell of extraJellyHits) {
         if (nextM[cell.row]?.[cell.col] && nextM[cell.row][cell.col].jelly > 0) {
           nextM[cell.row][cell.col].jelly = (nextM[cell.row][cell.col].jelly - 1) as 0 | 1 | 2;
+          jellyHit = true;
         }
       }
+
+      if (frostingHit) sound.playFrostingCrack();
+      if (jellyHit) sound.playJellyCrack();
 
       const gained = clearedCount * 25 * comboStep;
       if (gained > 0) {
@@ -417,7 +368,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           comboStep += 1;
           const plan = expandChainDestruction(boardRef.current, metaRef.current, armedCoords);
           addFlashes(plan.flashes);
+          addLightningArcs(plan.lightningArcs);
           triggerShake();
+          if (plan.hasLaser) sound.playLaserBeam();
           sound.playExplosion();
           const { nextB, nextM } = destroyCellsAndUpdate(
             boardRef.current,
@@ -438,7 +391,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
             boardRef.current,
             metaRef.current,
             level.numColors,
-            toSpawnRef.current
+            toSpawnRef.current,
+            level.teleporters
           );
           toSpawnRef.current = grav.ingredientsLeftToSpawn;
           if (grav.collectedIngredients > 0) {
@@ -462,7 +416,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
             boardRef.current,
             metaRef.current,
             level.numColors,
-            toSpawnRef.current
+            toSpawnRef.current,
+            level.teleporters
           );
           toSpawnRef.current = grav.ingredientsLeftToSpawn;
           boardRef.current = grav.nextBoard;
@@ -515,10 +470,14 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         }
 
         addFlashes(plan.flashes);
+        addLightningArcs(plan.lightningArcs);
         if (plan.screenShake || comboStep >= 3) triggerShake();
 
         if (plan.specialSound === 'color_bomb') sound.playColorBomb();
-        else if (plan.specialSound === 'explosion') sound.playExplosion();
+        else if (plan.hasLaser) {
+          sound.playLaserBeam();
+          sound.playExplosion();
+        } else if (plan.specialSound === 'explosion') sound.playExplosion();
         else sound.playMatch(comboStep);
 
         if (spawnQueue.length > 0) {
@@ -564,7 +523,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           boardRef.current,
           metaRef.current,
           level.numColors,
-          toSpawnRef.current
+          toSpawnRef.current,
+          level.teleporters
         );
         toSpawnRef.current = grav.ingredientsLeftToSpawn;
         if (grav.collectedIngredients > 0) {
@@ -579,11 +539,192 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     },
     [
       addFlashes,
+      addLightningArcs,
       addPopup,
       collectBottomIngredients,
       destroyCellsAndUpdate,
       emitProgress,
       level.numColors,
+      level.teleporters,
+      triggerShake,
+    ]
+  );
+
+  const checkWinOrDeadlock = useCallback(
+    async (consumedPlayerMove: boolean) => {
+      if (finishedRef.current) return;
+      const myRunId = runIdRef.current;
+
+      const isWonNow = () => {
+        const jellyRemaining = countRemainingJelly(metaRef.current);
+        const blockersRemaining = countRemainingBlockers(boardRef.current, metaRef.current);
+        const ingredientsCollected = collectedRef.current;
+        if (level.objectiveType === 'score') {
+          return scoreRef.current >= level.targetScore;
+        }
+        if (level.objectiveType === 'jelly') return jellyRemaining === 0;
+        if (level.objectiveType === 'ingredients') {
+          return ingredientsCollected >= (level.ingredientCount ?? 0);
+        }
+        if (level.objectiveType === 'blockers') return blockersRemaining === 0;
+        return false;
+      };
+
+      const runSugarCrushIfWon = async (): Promise<boolean> => {
+        if (!isWonNow()) return false;
+        if (!sugarCrushTriggeredRef.current && movesRef.current > 0) {
+          sugarCrushTriggeredRef.current = true;
+          setShowSugarCrush(true);
+          sound.playSugarCrush();
+          await sleep(520);
+
+          while (movesRef.current > 0 && myRunId === runIdRef.current) {
+            const batchSize = Math.min(movesRef.current, 6);
+            const picks = pickSugarCrushCandidates(boardRef.current, metaRef.current, batchSize);
+            if (picks.length === 0) break;
+
+            const waveBoard = cloneBoard(boardRef.current);
+            const seeds: Array<{ row: number; col: number }> = [];
+            for (const p of picks) {
+              if (movesRef.current <= 0) break;
+              movesRef.current = Math.max(0, movesRef.current - 1);
+              onConsumeMove();
+              scoreRef.current += 150;
+              onAddScore(150);
+
+              const t = waveBoard[p.row][p.col];
+              if (t) {
+                const spRoll = Math.random();
+                const special: CandyTile['special'] =
+                  spRoll < 0.34 ? 'striped_h' : spRoll < 0.68 ? 'striped_v' : 'wrapped';
+                waveBoard[p.row][p.col] = { ...t, special };
+                seeds.push(p);
+                boardRef.current = cloneBoard(waveBoard);
+                setBoard(boardRef.current);
+                sound.playSpecialCreate();
+                addPopup(p.row, p.col, '+150', 'special');
+                await sleep(75);
+                if (myRunId !== runIdRef.current) return true;
+              }
+            }
+
+            if (seeds.length > 0) {
+              const plan = expandChainDestruction(boardRef.current, metaRef.current, seeds);
+              addFlashes(plan.flashes);
+              addLightningArcs(plan.lightningArcs);
+              triggerShake();
+              if (plan.hasLaser) sound.playLaserBeam();
+              sound.playExplosion();
+              const { nextB, nextM } = destroyCellsAndUpdate(
+                boardRef.current,
+                metaRef.current,
+                plan,
+                [],
+                3
+              );
+              boardRef.current = nextB;
+              metaRef.current = nextM;
+              setBoard(nextB);
+              setMeta(nextM);
+              emitProgress(nextB, nextM);
+              await sleep(220);
+              if (myRunId !== runIdRef.current) return true;
+
+              const grav = applyGravityAndRefill(
+                boardRef.current,
+                metaRef.current,
+                level.numColors,
+                toSpawnRef.current,
+                level.teleporters
+              );
+              toSpawnRef.current = grav.ingredientsLeftToSpawn;
+              boardRef.current = grav.nextBoard;
+              setBoard(grav.nextBoard);
+              await sleep(210);
+              await resolveCascades(myRunId, 2, []);
+            }
+          }
+          setShowSugarCrush(false);
+        }
+
+        if (myRunId !== runIdRef.current) return true;
+        finishedRef.current = true;
+        onLevelComplete();
+        return true;
+      };
+
+      if (await runSugarCrushIfWon()) return;
+
+      // On player's move end: tick bomb timers, spread chocolate, and advance conveyors
+      if (consumedPlayerMove) {
+        const bombRes = tickBombTimers(boardRef.current);
+        if (bombRes.nextBoard !== boardRef.current) {
+          boardRef.current = bombRes.nextBoard;
+          setBoard(bombRes.nextBoard);
+          if (bombRes.exploded) {
+            sound.playExplosion();
+            triggerShake();
+            onBombExploded();
+            return;
+          }
+        }
+
+        if (!chocolateClearedThisTurnRef.current && countChocolate(boardRef.current) > 0) {
+          const spreadRes = spreadChocolate(boardRef.current, metaRef.current);
+          if (spreadRes.spreadTo) {
+            boardRef.current = spreadRes.nextBoard;
+            setBoard(spreadRes.nextBoard);
+            emitProgress(spreadRes.nextBoard, metaRef.current);
+            addPopup(spreadRes.spreadTo.row, spreadRes.spreadTo.col, 'Chocolate Spread!', 'normal');
+          }
+        }
+
+        if (level.conveyors && level.conveyors.length > 0 && movesRef.current > 0) {
+          const convRes = stepConveyors(boardRef.current, metaRef.current, level.conveyors);
+          if (convRes.moved) {
+            boardRef.current = convRes.nextBoard;
+            setBoard(convRes.nextBoard);
+            sound.playSwap();
+            await sleep(210);
+            if (myRunId !== runIdRef.current) return;
+            if (findMatchClusters(boardRef.current).length > 0) {
+              await resolveCascades(myRunId, 0, []);
+              if (myRunId !== runIdRef.current) return;
+              if (await runSugarCrushIfWon()) return;
+            }
+          }
+        }
+      }
+
+      if (movesRef.current <= 0) {
+        onOutOfMoves();
+        return;
+      }
+
+      if (!findValidMove(boardRef.current, metaRef.current)) {
+        setShuffling(true);
+        await sleep(650);
+        const shuffled = shuffleBoard(boardRef.current, metaRef.current, level.numColors);
+        boardRef.current = shuffled;
+        setBoard(shuffled);
+        sound.playSwap();
+        await sleep(220);
+        setShuffling(false);
+      }
+    },
+    [
+      addFlashes,
+      addLightningArcs,
+      addPopup,
+      destroyCellsAndUpdate,
+      emitProgress,
+      level,
+      onAddScore,
+      onBombExploded,
+      onConsumeMove,
+      onLevelComplete,
+      onOutOfMoves,
+      resolveCascades,
       triggerShake,
     ]
   );
@@ -648,7 +789,19 @@ export const GameBoard: React.FC<GameBoardProps> = ({
       if (hasColorBomb || bothSpecial) {
         if (nowA.special === 'color_bomb' && nowB.special === 'color_bomb') {
           sound.playColorBomb();
+          sound.playExplosion();
           triggerShake();
+          addFlashes([
+            {
+              id: nextTileId(),
+              type: 'area',
+              row: 3.5,
+              col: 3.5,
+              radius: 4.5,
+              color: '#F472B6',
+              mega: true,
+            },
+          ]);
           addPopup(b.row, b.col, 'MEGA BLAST!', 'special', '+1600');
           const allCoords = new Set<string>();
           const allFrosting = new Set<string>();
@@ -680,7 +833,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           setBoard(nextB);
           setMeta(nextM);
           emitProgress(nextB, nextM);
-          await sleep(240);
+          await sleep(280);
         } else if (nowA.special === 'color_bomb' || nowB.special === 'color_bomb') {
           const bombPos = nowA.special === 'color_bomb' ? a : b;
           const partner = nowA.special === 'color_bomb' ? nowB : nowA;
@@ -698,6 +851,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
             const transformTo = partner.special;
             const converted = cloneBoard(boardRef.current);
             const seeds: Array<{ row: number; col: number }> = [bombPos];
+            const arcs: LightningArc[] = [];
+            const arcHex = COLOR_HEX[targetColor];
             for (let r = 0; r < GRID_SIZE; r++) {
               for (let c = 0; c < GRID_SIZE; c++) {
                 const t = converted[r][c];
@@ -710,17 +865,29 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                       : 'striped_v';
                   converted[r][c] = { ...t, special: chosenSpecial };
                   seeds.push({ row: r, col: c });
+                  arcs.push({
+                    id: nextTileId(),
+                    fromRow: bombPos.row,
+                    fromCol: bombPos.col,
+                    toRow: r,
+                    toCol: c,
+                    color: arcHex,
+                  });
                 }
               }
             }
+            addLightningArcs(arcs);
+            sound.playLightningZap(1);
             boardRef.current = converted;
             setBoard(converted);
             addPopup(b.row, b.col, 'Color Combo!', 'special');
-            await sleep(220);
+            await sleep(260);
             if (myRunId !== runIdRef.current) return;
 
             const plan = expandChainDestruction(boardRef.current, metaRef.current, seeds);
             addFlashes(plan.flashes);
+            addLightningArcs(plan.lightningArcs);
+            if (plan.hasLaser) sound.playLaserBeam();
             sound.playExplosion();
             const { nextB, nextM } = destroyCellsAndUpdate(
               boardRef.current,
@@ -735,20 +902,37 @@ export const GameBoard: React.FC<GameBoardProps> = ({
             setMeta(nextM);
           } else {
             const seeds: Array<{ row: number; col: number }> = [bombPos];
+            const arcs: LightningArc[] = [];
             if (targetColor !== 'none') {
+              const arcHex = COLOR_HEX[targetColor];
               for (let r = 0; r < GRID_SIZE; r++) {
                 for (let c = 0; c < GRID_SIZE; c++) {
                   const t = boardRef.current[r][c];
                   if (t && t.color === targetColor && !t.isIngredient) {
                     seeds.push({ row: r, col: c });
+                    arcs.push({
+                      id: nextTileId(),
+                      fromRow: bombPos.row,
+                      fromCol: bombPos.col,
+                      toRow: r,
+                      toCol: c,
+                      color: arcHex,
+                    });
                   }
                 }
               }
             }
+            addLightningArcs(arcs);
+            sound.playLightningZap(2);
+            await sleep(210);
+            if (myRunId !== runIdRef.current) return;
+
             const exempt = new Set([`${bombPos.row},${bombPos.col}`]);
             const plan = expandChainDestruction(boardRef.current, metaRef.current, seeds, exempt);
             plan.toDestroy.add(`${bombPos.row},${bombPos.col}`);
             addFlashes(plan.flashes);
+            addLightningArcs(plan.lightningArcs);
+            if (plan.hasLaser) sound.playLaserBeam();
             addPopup(b.row, b.col, 'Color Bomb!', 'special');
             const { nextB, nextM } = destroyCellsAndUpdate(
               boardRef.current,
@@ -773,34 +957,64 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           const seeds: Array<{ row: number; col: number }> = [];
           const customFlashes: LineFlash[] = [];
           const exempt = new Set<string>([`${a.row},${a.col}`, `${b.row},${b.col}`]);
+          const comboHex =
+            nowB.color !== 'none'
+              ? COLOR_HEX[nowB.color]
+              : nowA.color !== 'none'
+              ? COLOR_HEX[nowA.color]
+              : '#F472B6';
 
           if (isAStriped && isBStriped) {
             addPopup(b.row, b.col, 'Cross Blast!', 'special');
-            customFlashes.push({ id: nextTileId(), type: 'row', row: b.row, col: b.col });
-            customFlashes.push({ id: nextTileId(), type: 'col', row: b.row, col: b.col });
+            sound.playLaserBeam();
+            customFlashes.push({ id: nextTileId(), type: 'row', row: b.row, col: b.col, color: comboHex });
+            customFlashes.push({ id: nextTileId(), type: 'col', row: b.row, col: b.col, color: comboHex });
             for (let i = 0; i < GRID_SIZE; i++) {
               seeds.push({ row: b.row, col: i });
               seeds.push({ row: i, col: b.col });
             }
           } else if ((isAStriped && isBWrapped) || (isBStriped && isAWrapped)) {
             addPopup(b.row, b.col, 'Giant Blast!', 'special');
+            sound.playLaserBeam();
             for (let dr = -1; dr <= 1; dr++) {
               const rr = b.row + dr;
               if (rr >= 0 && rr < GRID_SIZE) {
-                customFlashes.push({ id: nextTileId(), type: 'row', row: rr, col: b.col });
+                customFlashes.push({
+                  id: nextTileId(),
+                  type: 'row',
+                  row: rr,
+                  col: b.col,
+                  color: comboHex,
+                  mega: true,
+                });
                 for (let c = 0; c < GRID_SIZE; c++) seeds.push({ row: rr, col: c });
               }
             }
             for (let dc = -1; dc <= 1; dc++) {
               const cc = b.col + dc;
               if (cc >= 0 && cc < GRID_SIZE) {
-                customFlashes.push({ id: nextTileId(), type: 'col', row: b.row, col: cc });
+                customFlashes.push({
+                  id: nextTileId(),
+                  type: 'col',
+                  row: b.row,
+                  col: cc,
+                  color: comboHex,
+                  mega: true,
+                });
                 for (let r = 0; r < GRID_SIZE; r++) seeds.push({ row: r, col: cc });
               }
             }
           } else if (isAWrapped && isBWrapped) {
             addPopup(b.row, b.col, 'Super Nova!', 'special');
-            customFlashes.push({ id: nextTileId(), type: 'area', row: b.row, col: b.col, radius: 2 });
+            customFlashes.push({
+              id: nextTileId(),
+              type: 'area',
+              row: b.row,
+              col: b.col,
+              radius: 2,
+              color: comboHex,
+              mega: true,
+            });
             for (let dr = -2; dr <= 2; dr++) {
               for (let dc = -2; dc <= 2; dc++) {
                 const rr = b.row + dr;
@@ -818,6 +1032,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           plan.toDestroy.add(`${a.row},${a.col}`);
           plan.toDestroy.add(`${b.row},${b.col}`);
           addFlashes([...customFlashes, ...plan.flashes]);
+          addLightningArcs(plan.lightningArcs);
 
           const { nextB, nextM } = destroyCellsAndUpdate(
             boardRef.current,
@@ -841,7 +1056,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           setBoard(nextB);
           setMeta(nextM);
           emitProgress(nextB, nextM);
-          await sleep(210);
+          await sleep(220);
         }
 
         if (myRunId !== runIdRef.current) return;
@@ -849,7 +1064,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           boardRef.current,
           metaRef.current,
           level.numColors,
-          toSpawnRef.current
+          toSpawnRef.current,
+          level.teleporters
         );
         toSpawnRef.current = grav.ingredientsLeftToSpawn;
         if (grav.collectedIngredients > 0) {
@@ -874,12 +1090,14 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     [
       activeBooster,
       addFlashes,
+      addLightningArcs,
       addPopup,
       checkWinOrDeadlock,
       destroyCellsAndUpdate,
       emitProgress,
       isModalOpen,
       level.numColors,
+      level.teleporters,
       onClearActiveBooster,
       onConsumeBooster,
       onConsumeMove,
@@ -906,6 +1124,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 
       const plan = expandChainDestruction(boardRef.current, metaRef.current, [pos]);
       addFlashes(plan.flashes);
+      addLightningArcs(plan.lightningArcs);
+      if (plan.hasLaser) sound.playLaserBeam();
       sound.playExplosion();
       triggerShake();
       addPopup(pos.row, pos.col, 'Smash!', 'special');
@@ -930,7 +1150,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         boardRef.current,
         metaRef.current,
         level.numColors,
-        toSpawnRef.current
+        toSpawnRef.current,
+        level.teleporters
       );
       toSpawnRef.current = grav.ingredientsLeftToSpawn;
       boardRef.current = grav.nextBoard;
@@ -945,12 +1166,14 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     },
     [
       addFlashes,
+      addLightningArcs,
       addPopup,
       checkWinOrDeadlock,
       destroyCellsAndUpdate,
       emitProgress,
       isModalOpen,
       level.numColors,
+      level.teleporters,
       onClearActiveBooster,
       onConsumeBooster,
       resetHintTimer,
@@ -1190,6 +1413,41 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                       </span>
                     </div>
                   )}
+
+                  {/* Conveyor Belt Track & Animated Chevron */}
+                  {cell.conveyorDir && (
+                    <div className="absolute inset-[1px] rounded-lg border border-amber-300/35 bg-amber-400/10 flex items-center justify-center pointer-events-none">
+                      <span className="text-[10px] font-extrabold text-amber-300/65 animate-pulse leading-none">
+                        {cell.conveyorDir === 'right'
+                          ? '▶'
+                          : cell.conveyorDir === 'left'
+                          ? '◀'
+                          : cell.conveyorDir === 'down'
+                          ? '▼'
+                          : '▲'}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Teleporter Portals (Exit Bottom / Entry Top) */}
+                  {cell.teleporterOut && (
+                    <div
+                      className={`absolute bottom-0 inset-x-0.5 h-1.5 rounded-full pointer-events-none shadow-[0_0_8px_currentColor] ${
+                        cell.teleporterOut === 1
+                          ? 'bg-cyan-400 text-cyan-300'
+                          : 'bg-orange-400 text-orange-300'
+                      }`}
+                    />
+                  )}
+                  {cell.teleporterIn && (
+                    <div
+                      className={`absolute top-0 inset-x-0.5 h-1.5 rounded-full pointer-events-none shadow-[0_0_8px_currentColor] ${
+                        cell.teleporterIn === 1
+                          ? 'bg-cyan-400 text-cyan-300'
+                          : 'bg-orange-400 text-orange-300'
+                      }`}
+                    />
+                  )}
                 </div>
               );
             })
@@ -1207,7 +1465,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({
             return (
               <div
                 key={tile.id}
-                className="absolute top-0 left-0 w-[12.5%] h-[12.5%] transition-transform duration-180 ease-out will-change-transform"
+                className={`absolute top-0 left-0 w-[12.5%] h-[12.5%] transition-transform duration-180 ease-out will-change-transform ${
+                  tile.wrappedArmed ? 'scale-115 drop-shadow-[0_0_12px_rgba(253,224,71,0.95)]' : ''
+                }`}
                 style={{
                   transform: `translate3d(${tile.col * 100}%, ${tile.row * 100}%, 0)`,
                 }}
@@ -1218,42 +1478,115 @@ export const GameBoard: React.FC<GameBoardProps> = ({
           })}
         </div>
 
-        {/* Special Beam & Area Flashes */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Electric Lightning Arcs Layer (Color Bomb Zaps) */}
+        {lightningArcs.length > 0 && (
+          <svg
+            viewBox="0 0 800 800"
+            className="absolute inset-0 w-full h-full pointer-events-none z-20 animate-lightning-flash"
+          >
+            {lightningArcs.map((arc, idx) => {
+              const x1 = (arc.fromCol + 0.5) * 100;
+              const y1 = (arc.fromRow + 0.5) * 100;
+              const x2 = (arc.toCol + 0.5) * 100;
+              const y2 = (arc.toRow + 0.5) * 100;
+              const mx1 = x1 + (x2 - x1) * 0.33 + ((idx % 2 === 0 ? 1 : -1) * 18);
+              const my1 = y1 + (y2 - y1) * 0.33 + ((idx % 3 === 0 ? -1 : 1) * 16);
+              const mx2 = x1 + (x2 - x1) * 0.66 + ((idx % 2 === 0 ? -1 : 1) * 18);
+              const my2 = y1 + (y2 - y1) * 0.66 + ((idx % 3 === 0 ? 1 : -1) * 16);
+              const pts = `${x1},${y1} ${mx1},${my1} ${mx2},${my2} ${x2},${y2}`;
+              return (
+                <g key={arc.id}>
+                  <polyline
+                    points={pts}
+                    fill="none"
+                    stroke={arc.color}
+                    strokeWidth="12"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity="0.7"
+                  />
+                  <polyline
+                    points={pts}
+                    fill="none"
+                    stroke="#FFFFFF"
+                    strokeWidth="4.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+              );
+            })}
+          </svg>
+        )}
+
+        {/* Special Laser Beam & Shockwave Ring Flashes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
           {flashes.map((f) => {
+            const beamColor = f.color ?? '#F472B6';
             if (f.type === 'row') {
               return (
                 <div
                   key={f.id}
-                  className="absolute left-0 right-0 h-[12.5%] bg-gradient-to-r from-transparent via-white/85 to-transparent animate-beam-flash"
-                  style={{ top: `${f.row * 12.5}%` }}
-                />
+                  className="absolute left-0 right-0 h-[12.5%] flex items-center animate-laser-h"
+                  style={{
+                    top: `${f.row * 12.5}%`,
+                    background: `linear-gradient(90deg, transparent, ${beamColor}B0, #FFFFFF, ${beamColor}B0, transparent)`,
+                    boxShadow: `0 0 18px ${beamColor}`,
+                  }}
+                >
+                  <div className="w-full h-[36%] bg-gradient-to-r from-transparent via-white to-transparent" />
+                </div>
               );
             }
             if (f.type === 'col') {
               return (
                 <div
                   key={f.id}
-                  className="absolute top-0 bottom-0 w-[12.5%] bg-gradient-to-b from-transparent via-white/85 to-transparent animate-beam-flash"
-                  style={{ left: `${f.col * 12.5}%` }}
-                />
+                  className="absolute top-0 bottom-0 w-[12.5%] flex justify-center animate-laser-v"
+                  style={{
+                    left: `${f.col * 12.5}%`,
+                    background: `linear-gradient(180deg, transparent, ${beamColor}B0, #FFFFFF, ${beamColor}B0, transparent)`,
+                    boxShadow: `0 0 18px ${beamColor}`,
+                  }}
+                >
+                  <div className="h-full w-[36%] bg-gradient-to-b from-transparent via-white to-transparent" />
+                </div>
               );
             }
             const span = ((f.radius ?? 1) * 2 + 1) * 12.5;
             return (
               <div
                 key={f.id}
-                className="absolute rounded-full bg-amber-300/45 border-2 border-white/80 animate-beam-flash"
+                className="absolute rounded-full animate-shockwave-ring"
                 style={{
                   width: `${span}%`,
                   height: `${span}%`,
                   left: `${(f.col - (f.radius ?? 1)) * 12.5}%`,
                   top: `${(f.row - (f.radius ?? 1)) * 12.5}%`,
+                  border: f.mega ? '4px solid #FFFFFF' : `3px solid ${beamColor}`,
+                  background: f.mega
+                    ? 'radial-gradient(circle, rgba(255,255,255,0.72), rgba(244,114,182,0.45), rgba(56,189,248,0.3), transparent 72%)'
+                    : `radial-gradient(circle, rgba(255,255,255,0.6), ${beamColor}55, transparent 70%)`,
+                  boxShadow: `0 0 24px ${beamColor}`,
                 }}
               />
             );
           })}
         </div>
+
+        {/* Sugar Crush Celebration Banner */}
+        {showSugarCrush && (
+          <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
+            <div className="rounded-3xl bg-gradient-to-b from-pink-500 via-rose-500 to-amber-500 border-[3px] border-amber-200 px-6 py-3 shadow-[0_12px_36px_rgba(244,63,94,0.75)] animate-sugar-crush text-center">
+              <p className="font-display text-2xl sm:text-3xl font-extrabold text-white drop-shadow-[0_3px_0_#881337]">
+                Sugar Crush!
+              </p>
+              <p className="text-xs font-extrabold text-amber-100 uppercase tracking-widest">
+                Bonus Cascade Party
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Burst Particles Layer */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

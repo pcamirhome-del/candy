@@ -23,6 +23,26 @@ export interface CandyTile {
   bombTimer?: number;
 }
 
+export interface TeleporterLink {
+  from: { row: number; col: number };
+  to: { row: number; col: number };
+  pairId: number;
+}
+
+export interface ConveyorCell {
+  row: number;
+  col: number;
+}
+
+export interface WorldChapter {
+  id: number;
+  name: string;
+  subtitle: string;
+  startLevel: number;
+  endLevel: number;
+  accent: string;
+}
+
 export interface CellMeta {
   /** Cutout void cell where candies cannot sit */
   void: boolean;
@@ -32,6 +52,12 @@ export interface CellMeta {
   frosting: 0 | 1 | 2 | 3 | 4 | 5;
   /** Glowing green bottom exit chute for ingredients */
   exitChute: boolean;
+  /** Portal entry pairId (top of receiving cell) */
+  teleporterIn?: number;
+  /** Portal exit pairId (bottom of sending cell) */
+  teleporterOut?: number;
+  /** Moving conveyor belt direction for this cell */
+  conveyorDir?: 'up' | 'down' | 'left' | 'right';
 }
 
 export type LevelObjectiveType = 'score' | 'jelly' | 'ingredients' | 'blockers';
@@ -46,12 +72,15 @@ export interface LevelConfig {
   ingredientCount?: number;
   /** 8 rows of 8 chars static blueprint */
   blueprint: string[];
-  /** Signature string verified unique across all 250 levels */
+  /** Signature string verified unique across all 750 levels */
   signature: string;
   isBoss?: boolean;
   keyReward?: number;
   gemReward: number;
   numColors: 5 | 6;
+  worldId?: number;
+  teleporters?: TeleporterLink[];
+  conveyors?: ConveyorCell[][];
 }
 
 export type BoosterType = 'hammer' | 'freeSwitch' | 'colorBombStart';
@@ -63,6 +92,7 @@ export interface PlayerProgress {
   gems: number;
   keys: number;
   unlockedLevel: number;
+  purchasedLevels: number[];
   unlockedGates: number[];
   levelStars: Record<number, number>;
   highScores: Record<number, number>;
@@ -100,6 +130,17 @@ export interface LineFlash {
   row: number;
   col: number;
   radius?: number;
+  color?: string;
+  mega?: boolean;
+}
+
+export interface LightningArc {
+  id: string;
+  fromRow: number;
+  fromCol: number;
+  toRow: number;
+  toCol: number;
+  color: string;
 }
 
 export interface GateRequirement {

@@ -182,7 +182,6 @@ export const CandyPrincess: React.FC = () => {
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  // Theme attributes faithful to each attached reference character
   const skinGradId =
     variant === 'snow_princess'
       ? 'url(#skinPorcelain)'
@@ -199,26 +198,21 @@ export const CandyPrincess: React.FC = () => {
       ? '#65A30D'
       : '#78350F';
 
-  const lipColor =
-    variant === 'snow_princess'
-      ? '#B91C1C'
-      : variant === 'golden_princess'
-      ? '#E11D48'
-      : '#E11D48';
+  const lipColor = variant === 'snow_princess' ? '#B91C1C' : '#E11D48';
 
   const armColor =
     variant === 'golden_princess'
-      ? '#FBCFE8' // long pink princess gloves
+      ? '#FBCFE8'
       : variant === 'heroine_blossom'
-      ? '#44403C' // dark charcoal jacket sleeve
+      ? '#44403C'
       : skinGradId;
 
   return (
     <div
       className="pointer-events-none absolute right-0 z-20"
       style={{
-        bottom: 'clamp(124px, 18.5dvh, 168px)',
-        width: 'clamp(112px, 30vw, 150px)',
+        bottom: 'clamp(132px, 19.5dvh, 174px)',
+        width: 'clamp(104px, 28vw, 144px)',
       }}
       aria-hidden="true"
     >
@@ -250,7 +244,7 @@ export const CandyPrincess: React.FC = () => {
         ))}
       </div>
 
-      {/* Character Wrapper */}
+      {/* Articulated Princess Character Wrapper */}
       <div
         ref={containerRef}
         className="w-full will-change-transform"
@@ -274,7 +268,6 @@ export const CandyPrincess: React.FC = () => {
               <stop offset="100%" stopColor="#F5BE9E" />
             </linearGradient>
 
-            {/* Hair Gradients for each reference */}
             <linearGradient id="hairHoney" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#D6945E" />
               <stop offset="55%" stopColor="#A6673D" />
@@ -296,7 +289,6 @@ export const CandyPrincess: React.FC = () => {
               <stop offset="100%" stopColor="#171A45" />
             </linearGradient>
 
-            {/* Outfit Gradients */}
             <linearGradient id="skyTopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#BAE6FD" />
               <stop offset="100%" stopColor="#7DD3FC" />
@@ -316,7 +308,6 @@ export const CandyPrincess: React.FC = () => {
           </defs>
 
           <g ref={bodyBobRef}>
-            {/* ===== BACK HAIR PER CHARACTER ===== */}
             {variant === 'sweetheart_bow' && (
               <>
                 <path
@@ -332,9 +323,7 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'golden_princess' && (
               <>
-                {/* Top crown bun */}
                 <circle cx="85" cy="34" r="16" fill="url(#hairGolden)" />
-                {/* Flowing golden curls */}
                 <path
                   d="M52 54 C26 78, 28 136, 48 152 C60 144, 66 126, 68 106 Z"
                   fill="url(#hairGolden)"
@@ -348,7 +337,6 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'snow_princess' && (
               <>
-                {/* High White Fairytale Stand-up Collar */}
                 <path
                   d="M56 112 Q42 84 54 68 Q68 88 74 114 Z"
                   fill="#FFFFFF"
@@ -361,7 +349,6 @@ export const CandyPrincess: React.FC = () => {
                   stroke="#94A3B8"
                   strokeWidth="1.5"
                 />
-                {/* Short wavy black bob */}
                 <path
                   d="M48 64 C38 82, 42 108, 60 112 L110 112 C128 108, 132 82, 122 64 Z"
                   fill="url(#hairBlack)"
@@ -371,7 +358,6 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'heroine_blossom' && (
               <>
-                {/* Twin low indigo pigtails with red ties */}
                 <circle cx="55" cy="107" r="4.5" fill="#DC2626" />
                 <ellipse cx="48" cy="116" rx="13" ry="15" transform="rotate(-12 48 116)" fill="url(#hairIndigo)" />
                 <circle cx="115" cy="107" r="4.5" fill="#DC2626" />
@@ -380,7 +366,7 @@ export const CandyPrincess: React.FC = () => {
               </>
             )}
 
-            {/* ===== RIGHT HAND HOLDING GIANT RAINBOW LOLLIPOP ===== */}
+            {/* Right Hand Holding Giant Rainbow Lollipop */}
             <g ref={lollipopHandRef}>
               <rect x="122" y="68" width="5" height="62" rx="2.5" fill="#FFFBEB" stroke="#E5E7EB" strokeWidth="1" />
               <circle cx="124.5" cy="54" r="24" fill="url(#rainbowLolli)" stroke="#FFFFFF" strokeWidth="2.5" />
@@ -409,7 +395,7 @@ export const CandyPrincess: React.FC = () => {
               />
             </g>
 
-            {/* ===== FREE LEFT ARM (WAVING & BLOWING KISS) ===== */}
+            {/* Free Left Arm (Waving & Blowing Kiss) */}
             <g ref={waveArmRef}>
               <path
                 d="M64 125 C46 118, 34 102, 29 82"
@@ -418,7 +404,6 @@ export const CandyPrincess: React.FC = () => {
                 strokeWidth="9.5"
                 strokeLinecap="round"
               />
-              {/* Left Sleeve */}
               {variant === 'sweetheart_bow' && (
                 <circle cx="62" cy="123" r="10.5" fill="#7DD3FC" stroke="#BAE6FD" strokeWidth="1.4" />
               )}
@@ -436,7 +421,6 @@ export const CandyPrincess: React.FC = () => {
                 <circle cx="62" cy="123" r="10" fill="#44403C" />
               )}
 
-              {/* Waving Hand */}
               <circle
                 cx="28"
                 cy="80"
@@ -451,7 +435,6 @@ export const CandyPrincess: React.FC = () => {
               />
             </g>
 
-            {/* ===== OUTFIT SKIRT & BODICE PER CHARACTER ===== */}
             {variant === 'sweetheart_bow' && (
               <>
                 <path
@@ -466,7 +449,6 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'golden_princess' && (
               <>
-                {/* Golden Ballgown Skirt */}
                 <path
                   d="M64 142 L106 142 C128 175, 134 205, 132 214 Q108 222 85 215 Q62 222 38 214 C36 205, 42 175, 64 142 Z"
                   fill="url(#goldSkirtGrad)"
@@ -474,7 +456,6 @@ export const CandyPrincess: React.FC = () => {
                   strokeWidth="1.8"
                 />
                 <path d="M62 142 Q85 162 108 142" fill="#FEF08A" opacity="0.85" />
-                {/* Magenta Pink Bodice */}
                 <path
                   d="M64 116 Q85 124 106 116 L108 143 Q85 152 62 143 Z"
                   fill="#DB2777"
@@ -487,14 +468,12 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'snow_princess' && (
               <>
-                {/* Yellow Skirt */}
                 <path
                   d="M63 144 L107 144 C126 175, 132 204, 130 214 Q85 222 40 214 C38 204, 44 175, 63 144 Z"
                   fill="url(#goldSkirtGrad)"
                   stroke="#FEF08A"
                   strokeWidth="1.5"
                 />
-                {/* Royal Navy Bodice with Gold Vertical Seam */}
                 <path
                   d="M64 115 Q85 123 106 115 L107 145 L85 153 L63 145 Z"
                   fill="#1E295B"
@@ -502,7 +481,6 @@ export const CandyPrincess: React.FC = () => {
                   strokeWidth="1.2"
                 />
                 <line x1="85" y1="121" x2="85" y2="152" stroke="#FBBF24" strokeWidth="1.2" />
-                {/* Right Blue & Red Puff Sleeve */}
                 <circle cx="108" cy="123" r="11.5" fill="#1D4ED8" stroke="#D97706" strokeWidth="1.6" />
                 <ellipse cx="106" cy="121" rx="2.4" ry="4.8" fill="#DC2626" />
                 <ellipse cx="112" cy="123" rx="2.2" ry="4.4" fill="#DC2626" />
@@ -511,21 +489,18 @@ export const CandyPrincess: React.FC = () => {
 
             {variant === 'heroine_blossom' && (
               <>
-                {/* White Cherry-Blossom Shirt */}
                 <path
                   d="M64 117 Q85 126 106 117 L112 214 Q85 220 58 214 Z"
                   fill="#F8FAFC"
                   stroke="#334155"
                   strokeWidth="1.4"
                 />
-                {/* Cherry Blossom Flower Print */}
                 <g>
                   <circle cx="80" cy="145" r="4.5" fill="#F472B6" />
                   <circle cx="89" cy="138" r="3.5" fill="#F9A8D4" />
                   <circle cx="75" cy="156" r="4" fill="#F472B6" />
                   <path d="M72 158 Q84 146 95 135" fill="none" stroke="#44403C" strokeWidth="1.4" />
                 </g>
-                {/* Charcoal Cardigan with Pink-Polka Lapel */}
                 <path d="M62 116 L74 118 L70 214 L46 214 Z" fill="#44403C" />
                 <path d="M108 116 L96 118 L100 214 L124 214 Z" fill="#44403C" />
                 <path d="M69 116 L76 118 L72 146 L66 138 Z" fill="#FCE7F3" stroke="#1E293B" strokeWidth="1" />
@@ -534,7 +509,6 @@ export const CandyPrincess: React.FC = () => {
               </>
             )}
 
-            {/* ===== NECK & NECKLACE ===== */}
             <rect x="78" y="99" width="14" height="19" rx="6" fill={skinGradId} />
             {variant === 'sweetheart_bow' && (
               <>
@@ -548,7 +522,6 @@ export const CandyPrincess: React.FC = () => {
               </>
             )}
 
-            {/* ===== HEAD & EAR ===== */}
             {(variant === 'sweetheart_bow' || variant === 'heroine_blossom') && (
               <>
                 <ellipse cx="115" cy="79" rx="5" ry="7.5" fill={skinGradId} />
@@ -557,11 +530,9 @@ export const CandyPrincess: React.FC = () => {
             )}
             <ellipse cx="85" cy="74" rx="30" ry="31" fill={skinGradId} />
 
-            {/* Rosy Cheeks */}
             <ellipse cx="66" cy="83" rx="6.5" ry="3.8" fill="#FB7185" opacity="0.45" />
             <ellipse cx="104" cy="83" rx="6.5" ry="3.8" fill="#FB7185" opacity="0.45" />
 
-            {/* ===== EXPRESSIVE EYES ===== */}
             {isWinking ? (
               <path
                 d="M66 74 Q72 69 78 74"
@@ -590,7 +561,6 @@ export const CandyPrincess: React.FC = () => {
               <path d="M92 69 Q98 64 106 70" fill="none" stroke="#0F172A" strokeWidth="2.2" strokeLinecap="round" />
             </g>
 
-            {/* Eyebrows */}
             <path
               d="M65 62 Q72 59 77 62"
               fill="none"
@@ -606,10 +576,8 @@ export const CandyPrincess: React.FC = () => {
               strokeLinecap="round"
             />
 
-            {/* Nose */}
             <path d="M83.5 80 Q85 82.5 86.5 80" fill="none" stroke="#E29578" strokeWidth="1.8" strokeLinecap="round" />
 
-            {/* Smile or Blow-Kiss Mouth */}
             {mouthMode === 'kiss' ? (
               <ellipse cx="85" cy="90" rx="3.4" ry="3.8" fill={lipColor} stroke="#881337" strokeWidth="1" />
             ) : (
@@ -622,15 +590,12 @@ export const CandyPrincess: React.FC = () => {
               />
             )}
 
-            {/* ===== FRONT BANGS & HEAD ACCESSORIES PER CHARACTER ===== */}
             {variant === 'sweetheart_bow' && (
               <>
-                {/* Swept honey bangs */}
                 <path
                   d="M53 68 C52 40, 118 40, 117 68 C108 52, 92 50, 82 59 C72 62, 61 60, 53 68 Z"
                   fill="url(#hairHoney)"
                 />
-                {/* Pastel Sky-Blue Headband */}
                 <path
                   d="M57 52 Q86 35 113 55"
                   fill="none"
@@ -638,7 +603,6 @@ export const CandyPrincess: React.FC = () => {
                   strokeWidth="5"
                   strokeLinecap="round"
                 />
-                {/* Side Red Bow */}
                 <g transform="translate(56, 48) rotate(-25)">
                   <path d="M0 0 L-10 -6 L-10 6 Z" fill="#DC2626" />
                   <path d="M0 0 L10 -6 L10 6 Z" fill="#EF4444" />
@@ -653,7 +617,6 @@ export const CandyPrincess: React.FC = () => {
                   d="M53 68 C53 42, 117 42, 117 68 C105 56, 94 54, 85 59 C74 53, 62 57, 53 68 Z"
                   fill="url(#hairGolden)"
                 />
-                {/* Crown Tiara Ribbon with Pink Ruby */}
                 <path d="M72 41 Q85 35 98 41" fill="none" stroke="#FEF08A" strokeWidth="3.2" strokeLinecap="round" />
                 <circle cx="72" cy="40" r="3.4" fill="#EC4899" stroke="#FEF08A" strokeWidth="1.2" />
               </>
@@ -665,7 +628,6 @@ export const CandyPrincess: React.FC = () => {
                   d="M53 68 C53 41, 117 41, 117 68 C107 54, 95 54, 85 58 C74 53, 62 56, 53 68 Z"
                   fill="url(#hairBlack)"
                 />
-                {/* Classic Red Headband & Ribbon Bow */}
                 <path
                   d="M58 50 Q85 36 112 50"
                   fill="none"
